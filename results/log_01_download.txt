@@ -1,0 +1,26 @@
+12 months to process
+2025-10: 75,470 station-hours, 64,191,289 entries
+2025-11: 73,050 station-hours, 66,685,568 entries
+2025-12: 76,078 station-hours, 70,016,035 entries
+2026-01: 75,428 station-hours, 65,387,570 entries
+2026-02: 68,091 station-hours, 53,774,896 entries
+2026-03: 75,387 station-hours, 68,518,802 entries
+2026-04: 73,076 station-hours, 63,558,151 entries
+2026-05: 75,616 station-hours, 66,404,719 entries
+2026-06: 73,119 station-hours, 62,403,293 entries
+2026-07: 74,960 station-hours, 63,379,613 entries
+2026-08: 75,478 station-hours, 64,714,014 entries
+2026-09: 73,766 station-hours, 64,273,963 entries
+12 months to process
+2024-10: 72,929 station-hours, 60,091,115 entries
+2024-11: 71,296 station-hours, 65,563,857 entries
+2024-12: 75,353 station-hours, 70,325,791 entries
+2025-01: 75,267 station-hours, 60,012,939 entries
+2025-02: 68,041 station-hours, 58,987,391 entries
+2025-03: 75,335 station-hours, 66,314,639 entries
+2025-04: 72,958 station-hours, 62,896,899 entries
+2025-05: 75,695 station-hours, 64,046,753 entries
+2025-06: 73,072 station-hours, 61,589,596 entries
+2025-07: 75,442 station-hours, 64,009,217 entries
+2025-08: 75,420 station-hours, 64,783,615 entries
+2025-09: 72,984 station-hours, 63,114,547 entries
