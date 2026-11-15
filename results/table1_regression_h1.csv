@@ -1,11 +1,11 @@
-target,horizon,method,MAE,RMSE,peak_MAE
-entries,1,Last Value,272.41,597.61,786.48
-entries,1,Seasonal Naive,87.42,305.39,106.94
-entries,1,Historical Average,75.91,199.26,125.27
-entries,1,LightGBM,41.08,113.83,78.97
-entries,1,LightGBM (scaled),41.34,117.79,73.97
-exits,1,Last Value,271.44,638.99,802.19
-exits,1,Seasonal Naive,85.08,308.02,110.9
-exits,1,Historical Average,76.47,203.46,136.24
-exits,1,LightGBM,39.65,103.96,82.89
-exits,1,LightGBM (scaled),39.48,98.39,76.47
+target,horizon,method,MAE,RMSE,peak_MAE,rain_MAE,dry_MAE
+entries,1,Last Value,272.41,597.61,786.48,277.89,272.12
+entries,1,Seasonal Naive,87.42,305.39,106.94,130.04,85.18
+entries,1,Historical Average,75.91,199.26,125.27,129.45,73.1
+entries,1,LightGBM,42.84,120.16,90.44,87.16,40.51
+entries,1,LightGBM (scaled),41.87,117.57,77.48,72.06,40.28
+exits,1,Last Value,271.44,638.99,802.19,268.57,271.59
+exits,1,Seasonal Naive,85.08,308.02,110.9,115.02,83.5
+exits,1,Historical Average,76.47,203.46,136.24,124.75,73.93
+exits,1,LightGBM,41.94,117.67,96.55,80.72,39.9
+exits,1,LightGBM (scaled),40.17,102.79,80.7,65.43,38.84
