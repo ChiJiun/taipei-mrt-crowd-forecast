@@ -1,0 +1,66 @@
+{
+ "rain": [
+  {
+   "daytype": "假日",
+   "rain_grp": "無雨",
+   "mean": 1.0,
+   "count": 1586
+  },
+  {
+   "daytype": "假日",
+   "rain_grp": "<1mm",
+   "mean": 0.983,
+   "count": 472
+  },
+  {
+   "daytype": "假日",
+   "rain_grp": "1-5mm",
+   "mean": 0.864,
+   "count": 99
+  },
+  {
+   "daytype": "假日",
+   "rain_grp": ">5mm",
+   "mean": 0.547,
+   "count": 21
+  },
+  {
+   "daytype": "平日",
+   "rain_grp": "無雨",
+   "mean": 1.0,
+   "count": 3001
+  },
+  {
+   "daytype": "平日",
+   "rain_grp": "<1mm",
+   "mean": 0.993,
+   "count": 1100
+  },
+  {
+   "daytype": "平日",
+   "rain_grp": "1-5mm",
+   "mean": 0.963,
+   "count": 261
+  },
+  {
+   "daytype": "平日",
+   "rain_grp": ">5mm",
+   "mean": 0.942,
+   "count": 30
+  }
+ ],
+ "top_station_avg_per_hour": {
+  "台北車站": 12567.0,
+  "西門": 5749.0,
+  "市政府": 5261.0,
+  "中山": 4387.0,
+  "忠孝復興": 3705.0,
+  "BL板橋": 3410.0,
+  "南京復興": 3327.0,
+  "新埔": 3045.0,
+  "松江南京": 2975.0,
+  "忠孝新生": 2962.0
+ },
+ "n_station": 122,
+ "avg_daily_entry": 2117846.61369863
+}

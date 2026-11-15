@@ -27,6 +27,10 @@ python src/03_calendar.py                         # -> data/external/calendar.cs
 
 `data/interim/` 未 commit，需要時執行 01 重建。
 
+天氣：`data/external/weather_hourly.csv` 已含主研究期（2025-10~2026-09）的 Open-Meteo 逐時再分析資料（取自進度報告當時下載的 `weather.json`）；2024-10~2025-09 的歷史期間由工作流 A 補齊。
+
+進度報告當時的原始程式碼與數值放在 `reference/progress_report/`（僅供對照）。
+
 基準結果（`results/table1_regression_h1.csv`，尚未含天氣）：進站 MAE — Historical Average 75.9、LightGBM 41.1、LightGBM-scaled 41.3（尖峰 MAE 74.0）。
 
 ## 資料約定
