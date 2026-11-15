@@ -68,13 +68,14 @@ def _g_roll_mean(s: pd.Series, w: int, by: pd.Series) -> np.ndarray:
 
 def make_features(panel: pd.DataFrame, target: str = "entries", horizon: int = 1,
                   weather: pd.DataFrame | None = "auto", events: pd.DataFrame | None = "auto",
-                  extra_lags: bool = True) -> pd.DataFrame:
+                  extra_lags: bool = True, train_end: str = TRAIN_END) -> pd.DataFrame:
     """Return a feature frame with columns: ts (origin), ts_target, station, y, features..., scale.
 
     Features (proposal 3.2): target-hour hour/dow/holiday, station, lags 1/2/3 at origin,
     seasonal lags 24/168 relative to target, rolling 24/168 means, historical average
     (station x day_type x hour, from TRAIN only), weather at target hour, other-direction lag.
-    `scale` = station mean over previous 168h (used by the scaled model)."""
+    `scale` = station mean over previous 168h (used by the scaled model).
+    `train_end` bounds the window used for hist_avg (override for rolling-origin backtests)."""
     df = panel[["ts", "station", "entries", "exits"]].copy()
     other = "exits" if target == "entries" else "entries"
     key = df["station"].cat.codes.to_numpy()
@@ -113,7 +114,7 @@ def make_features(panel: pd.DataFrame, target: str = "entries", horizon: int = 1
     hist = pd.DataFrame({"station": df["station"], "hour": df["ts"].dt.hour,
                          "hol": df["ts"].dt.normalize().map(cal["is_holiday"]).fillna(False).astype(int),
                          "v": y})
-    hist = hist[df["ts"] <= TRAIN_END]
+    hist = hist[df["ts"] <= train_end]
     ha = hist.groupby(["station", "hol", "hour"], observed=True)["v"].mean().rename("hist_avg")
     ha = ha.reset_index().rename(columns={"hol": "is_holiday"}).astype({"is_holiday": "int8", "hour": "int8"})
     out = out.merge(ha, on=["station", "is_holiday", "hour"], how="left")
