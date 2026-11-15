@@ -1,7 +1,7 @@
 """Large events -> station x hour impact table.
 
 Input : data/external/events.csv
-        (name, venue, date, start_time, end_time, scale_estimate, source_url, confidence)
+        (name, venue, date, start_time, end_time, scale_estimate, source_url, confidence, stations)
         collected manually / by web search; every row carries a source URL.
 Output: data/external/events_station_hour.csv
         ts, station, event_flag, event_scale, event_arrive, event_depart, n_events
@@ -37,10 +37,8 @@ VENUE_STATIONS: dict[str, list[tuple[str, float]]] = {
                   ("信義安和", 0.6), ("忠孝敦化", 0.4)],
     "大稻埕": [("北門", 1.0), ("大橋頭站", 1.0), ("雙連", 0.4), ("中山", 0.3)],
 }
-# stations named explicitly in an event name (for 燈節 / 路跑 / 遊行 whose location varies):
-# rows of those venues are mapped to every station whose name appears inside the event name,
-# written as e.g. "台北馬拉松（市政府、國父紀念館）".
-FREE_VENUES = {"台北燈節", "路跑/遊行"}
+# Venues whose location varies (燈節, 路跑/遊行, 國慶 ...) carry an explicit `stations` column in
+# events.csv, formatted "站名:權重;站名:權重" (e.g. "西門:1.0;北門:0.6"); it overrides the venue map.
 
 
 def _ts(date: str, hm: str) -> pd.Timestamp:
@@ -50,14 +48,14 @@ def _ts(date: str, hm: str) -> pd.Timestamp:
 def expand(ev: pd.DataFrame, stations: set[str]) -> pd.DataFrame:
     rows, unmapped = [], []
     for e in ev.itertuples(index=False):
-        if e.venue in VENUE_STATIONS:
-            st = VENUE_STATIONS[e.venue]
-        elif e.venue in FREE_VENUES:
-            st = [(s, 1.0) for s in sorted(stations, key=len, reverse=True) if s in str(e.name)]
-            # drop names contained in longer matched names (e.g. 板橋 within BL板橋)
-            st = [(s, w) for s, w in st if not any(s != t and s in t for t, _ in st)]
+        spec = getattr(e, "stations", None)
+        if isinstance(spec, str) and spec.strip():
+            st = [(x.split(":")[0].strip(), float(x.split(":")[1]) if ":" in x else 1.0)
+                  for x in spec.split(";") if x.strip()]
+            bad = [x for x, _ in st if x not in stations]
+            assert not bad, f"unknown station(s) {bad} in event {e.name}"
         else:
-            st = []
+            st = VENUE_STATIONS.get(e.venue, [])
         if not st:
             unmapped.append((e.name, e.venue))
             continue

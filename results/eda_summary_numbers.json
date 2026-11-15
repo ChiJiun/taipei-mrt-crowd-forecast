@@ -73,6 +73,43 @@
    "ci_high": 0.936
   }
  ],
+ "event_uplift": [
+  {
+   "venue": "台北101跨年",
+   "station": "台北101/世貿",
+   "n_event_days": 2,
+   "arrival_exits_ratio": 2.21,
+   "departure_entries_ratio": 2168.3
+  },
+  {
+   "venue": "大稻埕",
+   "station": "北門",
+   "n_event_days": 6,
+   "arrival_exits_ratio": 4.07,
+   "departure_entries_ratio": 8.12
+  },
+  {
+   "venue": "台北流行音樂中心",
+   "station": "昆陽",
+   "n_event_days": 57,
+   "arrival_exits_ratio": 1.5,
+   "departure_entries_ratio": 2.2
+  },
+  {
+   "venue": "南港展覽館",
+   "station": "南港展覽館",
+   "n_event_days": 68,
+   "arrival_exits_ratio": 1.7,
+   "departure_entries_ratio": 1.69
+  },
+  {
+   "venue": "台北世貿",
+   "station": "台北101/世貿",
+   "n_event_days": 43,
+   "arrival_exits_ratio": 1.17,
+   "departure_entries_ratio": 1.21
+  }
+ ],
  "typhoon_days": [
   {
    "date": "2024-10-02",
