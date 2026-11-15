@@ -1,0 +1,10 @@
+{
+ "daily_entries_workday": 2291872,
+ "daily_entries_holiday": 1754792,
+ "holiday_to_workday_ratio": 0.766,
+ "workday_peak_hours": [
+  18,
+  8,
+  17
+ ]
+}
