@@ -1,0 +1,3417 @@
+station,target,horizon,method,MAE,mean_y
+BL板橋,entries,1,Seasonal Naive,143.072,1616.154
+G大坪林,entries,1,Seasonal Naive,0.0,0.0
+O景安,entries,1,Seasonal Naive,0.0,0.0
+O頭前庄,entries,1,Seasonal Naive,0.0,0.0
+Y板橋,entries,1,Seasonal Naive,20.524,106.565
+七張,entries,1,Seasonal Naive,58.696,593.835
+三和國中,entries,1,Seasonal Naive,59.603,541.34
+三民高中,entries,1,Seasonal Naive,58.144,483.21
+三重,entries,1,Seasonal Naive,50.538,406.265
+三重國小,entries,1,Seasonal Naive,49.49,493.394
+中原,entries,1,Seasonal Naive,11.517,66.836
+中和,entries,1,Seasonal Naive,16.207,105.786
+中山,entries,1,Seasonal Naive,175.44,2146.368
+中山國中,entries,1,Seasonal Naive,60.994,520.351
+中山國小,entries,1,Seasonal Naive,70.893,706.35
+中正紀念堂,entries,1,Seasonal Naive,158.292,1104.017
+丹鳳,entries,1,Seasonal Naive,46.335,377.458
+亞東醫院,entries,1,Seasonal Naive,104.046,1023.799
+信義安和,entries,1,Seasonal Naive,77.811,769.812
+先嗇宮,entries,1,Seasonal Naive,26.5,205.467
+內湖,entries,1,Seasonal Naive,45.226,415.104
+公館,entries,1,Seasonal Naive,180.071,1177.964
+六張犁,entries,1,Seasonal Naive,48.033,423.912
+劍南路,entries,1,Seasonal Naive,58.226,453.143
+劍潭,entries,1,Seasonal Naive,203.504,1128.921
+動物園,entries,1,Seasonal Naive,61.915,246.086
+北投,entries,1,Seasonal Naive,91.685,723.654
+北門,entries,1,Seasonal Naive,66.707,701.192
+十四張,entries,1,Seasonal Naive,18.551,105.442
+南京三民,entries,1,Seasonal Naive,104.514,918.801
+南京復興,entries,1,Seasonal Naive,169.371,1613.208
+南勢角,entries,1,Seasonal Naive,82.389,810.172
+南港,entries,1,Seasonal Naive,198.007,1048.728
+南港展覽館,entries,1,Seasonal Naive,367.681,1394.436
+南港軟體園區,entries,1,Seasonal Naive,42.399,297.385
+古亭,entries,1,Seasonal Naive,125.688,1262.574
+台北101/世貿,entries,1,Seasonal Naive,166.067,1381.381
+台北小巨蛋,entries,1,Seasonal Naive,212.961,881.717
+台北橋,entries,1,Seasonal Naive,46.631,425.36
+台北車站,entries,1,Seasonal Naive,514.189,6361.756
+台大醫院,entries,1,Seasonal Naive,119.638,865.14
+台電大樓,entries,1,Seasonal Naive,66.093,636.711
+唭哩岸,entries,1,Seasonal Naive,36.967,300.714
+善導寺,entries,1,Seasonal Naive,153.669,913.488
+國父紀念館,entries,1,Seasonal Naive,270.753,1517.726
+圓山,entries,1,Seasonal Naive,145.193,1107.881
+土城,entries,1,Seasonal Naive,40.714,362.45
+士林,entries,1,Seasonal Naive,168.394,1115.685
+大坪林,entries,1,Seasonal Naive,83.199,824.776
+大安,entries,1,Seasonal Naive,133.285,979.792
+大安森林公園,entries,1,Seasonal Naive,70.756,411.886
+大橋頭站,entries,1,Seasonal Naive,62.025,578.781
+大湖公園,entries,1,Seasonal Naive,24.59,144.558
+大直,entries,1,Seasonal Naive,66.235,370.407
+奇岩,entries,1,Seasonal Naive,41.035,357.538
+小南門,entries,1,Seasonal Naive,74.328,413.61
+小碧潭,entries,1,Seasonal Naive,20.651,138.286
+市政府,entries,1,Seasonal Naive,195.903,2478.353
+幸福,entries,1,Seasonal Naive,14.742,92.326
+府中,entries,1,Seasonal Naive,110.904,1225.865
+後山埤,entries,1,Seasonal Naive,62.108,640.051
+徐匯中學,entries,1,Seasonal Naive,53.238,483.689
+復興崗,entries,1,Seasonal Naive,21.951,163.079
+忠孝復興,entries,1,Seasonal Naive,135.225,1810.194
+忠孝敦化,entries,1,Seasonal Naive,109.815,1256.225
+忠孝新生,entries,1,Seasonal Naive,173.778,1505.544
+忠義,entries,1,Seasonal Naive,17.731,122.712
+文德,entries,1,Seasonal Naive,42.281,236.1
+新北投,entries,1,Seasonal Naive,33.903,226.624
+新北產業園區,entries,1,Seasonal Naive,13.428,77.719
+新埔,entries,1,Seasonal Naive,145.249,1530.204
+新埔民生,entries,1,Seasonal Naive,7.576,29.922
+新店,entries,1,Seasonal Naive,57.962,502.839
+新店區公所,entries,1,Seasonal Naive,46.868,480.926
+新莊,entries,1,Seasonal Naive,85.111,444.1
+昆陽,entries,1,Seasonal Naive,102.746,644.497
+明德,entries,1,Seasonal Naive,67.535,528.154
+景安,entries,1,Seasonal Naive,86.175,893.058
+景平,entries,1,Seasonal Naive,12.214,80.194
+景美,entries,1,Seasonal Naive,81.312,637.806
+木柵,entries,1,Seasonal Naive,31.708,180.561
+東湖,entries,1,Seasonal Naive,49.808,352.632
+東門,entries,1,Seasonal Naive,116.812,1108.183
+松山,entries,1,Seasonal Naive,121.908,1037.907
+松山機場,entries,1,Seasonal Naive,34.454,232.736
+松江南京,entries,1,Seasonal Naive,157.228,1464.669
+板新,entries,1,Seasonal Naive,11.404,59.129
+橋和,entries,1,Seasonal Naive,9.853,51.01
+民權西路,entries,1,Seasonal Naive,105.064,979.51
+永安市場,entries,1,Seasonal Naive,93.654,959.568
+永寧,entries,1,Seasonal Naive,71.521,540.55
+永春,entries,1,Seasonal Naive,87.386,792.653
+江子翠,entries,1,Seasonal Naive,107.214,1131.567
+海山,entries,1,Seasonal Naive,104.061,949.557
+淡水,entries,1,Seasonal Naive,261.24,1366.596
+港墘,entries,1,Seasonal Naive,93.178,662.736
+石牌,entries,1,Seasonal Naive,127.779,1153.028
+秀朗橋,entries,1,Seasonal Naive,11.16,61.479
+科技大樓,entries,1,Seasonal Naive,78.067,606.142
+竹圍,entries,1,Seasonal Naive,43.949,369.843
+紅樹林,entries,1,Seasonal Naive,83.044,576.85
+芝山,entries,1,Seasonal Naive,100.203,929.115
+菜寮,entries,1,Seasonal Naive,51.047,427.185
+萬芳社區,entries,1,Seasonal Naive,15.474,104.654
+萬芳醫院,entries,1,Seasonal Naive,70.093,461.125
+萬隆,entries,1,Seasonal Naive,43.14,422.024
+葫洲,entries,1,Seasonal Naive,49.531,338.232
+蘆洲,entries,1,Seasonal Naive,72.115,617.989
+行天宮,entries,1,Seasonal Naive,108.646,1062.65
+西湖,entries,1,Seasonal Naive,70.553,514.04
+西門,entries,1,Seasonal Naive,229.678,2760.707
+象山,entries,1,Seasonal Naive,77.839,556.026
+輔大,entries,1,Seasonal Naive,101.374,393.638
+辛亥,entries,1,Seasonal Naive,19.997,139.553
+迴龍,entries,1,Seasonal Naive,59.106,454.975
+關渡,entries,1,Seasonal Naive,73.682,504.779
+雙連,entries,1,Seasonal Naive,82.915,880.144
+頂埔,entries,1,Seasonal Naive,109.711,640.165
+頂溪,entries,1,Seasonal Naive,117.517,1316.481
+頭前庄,entries,1,Seasonal Naive,30.038,217.842
+麟光,entries,1,Seasonal Naive,23.288,181.974
+龍山寺,entries,1,Seasonal Naive,111.933,1168.743
+BL板橋,entries,1,Historical Average,126.394,1616.154
+G大坪林,entries,1,Historical Average,0.0,0.0
+O景安,entries,1,Historical Average,0.0,0.0
+O頭前庄,entries,1,Historical Average,0.0,0.0
+Y板橋,entries,1,Historical Average,19.195,106.565
+七張,entries,1,Historical Average,44.155,593.835
+三和國中,entries,1,Historical Average,43.412,541.34
+三民高中,entries,1,Historical Average,44.202,483.21
+三重,entries,1,Historical Average,42.941,406.265
+三重國小,entries,1,Historical Average,37.81,493.394
+中原,entries,1,Historical Average,7.211,66.836
+中和,entries,1,Historical Average,12.073,105.786
+中山,entries,1,Historical Average,201.333,2146.368
+中山國中,entries,1,Historical Average,43.512,520.351
+中山國小,entries,1,Historical Average,54.498,706.35
+中正紀念堂,entries,1,Historical Average,119.342,1104.017
+丹鳳,entries,1,Historical Average,34.254,377.458
+亞東醫院,entries,1,Historical Average,76.345,1023.799
+信義安和,entries,1,Historical Average,66.235,769.812
+先嗇宮,entries,1,Historical Average,16.298,205.467
+內湖,entries,1,Historical Average,34.608,415.104
+公館,entries,1,Historical Average,169.241,1177.964
+六張犁,entries,1,Historical Average,36.309,423.912
+劍南路,entries,1,Historical Average,51.533,453.143
+劍潭,entries,1,Historical Average,152.101,1128.921
+動物園,entries,1,Historical Average,52.976,246.086
+北投,entries,1,Historical Average,74.211,723.654
+北門,entries,1,Historical Average,57.939,701.192
+十四張,entries,1,Historical Average,13.42,105.442
+南京三民,entries,1,Historical Average,70.465,918.801
+南京復興,entries,1,Historical Average,119.968,1613.208
+南勢角,entries,1,Historical Average,55.429,810.172
+南港,entries,1,Historical Average,132.82,1048.728
+南港展覽館,entries,1,Historical Average,313.885,1394.436
+南港軟體園區,entries,1,Historical Average,36.984,297.385
+古亭,entries,1,Historical Average,107.452,1262.574
+台北101/世貿,entries,1,Historical Average,164.383,1381.381
+台北小巨蛋,entries,1,Historical Average,154.628,881.717
+台北橋,entries,1,Historical Average,37.989,425.36
+台北車站,entries,1,Historical Average,592.995,6361.756
+台大醫院,entries,1,Historical Average,72.477,865.14
+台電大樓,entries,1,Historical Average,61.619,636.711
+唭哩岸,entries,1,Historical Average,28.101,300.714
+善導寺,entries,1,Historical Average,109.495,913.488
+國父紀念館,entries,1,Historical Average,431.529,1517.726
+圓山,entries,1,Historical Average,139.41,1107.881
+土城,entries,1,Historical Average,30.771,362.45
+士林,entries,1,Historical Average,141.951,1115.685
+大坪林,entries,1,Historical Average,58.851,824.776
+大安,entries,1,Historical Average,102.948,979.792
+大安森林公園,entries,1,Historical Average,63.387,411.886
+大橋頭站,entries,1,Historical Average,52.578,578.781
+大湖公園,entries,1,Historical Average,17.537,144.558
+大直,entries,1,Historical Average,54.548,370.407
+奇岩,entries,1,Historical Average,30.393,357.538
+小南門,entries,1,Historical Average,52.335,413.61
+小碧潭,entries,1,Historical Average,15.805,138.286
+市政府,entries,1,Historical Average,226.766,2478.353
+幸福,entries,1,Historical Average,10.932,92.326
+府中,entries,1,Historical Average,100.823,1225.865
+後山埤,entries,1,Historical Average,62.919,640.051
+徐匯中學,entries,1,Historical Average,40.084,483.689
+復興崗,entries,1,Historical Average,16.382,163.079
+忠孝復興,entries,1,Historical Average,175.208,1810.194
+忠孝敦化,entries,1,Historical Average,123.205,1256.225
+忠孝新生,entries,1,Historical Average,148.397,1505.544
+忠義,entries,1,Historical Average,12.646,122.712
+文德,entries,1,Historical Average,30.939,236.1
+新北投,entries,1,Historical Average,34.577,226.624
+新北產業園區,entries,1,Historical Average,10.507,77.719
+新埔,entries,1,Historical Average,122.355,1530.204
+新埔民生,entries,1,Historical Average,6.431,29.922
+新店,entries,1,Historical Average,40.936,502.839
+新店區公所,entries,1,Historical Average,33.808,480.926
+新莊,entries,1,Historical Average,60.619,444.1
+昆陽,entries,1,Historical Average,73.984,644.497
+明德,entries,1,Historical Average,53.287,528.154
+景安,entries,1,Historical Average,65.249,893.058
+景平,entries,1,Historical Average,9.056,80.194
+景美,entries,1,Historical Average,66.243,637.806
+木柵,entries,1,Historical Average,24.567,180.561
+東湖,entries,1,Historical Average,41.349,352.632
+東門,entries,1,Historical Average,101.473,1108.183
+松山,entries,1,Historical Average,86.578,1037.907
+松山機場,entries,1,Historical Average,26.758,232.736
+松江南京,entries,1,Historical Average,107.101,1464.669
+板新,entries,1,Historical Average,8.946,59.129
+橋和,entries,1,Historical Average,6.753,51.01
+民權西路,entries,1,Historical Average,81.311,979.51
+永安市場,entries,1,Historical Average,70.683,959.568
+永寧,entries,1,Historical Average,57.0,540.55
+永春,entries,1,Historical Average,77.698,792.653
+江子翠,entries,1,Historical Average,82.759,1131.567
+海山,entries,1,Historical Average,75.812,949.557
+淡水,entries,1,Historical Average,201.371,1366.596
+港墘,entries,1,Historical Average,63.375,662.736
+石牌,entries,1,Historical Average,98.35,1153.028
+秀朗橋,entries,1,Historical Average,7.688,61.479
+科技大樓,entries,1,Historical Average,64.24,606.142
+竹圍,entries,1,Historical Average,32.684,369.843
+紅樹林,entries,1,Historical Average,59.349,576.85
+芝山,entries,1,Historical Average,76.23,929.115
+菜寮,entries,1,Historical Average,38.401,427.185
+萬芳社區,entries,1,Historical Average,10.76,104.654
+萬芳醫院,entries,1,Historical Average,59.687,461.125
+萬隆,entries,1,Historical Average,33.304,422.024
+葫洲,entries,1,Historical Average,40.014,338.232
+蘆洲,entries,1,Historical Average,51.984,617.989
+行天宮,entries,1,Historical Average,86.875,1062.65
+西湖,entries,1,Historical Average,44.236,514.04
+西門,entries,1,Historical Average,262.892,2760.707
+象山,entries,1,Historical Average,62.622,556.026
+輔大,entries,1,Historical Average,101.275,393.638
+辛亥,entries,1,Historical Average,14.398,139.553
+迴龍,entries,1,Historical Average,45.788,454.975
+關渡,entries,1,Historical Average,57.944,504.779
+雙連,entries,1,Historical Average,70.882,880.144
+頂埔,entries,1,Historical Average,198.46,640.165
+頂溪,entries,1,Historical Average,88.972,1316.481
+頭前庄,entries,1,Historical Average,21.743,217.842
+麟光,entries,1,Historical Average,16.088,181.974
+龍山寺,entries,1,Historical Average,95.346,1168.743
+BL板橋,entries,1,SARIMAX,79.65,1616.154
+G大坪林,entries,1,SARIMAX,0.0,0.0
+O景安,entries,1,SARIMAX,0.0,0.0
+O頭前庄,entries,1,SARIMAX,0.0,0.0
+Y板橋,entries,1,SARIMAX,14.361,106.565
+七張,entries,1,SARIMAX,37.358,593.835
+三和國中,entries,1,SARIMAX,35.586,541.34
+三民高中,entries,1,SARIMAX,38.614,483.21
+三重,entries,1,SARIMAX,32.602,406.265
+三重國小,entries,1,SARIMAX,28.927,493.394
+中原,entries,1,SARIMAX,6.898,66.836
+中和,entries,1,SARIMAX,10.566,105.786
+中山,entries,1,SARIMAX,102.365,2146.368
+中山國中,entries,1,SARIMAX,38.169,520.351
+中山國小,entries,1,SARIMAX,41.631,706.35
+中正紀念堂,entries,1,SARIMAX,85.779,1104.017
+丹鳳,entries,1,SARIMAX,29.05,377.458
+亞東醫院,entries,1,SARIMAX,55.054,1023.799
+信義安和,entries,1,SARIMAX,45.119,769.812
+先嗇宮,entries,1,SARIMAX,15.875,205.467
+內湖,entries,1,SARIMAX,28.624,415.104
+公館,entries,1,SARIMAX,80.948,1177.964
+六張犁,entries,1,SARIMAX,32.2,423.912
+劍南路,entries,1,SARIMAX,38.181,453.143
+劍潭,entries,1,SARIMAX,112.062,1128.921
+動物園,entries,1,SARIMAX,30.123,246.086
+北投,entries,1,SARIMAX,50.536,723.654
+北門,entries,1,SARIMAX,42.097,701.192
+十四張,entries,1,SARIMAX,12.508,105.442
+南京三民,entries,1,SARIMAX,52.057,918.801
+南京復興,entries,1,SARIMAX,80.507,1613.208
+南勢角,entries,1,SARIMAX,38.719,810.172
+南港,entries,1,SARIMAX,82.838,1048.728
+南港展覽館,entries,1,SARIMAX,150.977,1394.436
+南港軟體園區,entries,1,SARIMAX,26.56,297.385
+古亭,entries,1,SARIMAX,67.582,1262.574
+台北101/世貿,entries,1,SARIMAX,105.185,1381.381
+台北小巨蛋,entries,1,SARIMAX,116.145,881.717
+台北橋,entries,1,SARIMAX,30.769,425.36
+台北車站,entries,1,SARIMAX,315.604,6361.756
+台大醫院,entries,1,SARIMAX,54.864,865.14
+台電大樓,entries,1,SARIMAX,38.246,636.711
+唭哩岸,entries,1,SARIMAX,23.198,300.714
+善導寺,entries,1,SARIMAX,72.137,913.488
+國父紀念館,entries,1,SARIMAX,272.909,1517.726
+圓山,entries,1,SARIMAX,85.658,1107.881
+土城,entries,1,SARIMAX,25.123,362.45
+士林,entries,1,SARIMAX,86.742,1115.685
+大坪林,entries,1,SARIMAX,45.73,824.776
+大安,entries,1,SARIMAX,72.665,979.792
+大安森林公園,entries,1,SARIMAX,45.86,411.886
+大橋頭站,entries,1,SARIMAX,41.163,578.781
+大湖公園,entries,1,SARIMAX,14.889,144.558
+大直,entries,1,SARIMAX,35.213,370.407
+奇岩,entries,1,SARIMAX,27.441,357.538
+小南門,entries,1,SARIMAX,39.039,413.61
+小碧潭,entries,1,SARIMAX,15.885,138.286
+市政府,entries,1,SARIMAX,132.178,2478.353
+幸福,entries,1,SARIMAX,11.869,92.326
+府中,entries,1,SARIMAX,61.233,1225.865
+後山埤,entries,1,SARIMAX,37.139,640.051
+徐匯中學,entries,1,SARIMAX,30.948,483.689
+復興崗,entries,1,SARIMAX,15.997,163.079
+忠孝復興,entries,1,SARIMAX,85.261,1810.194
+忠孝敦化,entries,1,SARIMAX,66.469,1256.225
+忠孝新生,entries,1,SARIMAX,91.572,1505.544
+忠義,entries,1,SARIMAX,12.443,122.712
+文德,entries,1,SARIMAX,27.674,236.1
+新北投,entries,1,SARIMAX,26.833,226.624
+新北產業園區,entries,1,SARIMAX,9.574,77.719
+新埔,entries,1,SARIMAX,86.051,1530.204
+新埔民生,entries,1,SARIMAX,5.638,29.922
+新店,entries,1,SARIMAX,31.261,502.839
+新店區公所,entries,1,SARIMAX,28.773,480.926
+新莊,entries,1,SARIMAX,51.142,444.1
+昆陽,entries,1,SARIMAX,65.602,644.497
+明德,entries,1,SARIMAX,41.257,528.154
+景安,entries,1,SARIMAX,46.508,893.058
+景平,entries,1,SARIMAX,8.401,80.194
+景美,entries,1,SARIMAX,47.25,637.806
+木柵,entries,1,SARIMAX,22.77,180.561
+東湖,entries,1,SARIMAX,35.276,352.632
+東門,entries,1,SARIMAX,62.926,1108.183
+松山,entries,1,SARIMAX,64.052,1037.907
+松山機場,entries,1,SARIMAX,26.983,232.736
+松江南京,entries,1,SARIMAX,78.968,1464.669
+板新,entries,1,SARIMAX,7.593,59.129
+橋和,entries,1,SARIMAX,6.424,51.01
+民權西路,entries,1,SARIMAX,60.865,979.51
+永安市場,entries,1,SARIMAX,54.571,959.568
+永寧,entries,1,SARIMAX,45.189,540.55
+永春,entries,1,SARIMAX,47.526,792.653
+江子翠,entries,1,SARIMAX,56.336,1131.567
+海山,entries,1,SARIMAX,51.092,949.557
+淡水,entries,1,SARIMAX,88.365,1366.596
+港墘,entries,1,SARIMAX,49.458,662.736
+石牌,entries,1,SARIMAX,64.418,1153.028
+秀朗橋,entries,1,SARIMAX,7.279,61.479
+科技大樓,entries,1,SARIMAX,45.14,606.142
+竹圍,entries,1,SARIMAX,24.485,369.843
+紅樹林,entries,1,SARIMAX,39.865,576.85
+芝山,entries,1,SARIMAX,55.582,929.115
+菜寮,entries,1,SARIMAX,30.902,427.185
+萬芳社區,entries,1,SARIMAX,11.022,104.654
+萬芳醫院,entries,1,SARIMAX,48.041,461.125
+萬隆,entries,1,SARIMAX,27.839,422.024
+葫洲,entries,1,SARIMAX,30.483,338.232
+蘆洲,entries,1,SARIMAX,39.752,617.989
+行天宮,entries,1,SARIMAX,57.082,1062.65
+西湖,entries,1,SARIMAX,37.44,514.04
+西門,entries,1,SARIMAX,124.771,2760.707
+象山,entries,1,SARIMAX,46.439,556.026
+輔大,entries,1,SARIMAX,51.826,393.638
+辛亥,entries,1,SARIMAX,13.749,139.553
+迴龍,entries,1,SARIMAX,34.29,454.975
+關渡,entries,1,SARIMAX,40.62,504.779
+雙連,entries,1,SARIMAX,47.157,880.144
+頂埔,entries,1,SARIMAX,48.152,640.165
+頂溪,entries,1,SARIMAX,59.994,1316.481
+頭前庄,entries,1,SARIMAX,20.072,217.842
+麟光,entries,1,SARIMAX,15.725,181.974
+龍山寺,entries,1,SARIMAX,59.962,1168.743
+BL板橋,entries,1,Prophet,142.819,1616.154
+G大坪林,entries,1,Prophet,0.0,0.0
+O景安,entries,1,Prophet,0.0,0.0
+O頭前庄,entries,1,Prophet,0.0,0.0
+Y板橋,entries,1,Prophet,18.598,106.565
+七張,entries,1,Prophet,57.757,593.835
+三和國中,entries,1,Prophet,60.226,541.34
+三民高中,entries,1,Prophet,60.453,483.21
+三重,entries,1,Prophet,48.787,406.265
+三重國小,entries,1,Prophet,47.892,493.394
+中原,entries,1,Prophet,7.644,66.836
+中和,entries,1,Prophet,14.874,105.786
+中山,entries,1,Prophet,213.665,2146.368
+中山國中,entries,1,Prophet,56.762,520.351
+中山國小,entries,1,Prophet,62.695,706.35
+中正紀念堂,entries,1,Prophet,132.835,1104.017
+丹鳳,entries,1,Prophet,43.821,377.458
+亞東醫院,entries,1,Prophet,84.879,1023.799
+信義安和,entries,1,Prophet,70.205,769.812
+先嗇宮,entries,1,Prophet,20.251,205.467
+內湖,entries,1,Prophet,50.049,415.104
+公館,entries,1,Prophet,203.646,1177.964
+六張犁,entries,1,Prophet,46.147,423.912
+劍南路,entries,1,Prophet,49.713,453.143
+劍潭,entries,1,Prophet,166.153,1128.921
+動物園,entries,1,Prophet,60.058,246.086
+北投,entries,1,Prophet,87.047,723.654
+北門,entries,1,Prophet,66.93,701.192
+十四張,entries,1,Prophet,18.44,105.442
+南京三民,entries,1,Prophet,86.767,918.801
+南京復興,entries,1,Prophet,130.215,1613.208
+南勢角,entries,1,Prophet,70.826,810.172
+南港,entries,1,Prophet,172.207,1048.728
+南港展覽館,entries,1,Prophet,337.986,1394.436
+南港軟體園區,entries,1,Prophet,35.768,297.385
+古亭,entries,1,Prophet,121.676,1262.574
+台北101/世貿,entries,1,Prophet,169.841,1381.381
+台北小巨蛋,entries,1,Prophet,169.203,881.717
+台北橋,entries,1,Prophet,47.662,425.36
+台北車站,entries,1,Prophet,664.692,6361.756
+台大醫院,entries,1,Prophet,74.948,865.14
+台電大樓,entries,1,Prophet,67.466,636.711
+唭哩岸,entries,1,Prophet,38.414,300.714
+善導寺,entries,1,Prophet,145.749,913.488
+國父紀念館,entries,1,Prophet,342.466,1517.726
+圓山,entries,1,Prophet,150.753,1107.881
+土城,entries,1,Prophet,34.704,362.45
+士林,entries,1,Prophet,146.978,1115.685
+大坪林,entries,1,Prophet,70.02,824.776
+大安,entries,1,Prophet,165.887,979.792
+大安森林公園,entries,1,Prophet,80.673,411.886
+大橋頭站,entries,1,Prophet,59.93,578.781
+大湖公園,entries,1,Prophet,20.294,144.558
+大直,entries,1,Prophet,67.085,370.407
+奇岩,entries,1,Prophet,36.605,357.538
+小南門,entries,1,Prophet,65.332,413.61
+小碧潭,entries,1,Prophet,22.956,138.286
+市政府,entries,1,Prophet,206.452,2478.353
+幸福,entries,1,Prophet,14.33,92.326
+府中,entries,1,Prophet,111.546,1225.865
+後山埤,entries,1,Prophet,56.99,640.051
+徐匯中學,entries,1,Prophet,57.005,483.689
+復興崗,entries,1,Prophet,21.395,163.079
+忠孝復興,entries,1,Prophet,160.289,1810.194
+忠孝敦化,entries,1,Prophet,115.151,1256.225
+忠孝新生,entries,1,Prophet,155.4,1505.544
+忠義,entries,1,Prophet,14.451,122.712
+文德,entries,1,Prophet,54.768,236.1
+新北投,entries,1,Prophet,40.769,226.624
+新北產業園區,entries,1,Prophet,10.398,77.719
+新埔,entries,1,Prophet,134.727,1530.204
+新埔民生,entries,1,Prophet,6.809,29.922
+新店,entries,1,Prophet,51.112,502.839
+新店區公所,entries,1,Prophet,42.036,480.926
+新莊,entries,1,Prophet,77.811,444.1
+昆陽,entries,1,Prophet,80.982,644.497
+明德,entries,1,Prophet,80.82,528.154
+景安,entries,1,Prophet,79.65,893.058
+景平,entries,1,Prophet,9.856,80.194
+景美,entries,1,Prophet,75.329,637.806
+木柵,entries,1,Prophet,37.944,180.561
+東湖,entries,1,Prophet,61.354,352.632
+東門,entries,1,Prophet,114.354,1108.183
+松山,entries,1,Prophet,97.565,1037.907
+松山機場,entries,1,Prophet,29.678,232.736
+松江南京,entries,1,Prophet,110.794,1464.669
+板新,entries,1,Prophet,9.501,59.129
+橋和,entries,1,Prophet,6.199,51.01
+民權西路,entries,1,Prophet,95.543,979.51
+永安市場,entries,1,Prophet,90.736,959.568
+永寧,entries,1,Prophet,65.992,540.55
+永春,entries,1,Prophet,109.479,792.653
+江子翠,entries,1,Prophet,103.737,1131.567
+海山,entries,1,Prophet,99.724,949.557
+淡水,entries,1,Prophet,224.906,1366.596
+港墘,entries,1,Prophet,98.301,662.736
+石牌,entries,1,Prophet,118.307,1153.028
+秀朗橋,entries,1,Prophet,9.929,61.479
+科技大樓,entries,1,Prophet,72.714,606.142
+竹圍,entries,1,Prophet,38.951,369.843
+紅樹林,entries,1,Prophet,77.499,576.85
+芝山,entries,1,Prophet,91.252,929.115
+菜寮,entries,1,Prophet,54.865,427.185
+萬芳社區,entries,1,Prophet,12.165,104.654
+萬芳醫院,entries,1,Prophet,72.519,461.125
+萬隆,entries,1,Prophet,39.751,422.024
+葫洲,entries,1,Prophet,51.639,338.232
+蘆洲,entries,1,Prophet,78.914,617.989
+行天宮,entries,1,Prophet,85.739,1062.65
+西湖,entries,1,Prophet,47.819,514.04
+西門,entries,1,Prophet,263.973,2760.707
+象山,entries,1,Prophet,57.657,556.026
+輔大,entries,1,Prophet,119.707,393.638
+辛亥,entries,1,Prophet,18.101,139.553
+迴龍,entries,1,Prophet,57.613,454.975
+關渡,entries,1,Prophet,64.942,504.779
+雙連,entries,1,Prophet,68.256,880.144
+頂埔,entries,1,Prophet,128.076,640.165
+頂溪,entries,1,Prophet,109.828,1316.481
+頭前庄,entries,1,Prophet,28.147,217.842
+麟光,entries,1,Prophet,21.027,181.974
+龍山寺,entries,1,Prophet,95.806,1168.743
+BL板橋,entries,1,Prophet+AR,94.007,1616.154
+G大坪林,entries,1,Prophet+AR,0.0,0.0
+O景安,entries,1,Prophet+AR,0.0,0.0
+O頭前庄,entries,1,Prophet+AR,0.0,0.0
+Y板橋,entries,1,Prophet+AR,15.026,106.565
+七張,entries,1,Prophet+AR,51.55,593.835
+三和國中,entries,1,Prophet+AR,56.599,541.34
+三民高中,entries,1,Prophet+AR,60.769,483.21
+三重,entries,1,Prophet+AR,44.941,406.265
+三重國小,entries,1,Prophet+AR,40.624,493.394
+中原,entries,1,Prophet+AR,7.23,66.836
+中和,entries,1,Prophet+AR,13.448,105.786
+中山,entries,1,Prophet+AR,113.935,2146.368
+中山國中,entries,1,Prophet+AR,48.47,520.351
+中山國小,entries,1,Prophet+AR,54.215,706.35
+中正紀念堂,entries,1,Prophet+AR,109.005,1104.017
+丹鳳,entries,1,Prophet+AR,41.972,377.458
+亞東醫院,entries,1,Prophet+AR,74.817,1023.799
+信義安和,entries,1,Prophet+AR,47.754,769.812
+先嗇宮,entries,1,Prophet+AR,21.162,205.467
+內湖,entries,1,Prophet+AR,41.603,415.104
+公館,entries,1,Prophet+AR,108.553,1177.964
+六張犁,entries,1,Prophet+AR,41.753,423.912
+劍南路,entries,1,Prophet+AR,41.908,453.143
+劍潭,entries,1,Prophet+AR,136.984,1128.921
+動物園,entries,1,Prophet+AR,40.475,246.086
+北投,entries,1,Prophet+AR,75.633,723.654
+北門,entries,1,Prophet+AR,49.524,701.192
+十四張,entries,1,Prophet+AR,16.187,105.442
+南京三民,entries,1,Prophet+AR,68.896,918.801
+南京復興,entries,1,Prophet+AR,92.478,1613.208
+南勢角,entries,1,Prophet+AR,57.711,810.172
+南港,entries,1,Prophet+AR,116.514,1048.728
+南港展覽館,entries,1,Prophet+AR,193.157,1394.436
+南港軟體園區,entries,1,Prophet+AR,27.788,297.385
+古亭,entries,1,Prophet+AR,88.5,1262.574
+台北101/世貿,entries,1,Prophet+AR,116.35,1381.381
+台北小巨蛋,entries,1,Prophet+AR,134.299,881.717
+台北橋,entries,1,Prophet+AR,42.021,425.36
+台北車站,entries,1,Prophet+AR,355.653,6361.756
+台大醫院,entries,1,Prophet+AR,54.673,865.14
+台電大樓,entries,1,Prophet+AR,48.903,636.711
+唭哩岸,entries,1,Prophet+AR,32.91,300.714
+善導寺,entries,1,Prophet+AR,116.238,913.488
+國父紀念館,entries,1,Prophet+AR,252.115,1517.726
+圓山,entries,1,Prophet+AR,109.736,1107.881
+土城,entries,1,Prophet+AR,30.148,362.45
+士林,entries,1,Prophet+AR,111.61,1115.685
+大坪林,entries,1,Prophet+AR,61.512,824.776
+大安,entries,1,Prophet+AR,124.77,979.792
+大安森林公園,entries,1,Prophet+AR,61.005,411.886
+大橋頭站,entries,1,Prophet+AR,50.809,578.781
+大湖公園,entries,1,Prophet+AR,19.473,144.558
+大直,entries,1,Prophet+AR,49.039,370.407
+奇岩,entries,1,Prophet+AR,34.59,357.538
+小南門,entries,1,Prophet+AR,53.421,413.61
+小碧潭,entries,1,Prophet+AR,21.052,138.286
+市政府,entries,1,Prophet+AR,150.762,2478.353
+幸福,entries,1,Prophet+AR,14.338,92.326
+府中,entries,1,Prophet+AR,79.81,1225.865
+後山埤,entries,1,Prophet+AR,48.854,640.051
+徐匯中學,entries,1,Prophet+AR,47.973,483.689
+復興崗,entries,1,Prophet+AR,21.777,163.079
+忠孝復興,entries,1,Prophet+AR,96.811,1810.194
+忠孝敦化,entries,1,Prophet+AR,70.428,1256.225
+忠孝新生,entries,1,Prophet+AR,102.122,1505.544
+忠義,entries,1,Prophet+AR,14.888,122.712
+文德,entries,1,Prophet+AR,46.259,236.1
+新北投,entries,1,Prophet+AR,34.792,226.624
+新北產業園區,entries,1,Prophet+AR,9.859,77.719
+新埔,entries,1,Prophet+AR,113.766,1530.204
+新埔民生,entries,1,Prophet+AR,6.128,29.922
+新店,entries,1,Prophet+AR,43.362,502.839
+新店區公所,entries,1,Prophet+AR,38.433,480.926
+新莊,entries,1,Prophet+AR,66.87,444.1
+昆陽,entries,1,Prophet+AR,76.921,644.497
+明德,entries,1,Prophet+AR,66.456,528.154
+景安,entries,1,Prophet+AR,65.09,893.058
+景平,entries,1,Prophet+AR,9.627,80.194
+景美,entries,1,Prophet+AR,58.551,637.806
+木柵,entries,1,Prophet+AR,33.433,180.561
+東湖,entries,1,Prophet+AR,59.042,352.632
+東門,entries,1,Prophet+AR,81.87,1108.183
+松山,entries,1,Prophet+AR,75.067,1037.907
+松山機場,entries,1,Prophet+AR,27.868,232.736
+松江南京,entries,1,Prophet+AR,85.768,1464.669
+板新,entries,1,Prophet+AR,8.784,59.129
+橋和,entries,1,Prophet+AR,6.367,51.01
+民權西路,entries,1,Prophet+AR,79.708,979.51
+永安市場,entries,1,Prophet+AR,76.156,959.568
+永寧,entries,1,Prophet+AR,59.757,540.55
+永春,entries,1,Prophet+AR,88.186,792.653
+江子翠,entries,1,Prophet+AR,75.356,1131.567
+海山,entries,1,Prophet+AR,86.184,949.557
+淡水,entries,1,Prophet+AR,136.264,1366.596
+港墘,entries,1,Prophet+AR,81.9,662.736
+石牌,entries,1,Prophet+AR,90.619,1153.028
+秀朗橋,entries,1,Prophet+AR,8.604,61.479
+科技大樓,entries,1,Prophet+AR,55.3,606.142
+竹圍,entries,1,Prophet+AR,37.165,369.843
+紅樹林,entries,1,Prophet+AR,59.596,576.85
+芝山,entries,1,Prophet+AR,68.298,929.115
+菜寮,entries,1,Prophet+AR,49.39,427.185
+萬芳社區,entries,1,Prophet+AR,12.177,104.654
+萬芳醫院,entries,1,Prophet+AR,58.455,461.125
+萬隆,entries,1,Prophet+AR,35.128,422.024
+葫洲,entries,1,Prophet+AR,44.988,338.232
+蘆洲,entries,1,Prophet+AR,66.397,617.989
+行天宮,entries,1,Prophet+AR,64.192,1062.65
+西湖,entries,1,Prophet+AR,40.718,514.04
+西門,entries,1,Prophet+AR,144.074,2760.707
+象山,entries,1,Prophet+AR,49.105,556.026
+輔大,entries,1,Prophet+AR,70.449,393.638
+辛亥,entries,1,Prophet+AR,16.572,139.553
+迴龍,entries,1,Prophet+AR,50.366,454.975
+關渡,entries,1,Prophet+AR,55.102,504.779
+雙連,entries,1,Prophet+AR,54.649,880.144
+頂埔,entries,1,Prophet+AR,66.227,640.165
+頂溪,entries,1,Prophet+AR,83.237,1316.481
+頭前庄,entries,1,Prophet+AR,26.84,217.842
+麟光,entries,1,Prophet+AR,20.741,181.974
+龍山寺,entries,1,Prophet+AR,73.812,1168.743
+BL板橋,entries,1,LightGBM,67.236,1616.154
+G大坪林,entries,1,LightGBM,0.002,0.0
+O景安,entries,1,LightGBM,0.002,0.0
+O頭前庄,entries,1,LightGBM,0.002,0.0
+Y板橋,entries,1,LightGBM,13.749,106.565
+七張,entries,1,LightGBM,29.791,593.835
+三和國中,entries,1,LightGBM,29.371,541.34
+三民高中,entries,1,LightGBM,29.434,483.21
+三重,entries,1,LightGBM,29.716,406.265
+三重國小,entries,1,LightGBM,24.936,493.394
+中原,entries,1,LightGBM,6.92,66.836
+中和,entries,1,LightGBM,10.031,105.786
+中山,entries,1,LightGBM,85.347,2146.368
+中山國中,entries,1,LightGBM,29.403,520.351
+中山國小,entries,1,LightGBM,35.487,706.35
+中正紀念堂,entries,1,LightGBM,78.118,1104.017
+丹鳳,entries,1,LightGBM,21.728,377.458
+亞東醫院,entries,1,LightGBM,44.564,1023.799
+信義安和,entries,1,LightGBM,37.224,769.812
+先嗇宮,entries,1,LightGBM,14.478,205.467
+內湖,entries,1,LightGBM,23.889,415.104
+公館,entries,1,LightGBM,76.764,1177.964
+六張犁,entries,1,LightGBM,25.227,423.912
+劍南路,entries,1,LightGBM,32.836,453.143
+劍潭,entries,1,LightGBM,94.761,1128.921
+動物園,entries,1,LightGBM,25.614,246.086
+北投,entries,1,LightGBM,43.401,723.654
+北門,entries,1,LightGBM,38.377,701.192
+十四張,entries,1,LightGBM,11.345,105.442
+南京三民,entries,1,LightGBM,45.514,918.801
+南京復興,entries,1,LightGBM,68.542,1613.208
+南勢角,entries,1,LightGBM,34.674,810.172
+南港,entries,1,LightGBM,81.019,1048.728
+南港展覽館,entries,1,LightGBM,119.683,1394.436
+南港軟體園區,entries,1,LightGBM,24.437,297.385
+古亭,entries,1,LightGBM,52.766,1262.574
+台北101/世貿,entries,1,LightGBM,91.893,1381.381
+台北小巨蛋,entries,1,LightGBM,102.763,881.717
+台北橋,entries,1,LightGBM,25.446,425.36
+台北車站,entries,1,LightGBM,329.304,6361.756
+台大醫院,entries,1,LightGBM,50.627,865.14
+台電大樓,entries,1,LightGBM,33.644,636.711
+唭哩岸,entries,1,LightGBM,19.997,300.714
+善導寺,entries,1,LightGBM,66.236,913.488
+國父紀念館,entries,1,LightGBM,208.205,1517.726
+圓山,entries,1,LightGBM,71.672,1107.881
+土城,entries,1,LightGBM,20.281,362.45
+士林,entries,1,LightGBM,74.623,1115.685
+大坪林,entries,1,LightGBM,41.659,824.776
+大安,entries,1,LightGBM,61.56,979.792
+大安森林公園,entries,1,LightGBM,37.331,411.886
+大橋頭站,entries,1,LightGBM,36.163,578.781
+大湖公園,entries,1,LightGBM,13.26,144.558
+大直,entries,1,LightGBM,31.691,370.407
+奇岩,entries,1,LightGBM,23.146,357.538
+小南門,entries,1,LightGBM,36.116,413.61
+小碧潭,entries,1,LightGBM,13.226,138.286
+市政府,entries,1,LightGBM,112.789,2478.353
+幸福,entries,1,LightGBM,8.908,92.326
+府中,entries,1,LightGBM,47.188,1225.865
+後山埤,entries,1,LightGBM,31.206,640.051
+徐匯中學,entries,1,LightGBM,25.384,483.689
+復興崗,entries,1,LightGBM,13.505,163.079
+忠孝復興,entries,1,LightGBM,70.841,1810.194
+忠孝敦化,entries,1,LightGBM,54.432,1256.225
+忠孝新生,entries,1,LightGBM,80.761,1505.544
+忠義,entries,1,LightGBM,11.702,122.712
+文德,entries,1,LightGBM,22.598,236.1
+新北投,entries,1,LightGBM,21.859,226.624
+新北產業園區,entries,1,LightGBM,9.379,77.719
+新埔,entries,1,LightGBM,66.019,1530.204
+新埔民生,entries,1,LightGBM,5.285,29.922
+新店,entries,1,LightGBM,27.732,502.839
+新店區公所,entries,1,LightGBM,22.655,480.926
+新莊,entries,1,LightGBM,43.705,444.1
+昆陽,entries,1,LightGBM,57.228,644.497
+明德,entries,1,LightGBM,33.745,528.154
+景安,entries,1,LightGBM,38.397,893.058
+景平,entries,1,LightGBM,8.16,80.194
+景美,entries,1,LightGBM,39.015,637.806
+木柵,entries,1,LightGBM,18.284,180.561
+東湖,entries,1,LightGBM,29.21,352.632
+東門,entries,1,LightGBM,53.155,1108.183
+松山,entries,1,LightGBM,54.45,1037.907
+松山機場,entries,1,LightGBM,24.837,232.736
+松江南京,entries,1,LightGBM,68.442,1464.669
+板新,entries,1,LightGBM,7.231,59.129
+橋和,entries,1,LightGBM,6.369,51.01
+民權西路,entries,1,LightGBM,48.242,979.51
+永安市場,entries,1,LightGBM,41.397,959.568
+永寧,entries,1,LightGBM,39.779,540.55
+永春,entries,1,LightGBM,41.954,792.653
+江子翠,entries,1,LightGBM,48.573,1131.567
+海山,entries,1,LightGBM,46.215,949.557
+淡水,entries,1,LightGBM,82.368,1366.596
+港墘,entries,1,LightGBM,44.054,662.736
+石牌,entries,1,LightGBM,52.15,1153.028
+秀朗橋,entries,1,LightGBM,7.002,61.479
+科技大樓,entries,1,LightGBM,41.033,606.142
+竹圍,entries,1,LightGBM,22.463,369.843
+紅樹林,entries,1,LightGBM,36.42,576.85
+芝山,entries,1,LightGBM,48.247,929.115
+菜寮,entries,1,LightGBM,26.342,427.185
+萬芳社區,entries,1,LightGBM,8.91,104.654
+萬芳醫院,entries,1,LightGBM,37.58,461.125
+萬隆,entries,1,LightGBM,24.154,422.024
+葫洲,entries,1,LightGBM,25.106,338.232
+蘆洲,entries,1,LightGBM,33.066,617.989
+行天宮,entries,1,LightGBM,48.519,1062.65
+西湖,entries,1,LightGBM,31.204,514.04
+西門,entries,1,LightGBM,117.597,2760.707
+象山,entries,1,LightGBM,40.878,556.026
+輔大,entries,1,LightGBM,38.464,393.638
+辛亥,entries,1,LightGBM,11.373,139.553
+迴龍,entries,1,LightGBM,29.511,454.975
+關渡,entries,1,LightGBM,35.798,504.779
+雙連,entries,1,LightGBM,39.493,880.144
+頂埔,entries,1,LightGBM,50.822,640.165
+頂溪,entries,1,LightGBM,53.227,1316.481
+頭前庄,entries,1,LightGBM,16.141,217.842
+麟光,entries,1,LightGBM,13.67,181.974
+龍山寺,entries,1,LightGBM,55.055,1168.743
+BL板橋,entries,1,LightGBM (scaled),65.834,1616.154
+G大坪林,entries,1,LightGBM (scaled),0.022,0.0
+O景安,entries,1,LightGBM (scaled),0.023,0.0
+O頭前庄,entries,1,LightGBM (scaled),0.023,0.0
+Y板橋,entries,1,LightGBM (scaled),14.45,106.565
+七張,entries,1,LightGBM (scaled),28.076,593.835
+三和國中,entries,1,LightGBM (scaled),27.548,541.34
+三民高中,entries,1,LightGBM (scaled),26.23,483.21
+三重,entries,1,LightGBM (scaled),25.05,406.265
+三重國小,entries,1,LightGBM (scaled),22.023,493.394
+中原,entries,1,LightGBM (scaled),6.522,66.836
+中和,entries,1,LightGBM (scaled),9.864,105.786
+中山,entries,1,LightGBM (scaled),85.529,2146.368
+中山國中,entries,1,LightGBM (scaled),27.911,520.351
+中山國小,entries,1,LightGBM (scaled),34.015,706.35
+中正紀念堂,entries,1,LightGBM (scaled),77.567,1104.017
+丹鳳,entries,1,LightGBM (scaled),19.497,377.458
+亞東醫院,entries,1,LightGBM (scaled),43.351,1023.799
+信義安和,entries,1,LightGBM (scaled),34.497,769.812
+先嗇宮,entries,1,LightGBM (scaled),13.907,205.467
+內湖,entries,1,LightGBM (scaled),21.554,415.104
+公館,entries,1,LightGBM (scaled),75.143,1177.964
+六張犁,entries,1,LightGBM (scaled),25.392,423.912
+劍南路,entries,1,LightGBM (scaled),31.614,453.143
+劍潭,entries,1,LightGBM (scaled),92.651,1128.921
+動物園,entries,1,LightGBM (scaled),27.708,246.086
+北投,entries,1,LightGBM (scaled),41.645,723.654
+北門,entries,1,LightGBM (scaled),35.002,701.192
+十四張,entries,1,LightGBM (scaled),10.933,105.442
+南京三民,entries,1,LightGBM (scaled),43.21,918.801
+南京復興,entries,1,LightGBM (scaled),65.743,1613.208
+南勢角,entries,1,LightGBM (scaled),31.14,810.172
+南港,entries,1,LightGBM (scaled),78.259,1048.728
+南港展覽館,entries,1,LightGBM (scaled),123.749,1394.436
+南港軟體園區,entries,1,LightGBM (scaled),25.047,297.385
+古亭,entries,1,LightGBM (scaled),53.128,1262.574
+台北101/世貿,entries,1,LightGBM (scaled),95.058,1381.381
+台北小巨蛋,entries,1,LightGBM (scaled),106.204,881.717
+台北橋,entries,1,LightGBM (scaled),23.202,425.36
+台北車站,entries,1,LightGBM (scaled),267.817,6361.756
+台大醫院,entries,1,LightGBM (scaled),48.117,865.14
+台電大樓,entries,1,LightGBM (scaled),31.369,636.711
+唭哩岸,entries,1,LightGBM (scaled),18.084,300.714
+善導寺,entries,1,LightGBM (scaled),62.604,913.488
+國父紀念館,entries,1,LightGBM (scaled),294.596,1517.726
+圓山,entries,1,LightGBM (scaled),64.967,1107.881
+土城,entries,1,LightGBM (scaled),20.579,362.45
+士林,entries,1,LightGBM (scaled),72.379,1115.685
+大坪林,entries,1,LightGBM (scaled),38.335,824.776
+大安,entries,1,LightGBM (scaled),57.181,979.792
+大安森林公園,entries,1,LightGBM (scaled),36.005,411.886
+大橋頭站,entries,1,LightGBM (scaled),32.605,578.781
+大湖公園,entries,1,LightGBM (scaled),13.069,144.558
+大直,entries,1,LightGBM (scaled),33.263,370.407
+奇岩,entries,1,LightGBM (scaled),19.975,357.538
+小南門,entries,1,LightGBM (scaled),35.526,413.61
+小碧潭,entries,1,LightGBM (scaled),12.925,138.286
+市政府,entries,1,LightGBM (scaled),129.362,2478.353
+幸福,entries,1,LightGBM (scaled),9.885,92.326
+府中,entries,1,LightGBM (scaled),45.734,1225.865
+後山埤,entries,1,LightGBM (scaled),32.212,640.051
+徐匯中學,entries,1,LightGBM (scaled),22.997,483.689
+復興崗,entries,1,LightGBM (scaled),12.687,163.079
+忠孝復興,entries,1,LightGBM (scaled),68.303,1810.194
+忠孝敦化,entries,1,LightGBM (scaled),52.639,1256.225
+忠孝新生,entries,1,LightGBM (scaled),81.341,1505.544
+忠義,entries,1,LightGBM (scaled),11.512,122.712
+文德,entries,1,LightGBM (scaled),21.597,236.1
+新北投,entries,1,LightGBM (scaled),22.241,226.624
+新北產業園區,entries,1,LightGBM (scaled),9.319,77.719
+新埔,entries,1,LightGBM (scaled),62.3,1530.204
+新埔民生,entries,1,LightGBM (scaled),5.788,29.922
+新店,entries,1,LightGBM (scaled),25.756,502.839
+新店區公所,entries,1,LightGBM (scaled),22.314,480.926
+新莊,entries,1,LightGBM (scaled),41.576,444.1
+昆陽,entries,1,LightGBM (scaled),58.548,644.497
+明德,entries,1,LightGBM (scaled),32.896,528.154
+景安,entries,1,LightGBM (scaled),34.962,893.058
+景平,entries,1,LightGBM (scaled),7.872,80.194
+景美,entries,1,LightGBM (scaled),40.624,637.806
+木柵,entries,1,LightGBM (scaled),17.37,180.561
+東湖,entries,1,LightGBM (scaled),24.208,352.632
+東門,entries,1,LightGBM (scaled),51.275,1108.183
+松山,entries,1,LightGBM (scaled),51.476,1037.907
+松山機場,entries,1,LightGBM (scaled),23.642,232.736
+松江南京,entries,1,LightGBM (scaled),72.686,1464.669
+板新,entries,1,LightGBM (scaled),7.581,59.129
+橋和,entries,1,LightGBM (scaled),6.438,51.01
+民權西路,entries,1,LightGBM (scaled),49.43,979.51
+永安市場,entries,1,LightGBM (scaled),37.137,959.568
+永寧,entries,1,LightGBM (scaled),44.955,540.55
+永春,entries,1,LightGBM (scaled),42.305,792.653
+江子翠,entries,1,LightGBM (scaled),40.77,1131.567
+海山,entries,1,LightGBM (scaled),39.758,949.557
+淡水,entries,1,LightGBM (scaled),79.576,1366.596
+港墘,entries,1,LightGBM (scaled),42.89,662.736
+石牌,entries,1,LightGBM (scaled),52.769,1153.028
+秀朗橋,entries,1,LightGBM (scaled),6.59,61.479
+科技大樓,entries,1,LightGBM (scaled),39.702,606.142
+竹圍,entries,1,LightGBM (scaled),20.03,369.843
+紅樹林,entries,1,LightGBM (scaled),34.34,576.85
+芝山,entries,1,LightGBM (scaled),42.748,929.115
+菜寮,entries,1,LightGBM (scaled),25.166,427.185
+萬芳社區,entries,1,LightGBM (scaled),9.044,104.654
+萬芳醫院,entries,1,LightGBM (scaled),34.769,461.125
+萬隆,entries,1,LightGBM (scaled),22.363,422.024
+葫洲,entries,1,LightGBM (scaled),24.117,338.232
+蘆洲,entries,1,LightGBM (scaled),28.047,617.989
+行天宮,entries,1,LightGBM (scaled),45.187,1062.65
+西湖,entries,1,LightGBM (scaled),30.908,514.04
+西門,entries,1,LightGBM (scaled),107.19,2760.707
+象山,entries,1,LightGBM (scaled),39.994,556.026
+輔大,entries,1,LightGBM (scaled),42.997,393.638
+辛亥,entries,1,LightGBM (scaled),10.875,139.553
+迴龍,entries,1,LightGBM (scaled),26.841,454.975
+關渡,entries,1,LightGBM (scaled),33.464,504.779
+雙連,entries,1,LightGBM (scaled),37.754,880.144
+頂埔,entries,1,LightGBM (scaled),56.568,640.165
+頂溪,entries,1,LightGBM (scaled),44.76,1316.481
+頭前庄,entries,1,LightGBM (scaled),16.1,217.842
+麟光,entries,1,LightGBM (scaled),12.717,181.974
+龍山寺,entries,1,LightGBM (scaled),51.146,1168.743
+BL板橋,entries,2,Seasonal Naive,143.072,1616.154
+G大坪林,entries,2,Seasonal Naive,0.0,0.0
+O景安,entries,2,Seasonal Naive,0.0,0.0
+O頭前庄,entries,2,Seasonal Naive,0.0,0.0
+Y板橋,entries,2,Seasonal Naive,20.524,106.565
+七張,entries,2,Seasonal Naive,58.696,593.835
+三和國中,entries,2,Seasonal Naive,59.603,541.34
+三民高中,entries,2,Seasonal Naive,58.144,483.21
+三重,entries,2,Seasonal Naive,50.538,406.265
+三重國小,entries,2,Seasonal Naive,49.49,493.394
+中原,entries,2,Seasonal Naive,11.517,66.836
+中和,entries,2,Seasonal Naive,16.207,105.786
+中山,entries,2,Seasonal Naive,175.44,2146.368
+中山國中,entries,2,Seasonal Naive,60.994,520.351
+中山國小,entries,2,Seasonal Naive,70.893,706.35
+中正紀念堂,entries,2,Seasonal Naive,158.292,1104.017
+丹鳳,entries,2,Seasonal Naive,46.335,377.458
+亞東醫院,entries,2,Seasonal Naive,104.046,1023.799
+信義安和,entries,2,Seasonal Naive,77.811,769.812
+先嗇宮,entries,2,Seasonal Naive,26.5,205.467
+內湖,entries,2,Seasonal Naive,45.226,415.104
+公館,entries,2,Seasonal Naive,180.071,1177.964
+六張犁,entries,2,Seasonal Naive,48.033,423.912
+劍南路,entries,2,Seasonal Naive,58.226,453.143
+劍潭,entries,2,Seasonal Naive,203.504,1128.921
+動物園,entries,2,Seasonal Naive,61.915,246.086
+北投,entries,2,Seasonal Naive,91.685,723.654
+北門,entries,2,Seasonal Naive,66.707,701.192
+十四張,entries,2,Seasonal Naive,18.551,105.442
+南京三民,entries,2,Seasonal Naive,104.514,918.801
+南京復興,entries,2,Seasonal Naive,169.371,1613.208
+南勢角,entries,2,Seasonal Naive,82.389,810.172
+南港,entries,2,Seasonal Naive,198.007,1048.728
+南港展覽館,entries,2,Seasonal Naive,367.681,1394.436
+南港軟體園區,entries,2,Seasonal Naive,42.399,297.385
+古亭,entries,2,Seasonal Naive,125.688,1262.574
+台北101/世貿,entries,2,Seasonal Naive,166.067,1381.381
+台北小巨蛋,entries,2,Seasonal Naive,212.961,881.717
+台北橋,entries,2,Seasonal Naive,46.631,425.36
+台北車站,entries,2,Seasonal Naive,514.189,6361.756
+台大醫院,entries,2,Seasonal Naive,119.638,865.14
+台電大樓,entries,2,Seasonal Naive,66.093,636.711
+唭哩岸,entries,2,Seasonal Naive,36.967,300.714
+善導寺,entries,2,Seasonal Naive,153.669,913.488
+國父紀念館,entries,2,Seasonal Naive,270.753,1517.726
+圓山,entries,2,Seasonal Naive,145.193,1107.881
+土城,entries,2,Seasonal Naive,40.714,362.45
+士林,entries,2,Seasonal Naive,168.394,1115.685
+大坪林,entries,2,Seasonal Naive,83.199,824.776
+大安,entries,2,Seasonal Naive,133.285,979.792
+大安森林公園,entries,2,Seasonal Naive,70.756,411.886
+大橋頭站,entries,2,Seasonal Naive,62.025,578.781
+大湖公園,entries,2,Seasonal Naive,24.59,144.558
+大直,entries,2,Seasonal Naive,66.235,370.407
+奇岩,entries,2,Seasonal Naive,41.035,357.538
+小南門,entries,2,Seasonal Naive,74.328,413.61
+小碧潭,entries,2,Seasonal Naive,20.651,138.286
+市政府,entries,2,Seasonal Naive,195.903,2478.353
+幸福,entries,2,Seasonal Naive,14.742,92.326
+府中,entries,2,Seasonal Naive,110.904,1225.865
+後山埤,entries,2,Seasonal Naive,62.108,640.051
+徐匯中學,entries,2,Seasonal Naive,53.238,483.689
+復興崗,entries,2,Seasonal Naive,21.951,163.079
+忠孝復興,entries,2,Seasonal Naive,135.225,1810.194
+忠孝敦化,entries,2,Seasonal Naive,109.815,1256.225
+忠孝新生,entries,2,Seasonal Naive,173.778,1505.544
+忠義,entries,2,Seasonal Naive,17.731,122.712
+文德,entries,2,Seasonal Naive,42.281,236.1
+新北投,entries,2,Seasonal Naive,33.903,226.624
+新北產業園區,entries,2,Seasonal Naive,13.428,77.719
+新埔,entries,2,Seasonal Naive,145.249,1530.204
+新埔民生,entries,2,Seasonal Naive,7.576,29.922
+新店,entries,2,Seasonal Naive,57.962,502.839
+新店區公所,entries,2,Seasonal Naive,46.868,480.926
+新莊,entries,2,Seasonal Naive,85.111,444.1
+昆陽,entries,2,Seasonal Naive,102.746,644.497
+明德,entries,2,Seasonal Naive,67.535,528.154
+景安,entries,2,Seasonal Naive,86.175,893.058
+景平,entries,2,Seasonal Naive,12.214,80.194
+景美,entries,2,Seasonal Naive,81.312,637.806
+木柵,entries,2,Seasonal Naive,31.708,180.561
+東湖,entries,2,Seasonal Naive,49.808,352.632
+東門,entries,2,Seasonal Naive,116.812,1108.183
+松山,entries,2,Seasonal Naive,121.908,1037.907
+松山機場,entries,2,Seasonal Naive,34.454,232.736
+松江南京,entries,2,Seasonal Naive,157.228,1464.669
+板新,entries,2,Seasonal Naive,11.404,59.129
+橋和,entries,2,Seasonal Naive,9.853,51.01
+民權西路,entries,2,Seasonal Naive,105.064,979.51
+永安市場,entries,2,Seasonal Naive,93.654,959.568
+永寧,entries,2,Seasonal Naive,71.521,540.55
+永春,entries,2,Seasonal Naive,87.386,792.653
+江子翠,entries,2,Seasonal Naive,107.214,1131.567
+海山,entries,2,Seasonal Naive,104.061,949.557
+淡水,entries,2,Seasonal Naive,261.24,1366.596
+港墘,entries,2,Seasonal Naive,93.178,662.736
+石牌,entries,2,Seasonal Naive,127.779,1153.028
+秀朗橋,entries,2,Seasonal Naive,11.16,61.479
+科技大樓,entries,2,Seasonal Naive,78.067,606.142
+竹圍,entries,2,Seasonal Naive,43.949,369.843
+紅樹林,entries,2,Seasonal Naive,83.044,576.85
+芝山,entries,2,Seasonal Naive,100.203,929.115
+菜寮,entries,2,Seasonal Naive,51.047,427.185
+萬芳社區,entries,2,Seasonal Naive,15.474,104.654
+萬芳醫院,entries,2,Seasonal Naive,70.093,461.125
+萬隆,entries,2,Seasonal Naive,43.14,422.024
+葫洲,entries,2,Seasonal Naive,49.531,338.232
+蘆洲,entries,2,Seasonal Naive,72.115,617.989
+行天宮,entries,2,Seasonal Naive,108.646,1062.65
+西湖,entries,2,Seasonal Naive,70.553,514.04
+西門,entries,2,Seasonal Naive,229.678,2760.707
+象山,entries,2,Seasonal Naive,77.839,556.026
+輔大,entries,2,Seasonal Naive,101.374,393.638
+辛亥,entries,2,Seasonal Naive,19.997,139.553
+迴龍,entries,2,Seasonal Naive,59.106,454.975
+關渡,entries,2,Seasonal Naive,73.682,504.779
+雙連,entries,2,Seasonal Naive,82.915,880.144
+頂埔,entries,2,Seasonal Naive,109.711,640.165
+頂溪,entries,2,Seasonal Naive,117.517,1316.481
+頭前庄,entries,2,Seasonal Naive,30.038,217.842
+麟光,entries,2,Seasonal Naive,23.288,181.974
+龍山寺,entries,2,Seasonal Naive,111.933,1168.743
+BL板橋,entries,2,Historical Average,126.394,1616.154
+G大坪林,entries,2,Historical Average,0.0,0.0
+O景安,entries,2,Historical Average,0.0,0.0
+O頭前庄,entries,2,Historical Average,0.0,0.0
+Y板橋,entries,2,Historical Average,19.195,106.565
+七張,entries,2,Historical Average,44.155,593.835
+三和國中,entries,2,Historical Average,43.412,541.34
+三民高中,entries,2,Historical Average,44.202,483.21
+三重,entries,2,Historical Average,42.941,406.265
+三重國小,entries,2,Historical Average,37.81,493.394
+中原,entries,2,Historical Average,7.211,66.836
+中和,entries,2,Historical Average,12.073,105.786
+中山,entries,2,Historical Average,201.333,2146.368
+中山國中,entries,2,Historical Average,43.512,520.351
+中山國小,entries,2,Historical Average,54.498,706.35
+中正紀念堂,entries,2,Historical Average,119.342,1104.017
+丹鳳,entries,2,Historical Average,34.254,377.458
+亞東醫院,entries,2,Historical Average,76.345,1023.799
+信義安和,entries,2,Historical Average,66.235,769.812
+先嗇宮,entries,2,Historical Average,16.298,205.467
+內湖,entries,2,Historical Average,34.608,415.104
+公館,entries,2,Historical Average,169.241,1177.964
+六張犁,entries,2,Historical Average,36.309,423.912
+劍南路,entries,2,Historical Average,51.533,453.143
+劍潭,entries,2,Historical Average,152.101,1128.921
+動物園,entries,2,Historical Average,52.976,246.086
+北投,entries,2,Historical Average,74.211,723.654
+北門,entries,2,Historical Average,57.939,701.192
+十四張,entries,2,Historical Average,13.42,105.442
+南京三民,entries,2,Historical Average,70.465,918.801
+南京復興,entries,2,Historical Average,119.968,1613.208
+南勢角,entries,2,Historical Average,55.429,810.172
+南港,entries,2,Historical Average,132.82,1048.728
+南港展覽館,entries,2,Historical Average,313.885,1394.436
+南港軟體園區,entries,2,Historical Average,36.984,297.385
+古亭,entries,2,Historical Average,107.452,1262.574
+台北101/世貿,entries,2,Historical Average,164.383,1381.381
+台北小巨蛋,entries,2,Historical Average,154.628,881.717
+台北橋,entries,2,Historical Average,37.989,425.36
+台北車站,entries,2,Historical Average,592.995,6361.756
+台大醫院,entries,2,Historical Average,72.477,865.14
+台電大樓,entries,2,Historical Average,61.619,636.711
+唭哩岸,entries,2,Historical Average,28.101,300.714
+善導寺,entries,2,Historical Average,109.495,913.488
+國父紀念館,entries,2,Historical Average,431.529,1517.726
+圓山,entries,2,Historical Average,139.41,1107.881
+土城,entries,2,Historical Average,30.771,362.45
+士林,entries,2,Historical Average,141.951,1115.685
+大坪林,entries,2,Historical Average,58.851,824.776
+大安,entries,2,Historical Average,102.948,979.792
+大安森林公園,entries,2,Historical Average,63.387,411.886
+大橋頭站,entries,2,Historical Average,52.578,578.781
+大湖公園,entries,2,Historical Average,17.537,144.558
+大直,entries,2,Historical Average,54.548,370.407
+奇岩,entries,2,Historical Average,30.393,357.538
+小南門,entries,2,Historical Average,52.335,413.61
+小碧潭,entries,2,Historical Average,15.805,138.286
+市政府,entries,2,Historical Average,226.766,2478.353
+幸福,entries,2,Historical Average,10.932,92.326
+府中,entries,2,Historical Average,100.823,1225.865
+後山埤,entries,2,Historical Average,62.919,640.051
+徐匯中學,entries,2,Historical Average,40.084,483.689
+復興崗,entries,2,Historical Average,16.382,163.079
+忠孝復興,entries,2,Historical Average,175.208,1810.194
+忠孝敦化,entries,2,Historical Average,123.205,1256.225
+忠孝新生,entries,2,Historical Average,148.397,1505.544
+忠義,entries,2,Historical Average,12.646,122.712
+文德,entries,2,Historical Average,30.939,236.1
+新北投,entries,2,Historical Average,34.577,226.624
+新北產業園區,entries,2,Historical Average,10.507,77.719
+新埔,entries,2,Historical Average,122.355,1530.204
+新埔民生,entries,2,Historical Average,6.431,29.922
+新店,entries,2,Historical Average,40.936,502.839
+新店區公所,entries,2,Historical Average,33.808,480.926
+新莊,entries,2,Historical Average,60.619,444.1
+昆陽,entries,2,Historical Average,73.984,644.497
+明德,entries,2,Historical Average,53.287,528.154
+景安,entries,2,Historical Average,65.249,893.058
+景平,entries,2,Historical Average,9.056,80.194
+景美,entries,2,Historical Average,66.243,637.806
+木柵,entries,2,Historical Average,24.567,180.561
+東湖,entries,2,Historical Average,41.349,352.632
+東門,entries,2,Historical Average,101.473,1108.183
+松山,entries,2,Historical Average,86.578,1037.907
+松山機場,entries,2,Historical Average,26.758,232.736
+松江南京,entries,2,Historical Average,107.101,1464.669
+板新,entries,2,Historical Average,8.946,59.129
+橋和,entries,2,Historical Average,6.753,51.01
+民權西路,entries,2,Historical Average,81.311,979.51
+永安市場,entries,2,Historical Average,70.683,959.568
+永寧,entries,2,Historical Average,57.0,540.55
+永春,entries,2,Historical Average,77.698,792.653
+江子翠,entries,2,Historical Average,82.759,1131.567
+海山,entries,2,Historical Average,75.812,949.557
+淡水,entries,2,Historical Average,201.371,1366.596
+港墘,entries,2,Historical Average,63.375,662.736
+石牌,entries,2,Historical Average,98.35,1153.028
+秀朗橋,entries,2,Historical Average,7.688,61.479
+科技大樓,entries,2,Historical Average,64.24,606.142
+竹圍,entries,2,Historical Average,32.684,369.843
+紅樹林,entries,2,Historical Average,59.349,576.85
+芝山,entries,2,Historical Average,76.23,929.115
+菜寮,entries,2,Historical Average,38.401,427.185
+萬芳社區,entries,2,Historical Average,10.76,104.654
+萬芳醫院,entries,2,Historical Average,59.687,461.125
+萬隆,entries,2,Historical Average,33.304,422.024
+葫洲,entries,2,Historical Average,40.014,338.232
+蘆洲,entries,2,Historical Average,51.984,617.989
+行天宮,entries,2,Historical Average,86.875,1062.65
+西湖,entries,2,Historical Average,44.236,514.04
+西門,entries,2,Historical Average,262.892,2760.707
+象山,entries,2,Historical Average,62.622,556.026
+輔大,entries,2,Historical Average,101.275,393.638
+辛亥,entries,2,Historical Average,14.398,139.553
+迴龍,entries,2,Historical Average,45.788,454.975
+關渡,entries,2,Historical Average,57.944,504.779
+雙連,entries,2,Historical Average,70.882,880.144
+頂埔,entries,2,Historical Average,198.46,640.165
+頂溪,entries,2,Historical Average,88.972,1316.481
+頭前庄,entries,2,Historical Average,21.743,217.842
+麟光,entries,2,Historical Average,16.088,181.974
+龍山寺,entries,2,Historical Average,95.346,1168.743
+BL板橋,entries,2,SARIMAX,97.764,1616.154
+G大坪林,entries,2,SARIMAX,0.0,0.0
+O景安,entries,2,SARIMAX,0.0,0.0
+O頭前庄,entries,2,SARIMAX,0.0,0.0
+Y板橋,entries,2,SARIMAX,16.361,106.565
+七張,entries,2,SARIMAX,41.016,593.835
+三和國中,entries,2,SARIMAX,41.362,541.34
+三民高中,entries,2,SARIMAX,42.327,483.21
+三重,entries,2,SARIMAX,36.988,406.265
+三重國小,entries,2,SARIMAX,34.946,493.394
+中原,entries,2,SARIMAX,7.375,66.836
+中和,entries,2,SARIMAX,11.721,105.786
+中山,entries,2,SARIMAX,129.771,2146.368
+中山國中,entries,2,SARIMAX,42.373,520.351
+中山國小,entries,2,SARIMAX,46.282,706.35
+中正紀念堂,entries,2,SARIMAX,103.849,1104.017
+丹鳳,entries,2,SARIMAX,32.362,377.458
+亞東醫院,entries,2,SARIMAX,66.492,1023.799
+信義安和,entries,2,SARIMAX,54.411,769.812
+先嗇宮,entries,2,SARIMAX,18.568,205.467
+內湖,entries,2,SARIMAX,32.702,415.104
+公館,entries,2,SARIMAX,104.819,1177.964
+六張犁,entries,2,SARIMAX,35.886,423.912
+劍南路,entries,2,SARIMAX,44.885,453.143
+劍潭,entries,2,SARIMAX,134.067,1128.921
+動物園,entries,2,SARIMAX,37.285,246.086
+北投,entries,2,SARIMAX,65.493,723.654
+北門,entries,2,SARIMAX,47.296,701.192
+十四張,entries,2,SARIMAX,13.095,105.442
+南京三民,entries,2,SARIMAX,62.024,918.801
+南京復興,entries,2,SARIMAX,102.074,1613.208
+南勢角,entries,2,SARIMAX,49.198,810.172
+南港,entries,2,SARIMAX,111.021,1048.728
+南港展覽館,entries,2,SARIMAX,200.566,1394.436
+南港軟體園區,entries,2,SARIMAX,32.621,297.385
+古亭,entries,2,SARIMAX,77.151,1262.574
+台北101/世貿,entries,2,SARIMAX,126.676,1381.381
+台北小巨蛋,entries,2,SARIMAX,132.795,881.717
+台北橋,entries,2,SARIMAX,32.84,425.36
+台北車站,entries,2,SARIMAX,421.767,6361.756
+台大醫院,entries,2,SARIMAX,68.09,865.14
+台電大樓,entries,2,SARIMAX,44.513,636.711
+唭哩岸,entries,2,SARIMAX,26.163,300.714
+善導寺,entries,2,SARIMAX,88.652,913.488
+國父紀念館,entries,2,SARIMAX,341.632,1517.726
+圓山,entries,2,SARIMAX,105.526,1107.881
+土城,entries,2,SARIMAX,29.328,362.45
+士林,entries,2,SARIMAX,117.171,1115.685
+大坪林,entries,2,SARIMAX,50.575,824.776
+大安,entries,2,SARIMAX,88.867,979.792
+大安森林公園,entries,2,SARIMAX,54.851,411.886
+大橋頭站,entries,2,SARIMAX,45.943,578.781
+大湖公園,entries,2,SARIMAX,17.763,144.558
+大直,entries,2,SARIMAX,42.41,370.407
+奇岩,entries,2,SARIMAX,31.785,357.538
+小南門,entries,2,SARIMAX,42.442,413.61
+小碧潭,entries,2,SARIMAX,16.714,138.286
+市政府,entries,2,SARIMAX,165.938,2478.353
+幸福,entries,2,SARIMAX,11.06,92.326
+府中,entries,2,SARIMAX,75.851,1225.865
+後山埤,entries,2,SARIMAX,39.615,640.051
+徐匯中學,entries,2,SARIMAX,37.822,483.689
+復興崗,entries,2,SARIMAX,18.022,163.079
+忠孝復興,entries,2,SARIMAX,102.096,1810.194
+忠孝敦化,entries,2,SARIMAX,84.057,1256.225
+忠孝新生,entries,2,SARIMAX,117.374,1505.544
+忠義,entries,2,SARIMAX,13.023,122.712
+文德,entries,2,SARIMAX,32.385,236.1
+新北投,entries,2,SARIMAX,30.662,226.624
+新北產業園區,entries,2,SARIMAX,10.174,77.719
+新埔,entries,2,SARIMAX,105.959,1530.204
+新埔民生,entries,2,SARIMAX,6.041,29.922
+新店,entries,2,SARIMAX,35.599,502.839
+新店區公所,entries,2,SARIMAX,31.348,480.926
+新莊,entries,2,SARIMAX,58.409,444.1
+昆陽,entries,2,SARIMAX,72.2,644.497
+明德,entries,2,SARIMAX,49.8,528.154
+景安,entries,2,SARIMAX,57.92,893.058
+景平,entries,2,SARIMAX,8.623,80.194
+景美,entries,2,SARIMAX,55.82,637.806
+木柵,entries,2,SARIMAX,26.837,180.561
+東湖,entries,2,SARIMAX,41.346,352.632
+東門,entries,2,SARIMAX,79.911,1108.183
+松山,entries,2,SARIMAX,72.343,1037.907
+松山機場,entries,2,SARIMAX,27.801,232.736
+松江南京,entries,2,SARIMAX,96.374,1464.669
+板新,entries,2,SARIMAX,8.106,59.129
+橋和,entries,2,SARIMAX,6.524,51.01
+民權西路,entries,2,SARIMAX,72.301,979.51
+永安市場,entries,2,SARIMAX,65.232,959.568
+永寧,entries,2,SARIMAX,49.792,540.55
+永春,entries,2,SARIMAX,58.518,792.653
+江子翠,entries,2,SARIMAX,67.358,1131.567
+海山,entries,2,SARIMAX,64.942,949.557
+淡水,entries,2,SARIMAX,127.312,1366.596
+港墘,entries,2,SARIMAX,59.583,662.736
+石牌,entries,2,SARIMAX,82.915,1153.028
+秀朗橋,entries,2,SARIMAX,7.756,61.479
+科技大樓,entries,2,SARIMAX,50.738,606.142
+竹圍,entries,2,SARIMAX,27.437,369.843
+紅樹林,entries,2,SARIMAX,49.703,576.85
+芝山,entries,2,SARIMAX,67.198,929.115
+菜寮,entries,2,SARIMAX,36.476,427.185
+萬芳社區,entries,2,SARIMAX,11.79,104.654
+萬芳醫院,entries,2,SARIMAX,60.455,461.125
+萬隆,entries,2,SARIMAX,30.919,422.024
+葫洲,entries,2,SARIMAX,36.891,338.232
+蘆洲,entries,2,SARIMAX,49.725,617.989
+行天宮,entries,2,SARIMAX,71.574,1062.65
+西湖,entries,2,SARIMAX,47.525,514.04
+西門,entries,2,SARIMAX,157.599,2760.707
+象山,entries,2,SARIMAX,52.4,556.026
+輔大,entries,2,SARIMAX,67.916,393.638
+辛亥,entries,2,SARIMAX,14.91,139.553
+迴龍,entries,2,SARIMAX,39.218,454.975
+關渡,entries,2,SARIMAX,50.076,504.779
+雙連,entries,2,SARIMAX,57.409,880.144
+頂埔,entries,2,SARIMAX,73.942,640.165
+頂溪,entries,2,SARIMAX,77.15,1316.481
+頭前庄,entries,2,SARIMAX,21.319,217.842
+麟光,entries,2,SARIMAX,17.048,181.974
+龍山寺,entries,2,SARIMAX,76.631,1168.743
+BL板橋,entries,2,Prophet,142.819,1616.154
+G大坪林,entries,2,Prophet,0.0,0.0
+O景安,entries,2,Prophet,0.0,0.0
+O頭前庄,entries,2,Prophet,0.0,0.0
+Y板橋,entries,2,Prophet,18.598,106.565
+七張,entries,2,Prophet,57.757,593.835
+三和國中,entries,2,Prophet,60.226,541.34
+三民高中,entries,2,Prophet,60.453,483.21
+三重,entries,2,Prophet,48.787,406.265
+三重國小,entries,2,Prophet,47.892,493.394
+中原,entries,2,Prophet,7.644,66.836
+中和,entries,2,Prophet,14.874,105.786
+中山,entries,2,Prophet,213.665,2146.368
+中山國中,entries,2,Prophet,56.762,520.351
+中山國小,entries,2,Prophet,62.695,706.35
+中正紀念堂,entries,2,Prophet,132.835,1104.017
+丹鳳,entries,2,Prophet,43.821,377.458
+亞東醫院,entries,2,Prophet,84.879,1023.799
+信義安和,entries,2,Prophet,70.205,769.812
+先嗇宮,entries,2,Prophet,20.251,205.467
+內湖,entries,2,Prophet,50.049,415.104
+公館,entries,2,Prophet,203.646,1177.964
+六張犁,entries,2,Prophet,46.147,423.912
+劍南路,entries,2,Prophet,49.713,453.143
+劍潭,entries,2,Prophet,166.153,1128.921
+動物園,entries,2,Prophet,60.058,246.086
+北投,entries,2,Prophet,87.047,723.654
+北門,entries,2,Prophet,66.93,701.192
+十四張,entries,2,Prophet,18.44,105.442
+南京三民,entries,2,Prophet,86.767,918.801
+南京復興,entries,2,Prophet,130.215,1613.208
+南勢角,entries,2,Prophet,70.826,810.172
+南港,entries,2,Prophet,172.207,1048.728
+南港展覽館,entries,2,Prophet,337.986,1394.436
+南港軟體園區,entries,2,Prophet,35.768,297.385
+古亭,entries,2,Prophet,121.676,1262.574
+台北101/世貿,entries,2,Prophet,169.841,1381.381
+台北小巨蛋,entries,2,Prophet,169.203,881.717
+台北橋,entries,2,Prophet,47.662,425.36
+台北車站,entries,2,Prophet,664.692,6361.756
+台大醫院,entries,2,Prophet,74.948,865.14
+台電大樓,entries,2,Prophet,67.466,636.711
+唭哩岸,entries,2,Prophet,38.414,300.714
+善導寺,entries,2,Prophet,145.749,913.488
+國父紀念館,entries,2,Prophet,342.466,1517.726
+圓山,entries,2,Prophet,150.753,1107.881
+土城,entries,2,Prophet,34.704,362.45
+士林,entries,2,Prophet,146.978,1115.685
+大坪林,entries,2,Prophet,70.02,824.776
+大安,entries,2,Prophet,165.887,979.792
+大安森林公園,entries,2,Prophet,80.673,411.886
+大橋頭站,entries,2,Prophet,59.93,578.781
+大湖公園,entries,2,Prophet,20.294,144.558
+大直,entries,2,Prophet,67.085,370.407
+奇岩,entries,2,Prophet,36.605,357.538
+小南門,entries,2,Prophet,65.332,413.61
+小碧潭,entries,2,Prophet,22.956,138.286
+市政府,entries,2,Prophet,206.452,2478.353
+幸福,entries,2,Prophet,14.33,92.326
+府中,entries,2,Prophet,111.546,1225.865
+後山埤,entries,2,Prophet,56.99,640.051
+徐匯中學,entries,2,Prophet,57.005,483.689
+復興崗,entries,2,Prophet,21.395,163.079
+忠孝復興,entries,2,Prophet,160.289,1810.194
+忠孝敦化,entries,2,Prophet,115.151,1256.225
+忠孝新生,entries,2,Prophet,155.4,1505.544
+忠義,entries,2,Prophet,14.451,122.712
+文德,entries,2,Prophet,54.768,236.1
+新北投,entries,2,Prophet,40.769,226.624
+新北產業園區,entries,2,Prophet,10.398,77.719
+新埔,entries,2,Prophet,134.727,1530.204
+新埔民生,entries,2,Prophet,6.809,29.922
+新店,entries,2,Prophet,51.112,502.839
+新店區公所,entries,2,Prophet,42.036,480.926
+新莊,entries,2,Prophet,77.811,444.1
+昆陽,entries,2,Prophet,80.982,644.497
+明德,entries,2,Prophet,80.82,528.154
+景安,entries,2,Prophet,79.65,893.058
+景平,entries,2,Prophet,9.856,80.194
+景美,entries,2,Prophet,75.329,637.806
+木柵,entries,2,Prophet,37.944,180.561
+東湖,entries,2,Prophet,61.354,352.632
+東門,entries,2,Prophet,114.354,1108.183
+松山,entries,2,Prophet,97.565,1037.907
+松山機場,entries,2,Prophet,29.678,232.736
+松江南京,entries,2,Prophet,110.794,1464.669
+板新,entries,2,Prophet,9.501,59.129
+橋和,entries,2,Prophet,6.199,51.01
+民權西路,entries,2,Prophet,95.543,979.51
+永安市場,entries,2,Prophet,90.736,959.568
+永寧,entries,2,Prophet,65.992,540.55
+永春,entries,2,Prophet,109.479,792.653
+江子翠,entries,2,Prophet,103.737,1131.567
+海山,entries,2,Prophet,99.724,949.557
+淡水,entries,2,Prophet,224.906,1366.596
+港墘,entries,2,Prophet,98.301,662.736
+石牌,entries,2,Prophet,118.307,1153.028
+秀朗橋,entries,2,Prophet,9.929,61.479
+科技大樓,entries,2,Prophet,72.714,606.142
+竹圍,entries,2,Prophet,38.951,369.843
+紅樹林,entries,2,Prophet,77.499,576.85
+芝山,entries,2,Prophet,91.252,929.115
+菜寮,entries,2,Prophet,54.865,427.185
+萬芳社區,entries,2,Prophet,12.165,104.654
+萬芳醫院,entries,2,Prophet,72.519,461.125
+萬隆,entries,2,Prophet,39.751,422.024
+葫洲,entries,2,Prophet,51.639,338.232
+蘆洲,entries,2,Prophet,78.914,617.989
+行天宮,entries,2,Prophet,85.739,1062.65
+西湖,entries,2,Prophet,47.819,514.04
+西門,entries,2,Prophet,263.973,2760.707
+象山,entries,2,Prophet,57.657,556.026
+輔大,entries,2,Prophet,119.707,393.638
+辛亥,entries,2,Prophet,18.101,139.553
+迴龍,entries,2,Prophet,57.613,454.975
+關渡,entries,2,Prophet,64.942,504.779
+雙連,entries,2,Prophet,68.256,880.144
+頂埔,entries,2,Prophet,128.076,640.165
+頂溪,entries,2,Prophet,109.828,1316.481
+頭前庄,entries,2,Prophet,28.147,217.842
+麟光,entries,2,Prophet,21.027,181.974
+龍山寺,entries,2,Prophet,95.806,1168.743
+BL板橋,entries,2,Prophet+AR,122.002,1616.154
+G大坪林,entries,2,Prophet+AR,0.0,0.0
+O景安,entries,2,Prophet+AR,0.0,0.0
+O頭前庄,entries,2,Prophet+AR,0.0,0.0
+Y板橋,entries,2,Prophet+AR,16.852,106.565
+七張,entries,2,Prophet+AR,60.383,593.835
+三和國中,entries,2,Prophet+AR,62.261,541.34
+三民高中,entries,2,Prophet+AR,64.665,483.21
+三重,entries,2,Prophet+AR,46.308,406.265
+三重國小,entries,2,Prophet+AR,46.305,493.394
+中原,entries,2,Prophet+AR,7.633,66.836
+中和,entries,2,Prophet+AR,14.372,105.786
+中山,entries,2,Prophet+AR,148.455,2146.368
+中山國中,entries,2,Prophet+AR,56.307,520.351
+中山國小,entries,2,Prophet+AR,62.685,706.35
+中正紀念堂,entries,2,Prophet+AR,125.264,1104.017
+丹鳳,entries,2,Prophet+AR,43.698,377.458
+亞東醫院,entries,2,Prophet+AR,88.568,1023.799
+信義安和,entries,2,Prophet+AR,60.366,769.812
+先嗇宮,entries,2,Prophet+AR,21.571,205.467
+內湖,entries,2,Prophet+AR,48.285,415.104
+公館,entries,2,Prophet+AR,136.491,1177.964
+六張犁,entries,2,Prophet+AR,49.377,423.912
+劍南路,entries,2,Prophet+AR,48.374,453.143
+劍潭,entries,2,Prophet+AR,166.318,1128.921
+動物園,entries,2,Prophet+AR,51.82,246.086
+北投,entries,2,Prophet+AR,87.765,723.654
+北門,entries,2,Prophet+AR,58.857,701.192
+十四張,entries,2,Prophet+AR,18.137,105.442
+南京三民,entries,2,Prophet+AR,88.362,918.801
+南京復興,entries,2,Prophet+AR,116.395,1613.208
+南勢角,entries,2,Prophet+AR,67.093,810.172
+南港,entries,2,Prophet+AR,161.824,1048.728
+南港展覽館,entries,2,Prophet+AR,266.038,1394.436
+南港軟體園區,entries,2,Prophet+AR,32.033,297.385
+古亭,entries,2,Prophet+AR,101.368,1262.574
+台北101/世貿,entries,2,Prophet+AR,151.941,1381.381
+台北小巨蛋,entries,2,Prophet+AR,157.338,881.717
+台北橋,entries,2,Prophet+AR,43.258,425.36
+台北車站,entries,2,Prophet+AR,478.299,6361.756
+台大醫院,entries,2,Prophet+AR,68.577,865.14
+台電大樓,entries,2,Prophet+AR,53.84,636.711
+唭哩岸,entries,2,Prophet+AR,35.267,300.714
+善導寺,entries,2,Prophet+AR,148.468,913.488
+國父紀念館,entries,2,Prophet+AR,307.921,1517.726
+圓山,entries,2,Prophet+AR,141.713,1107.881
+土城,entries,2,Prophet+AR,35.186,362.45
+士林,entries,2,Prophet+AR,148.039,1115.685
+大坪林,entries,2,Prophet+AR,66.997,824.776
+大安,entries,2,Prophet+AR,168.081,979.792
+大安森林公園,entries,2,Prophet+AR,74.875,411.886
+大橋頭站,entries,2,Prophet+AR,55.989,578.781
+大湖公園,entries,2,Prophet+AR,20.909,144.558
+大直,entries,2,Prophet+AR,59.619,370.407
+奇岩,entries,2,Prophet+AR,37.099,357.538
+小南門,entries,2,Prophet+AR,61.923,413.61
+小碧潭,entries,2,Prophet+AR,23.775,138.286
+市政府,entries,2,Prophet+AR,184.927,2478.353
+幸福,entries,2,Prophet+AR,13.722,92.326
+府中,entries,2,Prophet+AR,98.766,1225.865
+後山埤,entries,2,Prophet+AR,51.176,640.051
+徐匯中學,entries,2,Prophet+AR,54.873,483.689
+復興崗,entries,2,Prophet+AR,22.829,163.079
+忠孝復興,entries,2,Prophet+AR,118.944,1810.194
+忠孝敦化,entries,2,Prophet+AR,89.901,1256.225
+忠孝新生,entries,2,Prophet+AR,134.33,1505.544
+忠義,entries,2,Prophet+AR,15.187,122.712
+文德,entries,2,Prophet+AR,56.132,236.1
+新北投,entries,2,Prophet+AR,40.747,226.624
+新北產業園區,entries,2,Prophet+AR,10.222,77.719
+新埔,entries,2,Prophet+AR,139.549,1530.204
+新埔民生,entries,2,Prophet+AR,6.668,29.922
+新店,entries,2,Prophet+AR,48.309,502.839
+新店區公所,entries,2,Prophet+AR,40.68,480.926
+新莊,entries,2,Prophet+AR,76.526,444.1
+昆陽,entries,2,Prophet+AR,82.88,644.497
+明德,entries,2,Prophet+AR,84.893,528.154
+景安,entries,2,Prophet+AR,76.098,893.058
+景平,entries,2,Prophet+AR,9.562,80.194
+景美,entries,2,Prophet+AR,71.181,637.806
+木柵,entries,2,Prophet+AR,38.914,180.561
+東湖,entries,2,Prophet+AR,66.565,352.632
+東門,entries,2,Prophet+AR,104.534,1108.183
+松山,entries,2,Prophet+AR,85.902,1037.907
+松山機場,entries,2,Prophet+AR,29.496,232.736
+松江南京,entries,2,Prophet+AR,112.52,1464.669
+板新,entries,2,Prophet+AR,9.266,59.129
+橋和,entries,2,Prophet+AR,6.176,51.01
+民權西路,entries,2,Prophet+AR,104.391,979.51
+永安市場,entries,2,Prophet+AR,93.266,959.568
+永寧,entries,2,Prophet+AR,65.955,540.55
+永春,entries,2,Prophet+AR,120.207,792.653
+江子翠,entries,2,Prophet+AR,92.972,1131.567
+海山,entries,2,Prophet+AR,102.799,949.557
+淡水,entries,2,Prophet+AR,187.568,1366.596
+港墘,entries,2,Prophet+AR,111.985,662.736
+石牌,entries,2,Prophet+AR,114.255,1153.028
+秀朗橋,entries,2,Prophet+AR,9.41,61.479
+科技大樓,entries,2,Prophet+AR,61.474,606.142
+竹圍,entries,2,Prophet+AR,39.82,369.843
+紅樹林,entries,2,Prophet+AR,72.468,576.85
+芝山,entries,2,Prophet+AR,86.071,929.115
+菜寮,entries,2,Prophet+AR,55.936,427.185
+萬芳社區,entries,2,Prophet+AR,12.865,104.654
+萬芳醫院,entries,2,Prophet+AR,73.21,461.125
+萬隆,entries,2,Prophet+AR,39.064,422.024
+葫洲,entries,2,Prophet+AR,52.233,338.232
+蘆洲,entries,2,Prophet+AR,75.006,617.989
+行天宮,entries,2,Prophet+AR,76.629,1062.65
+西湖,entries,2,Prophet+AR,52.914,514.04
+西門,entries,2,Prophet+AR,184.594,2760.707
+象山,entries,2,Prophet+AR,54.704,556.026
+輔大,entries,2,Prophet+AR,88.681,393.638
+辛亥,entries,2,Prophet+AR,17.922,139.553
+迴龍,entries,2,Prophet+AR,55.327,454.975
+關渡,entries,2,Prophet+AR,64.377,504.779
+雙連,entries,2,Prophet+AR,67.765,880.144
+頂埔,entries,2,Prophet+AR,102.354,640.165
+頂溪,entries,2,Prophet+AR,109.179,1316.481
+頭前庄,entries,2,Prophet+AR,27.747,217.842
+麟光,entries,2,Prophet+AR,20.834,181.974
+龍山寺,entries,2,Prophet+AR,94.793,1168.743
+BL板橋,entries,2,LightGBM,87.733,1616.154
+G大坪林,entries,2,LightGBM,0.005,0.0
+O景安,entries,2,LightGBM,0.005,0.0
+O頭前庄,entries,2,LightGBM,0.005,0.0
+Y板橋,entries,2,LightGBM,15.496,106.565
+七張,entries,2,LightGBM,34.261,593.835
+三和國中,entries,2,LightGBM,32.83,541.34
+三民高中,entries,2,LightGBM,30.926,483.21
+三重,entries,2,LightGBM,30.465,406.265
+三重國小,entries,2,LightGBM,27.017,493.394
+中原,entries,2,LightGBM,7.555,66.836
+中和,entries,2,LightGBM,10.455,105.786
+中山,entries,2,LightGBM,107.319,2146.368
+中山國中,entries,2,LightGBM,35.468,520.351
+中山國小,entries,2,LightGBM,42.626,706.35
+中正紀念堂,entries,2,LightGBM,90.744,1104.017
+丹鳳,entries,2,LightGBM,23.798,377.458
+亞東醫院,entries,2,LightGBM,53.691,1023.799
+信義安和,entries,2,LightGBM,47.358,769.812
+先嗇宮,entries,2,LightGBM,16.911,205.467
+內湖,entries,2,LightGBM,25.624,415.104
+公館,entries,2,LightGBM,94.96,1177.964
+六張犁,entries,2,LightGBM,28.322,423.912
+劍南路,entries,2,LightGBM,37.765,453.143
+劍潭,entries,2,LightGBM,117.285,1128.921
+動物園,entries,2,LightGBM,31.677,246.086
+北投,entries,2,LightGBM,50.7,723.654
+北門,entries,2,LightGBM,46.759,701.192
+十四張,entries,2,LightGBM,11.954,105.442
+南京三民,entries,2,LightGBM,57.14,918.801
+南京復興,entries,2,LightGBM,83.299,1613.208
+南勢角,entries,2,LightGBM,43.043,810.172
+南港,entries,2,LightGBM,102.984,1048.728
+南港展覽館,entries,2,LightGBM,152.347,1394.436
+南港軟體園區,entries,2,LightGBM,30.662,297.385
+古亭,entries,2,LightGBM,63.894,1262.574
+台北101/世貿,entries,2,LightGBM,107.522,1381.381
+台北小巨蛋,entries,2,LightGBM,127.534,881.717
+台北橋,entries,2,LightGBM,27.63,425.36
+台北車站,entries,2,LightGBM,371.846,6361.756
+台大醫院,entries,2,LightGBM,66.188,865.14
+台電大樓,entries,2,LightGBM,38.579,636.711
+唭哩岸,entries,2,LightGBM,21.973,300.714
+善導寺,entries,2,LightGBM,78.043,913.488
+國父紀念館,entries,2,LightGBM,253.343,1517.726
+圓山,entries,2,LightGBM,83.564,1107.881
+土城,entries,2,LightGBM,23.733,362.45
+士林,entries,2,LightGBM,94.299,1115.685
+大坪林,entries,2,LightGBM,48.053,824.776
+大安,entries,2,LightGBM,65.167,979.792
+大安森林公園,entries,2,LightGBM,47.374,411.886
+大橋頭站,entries,2,LightGBM,41.245,578.781
+大湖公園,entries,2,LightGBM,15.245,144.558
+大直,entries,2,LightGBM,36.033,370.407
+奇岩,entries,2,LightGBM,26.354,357.538
+小南門,entries,2,LightGBM,38.237,413.61
+小碧潭,entries,2,LightGBM,13.74,138.286
+市政府,entries,2,LightGBM,133.353,2478.353
+幸福,entries,2,LightGBM,9.42,92.326
+府中,entries,2,LightGBM,55.708,1225.865
+後山埤,entries,2,LightGBM,34.701,640.051
+徐匯中學,entries,2,LightGBM,28.369,483.689
+復興崗,entries,2,LightGBM,13.648,163.079
+忠孝復興,entries,2,LightGBM,81.317,1810.194
+忠孝敦化,entries,2,LightGBM,67.306,1256.225
+忠孝新生,entries,2,LightGBM,97.91,1505.544
+忠義,entries,2,LightGBM,12.574,122.712
+文德,entries,2,LightGBM,22.57,236.1
+新北投,entries,2,LightGBM,24.249,226.624
+新北產業園區,entries,2,LightGBM,9.79,77.719
+新埔,entries,2,LightGBM,83.484,1530.204
+新埔民生,entries,2,LightGBM,5.427,29.922
+新店,entries,2,LightGBM,31.372,502.839
+新店區公所,entries,2,LightGBM,25.675,480.926
+新莊,entries,2,LightGBM,48.744,444.1
+昆陽,entries,2,LightGBM,66.196,644.497
+明德,entries,2,LightGBM,36.918,528.154
+景安,entries,2,LightGBM,44.003,893.058
+景平,entries,2,LightGBM,8.74,80.194
+景美,entries,2,LightGBM,45.844,637.806
+木柵,entries,2,LightGBM,19.19,180.561
+東湖,entries,2,LightGBM,27.842,352.632
+東門,entries,2,LightGBM,62.723,1108.183
+松山,entries,2,LightGBM,66.464,1037.907
+松山機場,entries,2,LightGBM,26.683,232.736
+松江南京,entries,2,LightGBM,83.802,1464.669
+板新,entries,2,LightGBM,7.506,59.129
+橋和,entries,2,LightGBM,6.719,51.01
+民權西路,entries,2,LightGBM,58.114,979.51
+永安市場,entries,2,LightGBM,48.871,959.568
+永寧,entries,2,LightGBM,43.671,540.55
+永春,entries,2,LightGBM,49.845,792.653
+江子翠,entries,2,LightGBM,57.93,1131.567
+海山,entries,2,LightGBM,54.85,949.557
+淡水,entries,2,LightGBM,109.427,1366.596
+港墘,entries,2,LightGBM,50.276,662.736
+石牌,entries,2,LightGBM,61.014,1153.028
+秀朗橋,entries,2,LightGBM,7.643,61.479
+科技大樓,entries,2,LightGBM,47.792,606.142
+竹圍,entries,2,LightGBM,24.603,369.843
+紅樹林,entries,2,LightGBM,40.587,576.85
+芝山,entries,2,LightGBM,56.441,929.115
+菜寮,entries,2,LightGBM,29.056,427.185
+萬芳社區,entries,2,LightGBM,9.544,104.654
+萬芳醫院,entries,2,LightGBM,42.449,461.125
+萬隆,entries,2,LightGBM,25.923,422.024
+葫洲,entries,2,LightGBM,28.804,338.232
+蘆洲,entries,2,LightGBM,35.382,617.989
+行天宮,entries,2,LightGBM,63.563,1062.65
+西湖,entries,2,LightGBM,43.205,514.04
+西門,entries,2,LightGBM,138.093,2760.707
+象山,entries,2,LightGBM,48.056,556.026
+輔大,entries,2,LightGBM,48.224,393.638
+辛亥,entries,2,LightGBM,12.213,139.553
+迴龍,entries,2,LightGBM,31.662,454.975
+關渡,entries,2,LightGBM,41.785,504.779
+雙連,entries,2,LightGBM,47.736,880.144
+頂埔,entries,2,LightGBM,60.29,640.165
+頂溪,entries,2,LightGBM,66.238,1316.481
+頭前庄,entries,2,LightGBM,17.909,217.842
+麟光,entries,2,LightGBM,14.352,181.974
+龍山寺,entries,2,LightGBM,66.579,1168.743
+BL板橋,entries,2,LightGBM (scaled),69.389,1616.154
+G大坪林,entries,2,LightGBM (scaled),0.032,0.0
+O景安,entries,2,LightGBM (scaled),0.035,0.0
+O頭前庄,entries,2,LightGBM (scaled),0.031,0.0
+Y板橋,entries,2,LightGBM (scaled),15.289,106.565
+七張,entries,2,LightGBM (scaled),31.045,593.835
+三和國中,entries,2,LightGBM (scaled),27.986,541.34
+三民高中,entries,2,LightGBM (scaled),28.764,483.21
+三重,entries,2,LightGBM (scaled),27.915,406.265
+三重國小,entries,2,LightGBM (scaled),24.535,493.394
+中原,entries,2,LightGBM (scaled),6.921,66.836
+中和,entries,2,LightGBM (scaled),10.156,105.786
+中山,entries,2,LightGBM (scaled),89.002,2146.368
+中山國中,entries,2,LightGBM (scaled),31.478,520.351
+中山國小,entries,2,LightGBM (scaled),35.217,706.35
+中正紀念堂,entries,2,LightGBM (scaled),83.276,1104.017
+丹鳳,entries,2,LightGBM (scaled),22.015,377.458
+亞東醫院,entries,2,LightGBM (scaled),49.36,1023.799
+信義安和,entries,2,LightGBM (scaled),38.472,769.812
+先嗇宮,entries,2,LightGBM (scaled),15.199,205.467
+內湖,entries,2,LightGBM (scaled),23.254,415.104
+公館,entries,2,LightGBM (scaled),90.711,1177.964
+六張犁,entries,2,LightGBM (scaled),25.674,423.912
+劍南路,entries,2,LightGBM (scaled),34.543,453.143
+劍潭,entries,2,LightGBM (scaled),103.537,1128.921
+動物園,entries,2,LightGBM (scaled),30.865,246.086
+北投,entries,2,LightGBM (scaled),43.322,723.654
+北門,entries,2,LightGBM (scaled),39.52,701.192
+十四張,entries,2,LightGBM (scaled),11.203,105.442
+南京三民,entries,2,LightGBM (scaled),48.186,918.801
+南京復興,entries,2,LightGBM (scaled),72.123,1613.208
+南勢角,entries,2,LightGBM (scaled),35.247,810.172
+南港,entries,2,LightGBM (scaled),97.309,1048.728
+南港展覽館,entries,2,LightGBM (scaled),160.063,1394.436
+南港軟體園區,entries,2,LightGBM (scaled),27.568,297.385
+古亭,entries,2,LightGBM (scaled),58.314,1262.574
+台北101/世貿,entries,2,LightGBM (scaled),93.673,1381.381
+台北小巨蛋,entries,2,LightGBM (scaled),122.432,881.717
+台北橋,entries,2,LightGBM (scaled),24.886,425.36
+台北車站,entries,2,LightGBM (scaled),320.861,6361.756
+台大醫院,entries,2,LightGBM (scaled),51.961,865.14
+台電大樓,entries,2,LightGBM (scaled),33.666,636.711
+唭哩岸,entries,2,LightGBM (scaled),19.692,300.714
+善導寺,entries,2,LightGBM (scaled),69.507,913.488
+國父紀念館,entries,2,LightGBM (scaled),347.86,1517.726
+圓山,entries,2,LightGBM (scaled),73.598,1107.881
+土城,entries,2,LightGBM (scaled),22.405,362.45
+士林,entries,2,LightGBM (scaled),84.611,1115.685
+大坪林,entries,2,LightGBM (scaled),41.39,824.776
+大安,entries,2,LightGBM (scaled),62.577,979.792
+大安森林公園,entries,2,LightGBM (scaled),40.97,411.886
+大橋頭站,entries,2,LightGBM (scaled),34.953,578.781
+大湖公園,entries,2,LightGBM (scaled),13.294,144.558
+大直,entries,2,LightGBM (scaled),36.67,370.407
+奇岩,entries,2,LightGBM (scaled),22.199,357.538
+小南門,entries,2,LightGBM (scaled),34.455,413.61
+小碧潭,entries,2,LightGBM (scaled),13.286,138.286
+市政府,entries,2,LightGBM (scaled),140.188,2478.353
+幸福,entries,2,LightGBM (scaled),9.054,92.326
+府中,entries,2,LightGBM (scaled),51.204,1225.865
+後山埤,entries,2,LightGBM (scaled),34.418,640.051
+徐匯中學,entries,2,LightGBM (scaled),24.986,483.689
+復興崗,entries,2,LightGBM (scaled),13.234,163.079
+忠孝復興,entries,2,LightGBM (scaled),73.161,1810.194
+忠孝敦化,entries,2,LightGBM (scaled),58.542,1256.225
+忠孝新生,entries,2,LightGBM (scaled),86.34,1505.544
+忠義,entries,2,LightGBM (scaled),11.545,122.712
+文德,entries,2,LightGBM (scaled),23.142,236.1
+新北投,entries,2,LightGBM (scaled),22.181,226.624
+新北產業園區,entries,2,LightGBM (scaled),9.537,77.719
+新埔,entries,2,LightGBM (scaled),67.124,1530.204
+新埔民生,entries,2,LightGBM (scaled),5.972,29.922
+新店,entries,2,LightGBM (scaled),28.047,502.839
+新店區公所,entries,2,LightGBM (scaled),24.048,480.926
+新莊,entries,2,LightGBM (scaled),46.664,444.1
+昆陽,entries,2,LightGBM (scaled),61.866,644.497
+明德,entries,2,LightGBM (scaled),33.622,528.154
+景安,entries,2,LightGBM (scaled),39.282,893.058
+景平,entries,2,LightGBM (scaled),8.089,80.194
+景美,entries,2,LightGBM (scaled),44.202,637.806
+木柵,entries,2,LightGBM (scaled),18.021,180.561
+東湖,entries,2,LightGBM (scaled),26.072,352.632
+東門,entries,2,LightGBM (scaled),56.471,1108.183
+松山,entries,2,LightGBM (scaled),59.735,1037.907
+松山機場,entries,2,LightGBM (scaled),24.742,232.736
+松江南京,entries,2,LightGBM (scaled),71.402,1464.669
+板新,entries,2,LightGBM (scaled),7.754,59.129
+橋和,entries,2,LightGBM (scaled),6.473,51.01
+民權西路,entries,2,LightGBM (scaled),52.895,979.51
+永安市場,entries,2,LightGBM (scaled),41.899,959.568
+永寧,entries,2,LightGBM (scaled),43.784,540.55
+永春,entries,2,LightGBM (scaled),45.453,792.653
+江子翠,entries,2,LightGBM (scaled),48.028,1131.567
+海山,entries,2,LightGBM (scaled),44.861,949.557
+淡水,entries,2,LightGBM (scaled),95.19,1366.596
+港墘,entries,2,LightGBM (scaled),47.039,662.736
+石牌,entries,2,LightGBM (scaled),57.164,1153.028
+秀朗橋,entries,2,LightGBM (scaled),6.853,61.479
+科技大樓,entries,2,LightGBM (scaled),42.323,606.142
+竹圍,entries,2,LightGBM (scaled),20.764,369.843
+紅樹林,entries,2,LightGBM (scaled),39.584,576.85
+芝山,entries,2,LightGBM (scaled),47.324,929.115
+菜寮,entries,2,LightGBM (scaled),27.336,427.185
+萬芳社區,entries,2,LightGBM (scaled),9.484,104.654
+萬芳醫院,entries,2,LightGBM (scaled),37.619,461.125
+萬隆,entries,2,LightGBM (scaled),22.721,422.024
+葫洲,entries,2,LightGBM (scaled),27.36,338.232
+蘆洲,entries,2,LightGBM (scaled),32.203,617.989
+行天宮,entries,2,LightGBM (scaled),52.216,1062.65
+西湖,entries,2,LightGBM (scaled),34.309,514.04
+西門,entries,2,LightGBM (scaled),133.569,2760.707
+象山,entries,2,LightGBM (scaled),42.432,556.026
+輔大,entries,2,LightGBM (scaled),48.833,393.638
+辛亥,entries,2,LightGBM (scaled),11.376,139.553
+迴龍,entries,2,LightGBM (scaled),28.918,454.975
+關渡,entries,2,LightGBM (scaled),37.545,504.779
+雙連,entries,2,LightGBM (scaled),39.975,880.144
+頂埔,entries,2,LightGBM (scaled),67.398,640.165
+頂溪,entries,2,LightGBM (scaled),52.064,1316.481
+頭前庄,entries,2,LightGBM (scaled),17.559,217.842
+麟光,entries,2,LightGBM (scaled),13.278,181.974
+龍山寺,entries,2,LightGBM (scaled),58.853,1168.743
+BL板橋,exits,1,Seasonal Naive,150.753,1765.322
+G大坪林,exits,1,Seasonal Naive,77.897,783.535
+O景安,exits,1,Seasonal Naive,72.875,832.904
+O頭前庄,exits,1,Seasonal Naive,26.474,201.914
+Y板橋,exits,1,Seasonal Naive,0.0,0.0
+七張,exits,1,Seasonal Naive,59.685,631.592
+三和國中,exits,1,Seasonal Naive,53.603,528.156
+三民高中,exits,1,Seasonal Naive,55.104,502.754
+三重,exits,1,Seasonal Naive,48.994,414.932
+三重國小,exits,1,Seasonal Naive,48.708,516.532
+中原,exits,1,Seasonal Naive,0.0,0.0
+中和,exits,1,Seasonal Naive,0.0,0.0
+中山,exits,1,Seasonal Naive,205.636,2230.089
+中山國中,exits,1,Seasonal Naive,57.732,520.625
+中山國小,exits,1,Seasonal Naive,68.299,706.188
+中正紀念堂,exits,1,Seasonal Naive,141.508,1097.214
+丹鳳,exits,1,Seasonal Naive,43.986,381.632
+亞東醫院,exits,1,Seasonal Naive,99.165,951.464
+信義安和,exits,1,Seasonal Naive,79.621,808.018
+先嗇宮,exits,1,Seasonal Naive,26.761,214.792
+內湖,exits,1,Seasonal Naive,43.835,419.872
+公館,exits,1,Seasonal Naive,169.356,1183.611
+六張犁,exits,1,Seasonal Naive,45.125,425.171
+劍南路,exits,1,Seasonal Naive,58.921,453.811
+劍潭,exits,1,Seasonal Naive,197.635,1133.685
+動物園,exits,1,Seasonal Naive,66.607,250.582
+北投,exits,1,Seasonal Naive,85.661,756.356
+北門,exits,1,Seasonal Naive,72.799,713.582
+十四張,exits,1,Seasonal Naive,0.0,0.0
+南京三民,exits,1,Seasonal Naive,103.246,933.1
+南京復興,exits,1,Seasonal Naive,173.917,1715.957
+南勢角,exits,1,Seasonal Naive,67.864,813.792
+南港,exits,1,Seasonal Naive,216.796,1129.488
+南港展覽館,exits,1,Seasonal Naive,350.471,1303.219
+南港軟體園區,exits,1,Seasonal Naive,40.126,288.847
+古亭,exits,1,Seasonal Naive,127.485,1268.099
+台北101/世貿,exits,1,Seasonal Naive,188.612,1361.986
+台北小巨蛋,exits,1,Seasonal Naive,201.542,917.201
+台北橋,exits,1,Seasonal Naive,42.603,455.111
+台北車站,exits,1,Seasonal Naive,574.543,6256.5
+台大醫院,exits,1,Seasonal Naive,120.531,895.031
+台電大樓,exits,1,Seasonal Naive,68.849,629.26
+唭哩岸,exits,1,Seasonal Naive,31.108,283.91
+善導寺,exits,1,Seasonal Naive,148.75,925.726
+國父紀念館,exits,1,Seasonal Naive,274.864,1563.772
+圓山,exits,1,Seasonal Naive,161.231,1148.457
+土城,exits,1,Seasonal Naive,38.689,361.589
+士林,exits,1,Seasonal Naive,160.199,1114.074
+大坪林,exits,1,Seasonal Naive,0.0,0.0
+大安,exits,1,Seasonal Naive,126.89,989.038
+大安森林公園,exits,1,Seasonal Naive,63.431,384.707
+大橋頭站,exits,1,Seasonal Naive,54.969,526.685
+大湖公園,exits,1,Seasonal Naive,23.311,143.274
+大直,exits,1,Seasonal Naive,59.485,371.546
+奇岩,exits,1,Seasonal Naive,35.815,327.894
+小南門,exits,1,Seasonal Naive,73.254,419.153
+小碧潭,exits,1,Seasonal Naive,22.357,154.851
+市政府,exits,1,Seasonal Naive,237.383,2639.243
+幸福,exits,1,Seasonal Naive,0.0,0.0
+府中,exits,1,Seasonal Naive,104.721,1120.651
+後山埤,exits,1,Seasonal Naive,58.562,640.635
+徐匯中學,exits,1,Seasonal Naive,51.278,521.442
+復興崗,exits,1,Seasonal Naive,21.501,162.971
+忠孝復興,exits,1,Seasonal Naive,134.856,1795.856
+忠孝敦化,exits,1,Seasonal Naive,107.036,1258.589
+忠孝新生,exits,1,Seasonal Naive,178.303,1517.294
+忠義,exits,1,Seasonal Naive,18.239,124.953
+文德,exits,1,Seasonal Naive,34.662,228.338
+新北投,exits,1,Seasonal Naive,33.06,216.203
+新北產業園區,exits,1,Seasonal Naive,0.0,0.0
+新埔,exits,1,Seasonal Naive,133.993,1516.181
+新埔民生,exits,1,Seasonal Naive,0.0,0.0
+新店,exits,1,Seasonal Naive,53.115,461.133
+新店區公所,exits,1,Seasonal Naive,50.515,519.206
+新莊,exits,1,Seasonal Naive,76.675,484.529
+昆陽,exits,1,Seasonal Naive,96.739,647.7
+明德,exits,1,Seasonal Naive,63.817,516.274
+景安,exits,1,Seasonal Naive,0.0,0.0
+景平,exits,1,Seasonal Naive,0.0,0.0
+景美,exits,1,Seasonal Naive,78.832,669.864
+木柵,exits,1,Seasonal Naive,28.415,191.974
+東湖,exits,1,Seasonal Naive,49.782,367.453
+東門,exits,1,Seasonal Naive,111.918,1137.146
+松山,exits,1,Seasonal Naive,109.489,1000.512
+松山機場,exits,1,Seasonal Naive,28.536,230.088
+松江南京,exits,1,Seasonal Naive,159.408,1515.583
+板新,exits,1,Seasonal Naive,0.0,0.0
+橋和,exits,1,Seasonal Naive,0.0,0.0
+民權西路,exits,1,Seasonal Naive,104.812,967.547
+永安市場,exits,1,Seasonal Naive,92.34,1023.097
+永寧,exits,1,Seasonal Naive,64.311,539.99
+永春,exits,1,Seasonal Naive,84.689,796.011
+江子翠,exits,1,Seasonal Naive,101.699,1184.836
+海山,exits,1,Seasonal Naive,102.446,992.94
+淡水,exits,1,Seasonal Naive,213.847,1252.544
+港墘,exits,1,Seasonal Naive,84.525,640.039
+石牌,exits,1,Seasonal Naive,124.801,1191.203
+秀朗橋,exits,1,Seasonal Naive,0.0,0.0
+科技大樓,exits,1,Seasonal Naive,71.349,586.804
+竹圍,exits,1,Seasonal Naive,43.258,393.258
+紅樹林,exits,1,Seasonal Naive,87.038,634.432
+芝山,exits,1,Seasonal Naive,97.689,958.196
+菜寮,exits,1,Seasonal Naive,48.715,436.428
+萬芳社區,exits,1,Seasonal Naive,12.936,86.247
+萬芳醫院,exits,1,Seasonal Naive,62.379,488.278
+萬隆,exits,1,Seasonal Naive,41.19,430.039
+葫洲,exits,1,Seasonal Naive,46.525,345.128
+蘆洲,exits,1,Seasonal Naive,62.851,574.762
+行天宮,exits,1,Seasonal Naive,110.526,1092.369
+西湖,exits,1,Seasonal Naive,61.879,513.868
+西門,exits,1,Seasonal Naive,249.847,2789.819
+象山,exits,1,Seasonal Naive,73.083,517.865
+輔大,exits,1,Seasonal Naive,112.262,462.743
+辛亥,exits,1,Seasonal Naive,19.107,135.333
+迴龍,exits,1,Seasonal Naive,56.589,456.681
+關渡,exits,1,Seasonal Naive,75.694,515.312
+雙連,exits,1,Seasonal Naive,90.086,919.214
+頂埔,exits,1,Seasonal Naive,119.744,651.611
+頂溪,exits,1,Seasonal Naive,108.722,1383.594
+頭前庄,exits,1,Seasonal Naive,0.0,0.0
+麟光,exits,1,Seasonal Naive,23.004,176.474
+龍山寺,exits,1,Seasonal Naive,103.25,1152.875
+BL板橋,exits,1,Historical Average,142.69,1765.322
+G大坪林,exits,1,Historical Average,57.43,783.535
+O景安,exits,1,Historical Average,61.212,832.904
+O頭前庄,exits,1,Historical Average,19.29,201.914
+Y板橋,exits,1,Historical Average,0.0,0.0
+七張,exits,1,Historical Average,48.57,631.592
+三和國中,exits,1,Historical Average,45.505,528.156
+三民高中,exits,1,Historical Average,46.693,502.754
+三重,exits,1,Historical Average,44.014,414.932
+三重國小,exits,1,Historical Average,39.252,516.532
+中原,exits,1,Historical Average,0.0,0.0
+中和,exits,1,Historical Average,0.0,0.0
+中山,exits,1,Historical Average,217.084,2230.089
+中山國中,exits,1,Historical Average,43.647,520.625
+中山國小,exits,1,Historical Average,57.482,706.188
+中正紀念堂,exits,1,Historical Average,121.611,1097.214
+丹鳳,exits,1,Historical Average,36.435,381.632
+亞東醫院,exits,1,Historical Average,79.877,951.464
+信義安和,exits,1,Historical Average,66.157,808.018
+先嗇宮,exits,1,Historical Average,16.996,214.792
+內湖,exits,1,Historical Average,36.404,419.872
+公館,exits,1,Historical Average,171.347,1183.611
+六張犁,exits,1,Historical Average,30.63,425.171
+劍南路,exits,1,Historical Average,47.19,453.811
+劍潭,exits,1,Historical Average,155.985,1133.685
+動物園,exits,1,Historical Average,60.08,250.582
+北投,exits,1,Historical Average,72.765,756.356
+北門,exits,1,Historical Average,59.127,713.582
+十四張,exits,1,Historical Average,0.0,0.0
+南京三民,exits,1,Historical Average,65.004,933.1
+南京復興,exits,1,Historical Average,126.593,1715.957
+南勢角,exits,1,Historical Average,57.719,813.792
+南港,exits,1,Historical Average,174.186,1129.488
+南港展覽館,exits,1,Historical Average,298.523,1303.219
+南港軟體園區,exits,1,Historical Average,28.724,288.847
+古亭,exits,1,Historical Average,101.55,1268.099
+台北101/世貿,exits,1,Historical Average,187.862,1361.986
+台北小巨蛋,exits,1,Historical Average,147.412,917.201
+台北橋,exits,1,Historical Average,38.565,455.111
+台北車站,exits,1,Historical Average,648.228,6256.5
+台大醫院,exits,1,Historical Average,78.972,895.031
+台電大樓,exits,1,Historical Average,56.911,629.26
+唭哩岸,exits,1,Historical Average,23.779,283.91
+善導寺,exits,1,Historical Average,109.25,925.726
+國父紀念館,exits,1,Historical Average,392.575,1563.772
+圓山,exits,1,Historical Average,162.689,1148.457
+土城,exits,1,Historical Average,31.767,361.589
+士林,exits,1,Historical Average,141.063,1114.074
+大坪林,exits,1,Historical Average,0.0,0.0
+大安,exits,1,Historical Average,102.414,989.038
+大安森林公園,exits,1,Historical Average,56.304,384.707
+大橋頭站,exits,1,Historical Average,45.232,526.685
+大湖公園,exits,1,Historical Average,19.43,143.274
+大直,exits,1,Historical Average,53.472,371.546
+奇岩,exits,1,Historical Average,28.926,327.894
+小南門,exits,1,Historical Average,54.234,419.153
+小碧潭,exits,1,Historical Average,17.207,154.851
+市政府,exits,1,Historical Average,257.435,2639.243
+幸福,exits,1,Historical Average,0.0,0.0
+府中,exits,1,Historical Average,95.265,1120.651
+後山埤,exits,1,Historical Average,66.167,640.635
+徐匯中學,exits,1,Historical Average,41.684,521.442
+復興崗,exits,1,Historical Average,17.073,162.971
+忠孝復興,exits,1,Historical Average,176.009,1795.856
+忠孝敦化,exits,1,Historical Average,127.553,1258.589
+忠孝新生,exits,1,Historical Average,152.358,1517.294
+忠義,exits,1,Historical Average,13.952,124.953
+文德,exits,1,Historical Average,30.443,228.338
+新北投,exits,1,Historical Average,36.058,216.203
+新北產業園區,exits,1,Historical Average,0.0,0.0
+新埔,exits,1,Historical Average,114.52,1516.181
+新埔民生,exits,1,Historical Average,0.0,0.0
+新店,exits,1,Historical Average,43.861,461.133
+新店區公所,exits,1,Historical Average,40.038,519.206
+新莊,exits,1,Historical Average,60.662,484.529
+昆陽,exits,1,Historical Average,71.162,647.7
+明德,exits,1,Historical Average,52.485,516.274
+景安,exits,1,Historical Average,0.0,0.0
+景平,exits,1,Historical Average,0.0,0.0
+景美,exits,1,Historical Average,72.616,669.864
+木柵,exits,1,Historical Average,23.539,191.974
+東湖,exits,1,Historical Average,42.962,367.453
+東門,exits,1,Historical Average,98.516,1137.146
+松山,exits,1,Historical Average,80.19,1000.512
+松山機場,exits,1,Historical Average,20.458,230.088
+松江南京,exits,1,Historical Average,102.722,1515.583
+板新,exits,1,Historical Average,0.0,0.0
+橋和,exits,1,Historical Average,0.0,0.0
+民權西路,exits,1,Historical Average,75.664,967.547
+永安市場,exits,1,Historical Average,74.123,1023.097
+永寧,exits,1,Historical Average,65.824,539.99
+永春,exits,1,Historical Average,73.024,796.011
+江子翠,exits,1,Historical Average,84.951,1184.836
+海山,exits,1,Historical Average,87.54,992.94
+淡水,exits,1,Historical Average,180.565,1252.544
+港墘,exits,1,Historical Average,55.05,640.039
+石牌,exits,1,Historical Average,94.795,1191.203
+秀朗橋,exits,1,Historical Average,0.0,0.0
+科技大樓,exits,1,Historical Average,63.024,586.804
+竹圍,exits,1,Historical Average,32.192,393.258
+紅樹林,exits,1,Historical Average,67.335,634.432
+芝山,exits,1,Historical Average,73.482,958.196
+菜寮,exits,1,Historical Average,39.665,436.428
+萬芳社區,exits,1,Historical Average,9.455,86.247
+萬芳醫院,exits,1,Historical Average,56.807,488.278
+萬隆,exits,1,Historical Average,33.876,430.039
+葫洲,exits,1,Historical Average,36.727,345.128
+蘆洲,exits,1,Historical Average,51.253,574.762
+行天宮,exits,1,Historical Average,82.01,1092.369
+西湖,exits,1,Historical Average,35.209,513.868
+西門,exits,1,Historical Average,298.111,2789.819
+象山,exits,1,Historical Average,59.186,517.865
+輔大,exits,1,Historical Average,117.71,462.743
+辛亥,exits,1,Historical Average,13.706,135.333
+迴龍,exits,1,Historical Average,48.231,456.681
+關渡,exits,1,Historical Average,57.475,515.312
+雙連,exits,1,Historical Average,73.825,919.214
+頂埔,exits,1,Historical Average,227.287,651.611
+頂溪,exits,1,Historical Average,88.062,1383.594
+頭前庄,exits,1,Historical Average,0.0,0.0
+麟光,exits,1,Historical Average,17.899,176.474
+龍山寺,exits,1,Historical Average,91.663,1152.875
+BL板橋,exits,1,SARIMAX,84.816,1765.322
+G大坪林,exits,1,SARIMAX,50.93,783.535
+O景安,exits,1,SARIMAX,44.961,832.904
+O頭前庄,exits,1,SARIMAX,16.708,201.914
+Y板橋,exits,1,SARIMAX,0.0,0.0
+七張,exits,1,SARIMAX,42.227,631.592
+三和國中,exits,1,SARIMAX,36.02,528.156
+三民高中,exits,1,SARIMAX,37.747,502.754
+三重,exits,1,SARIMAX,30.476,414.932
+三重國小,exits,1,SARIMAX,32.949,516.532
+中原,exits,1,SARIMAX,0.0,0.0
+中和,exits,1,SARIMAX,0.0,0.0
+中山,exits,1,SARIMAX,100.955,2230.089
+中山國中,exits,1,SARIMAX,35.563,520.625
+中山國小,exits,1,SARIMAX,43.156,706.188
+中正紀念堂,exits,1,SARIMAX,83.151,1097.214
+丹鳳,exits,1,SARIMAX,29.843,381.632
+亞東醫院,exits,1,SARIMAX,55.385,951.464
+信義安和,exits,1,SARIMAX,47.898,808.018
+先嗇宮,exits,1,SARIMAX,16.394,214.792
+內湖,exits,1,SARIMAX,29.997,419.872
+公館,exits,1,SARIMAX,99.647,1183.611
+六張犁,exits,1,SARIMAX,27.116,425.171
+劍南路,exits,1,SARIMAX,34.149,453.811
+劍潭,exits,1,SARIMAX,101.1,1133.685
+動物園,exits,1,SARIMAX,37.053,250.582
+北投,exits,1,SARIMAX,57.214,756.356
+北門,exits,1,SARIMAX,41.718,713.582
+十四張,exits,1,SARIMAX,0.0,0.0
+南京三民,exits,1,SARIMAX,51.13,933.1
+南京復興,exits,1,SARIMAX,89.036,1715.957
+南勢角,exits,1,SARIMAX,46.494,813.792
+南港,exits,1,SARIMAX,105.446,1129.488
+南港展覽館,exits,1,SARIMAX,117.753,1303.219
+南港軟體園區,exits,1,SARIMAX,21.917,288.847
+古亭,exits,1,SARIMAX,67.786,1268.099
+台北101/世貿,exits,1,SARIMAX,98.934,1361.986
+台北小巨蛋,exits,1,SARIMAX,88.614,917.201
+台北橋,exits,1,SARIMAX,28.989,455.111
+台北車站,exits,1,SARIMAX,307.912,6256.5
+台大醫院,exits,1,SARIMAX,59.65,895.031
+台電大樓,exits,1,SARIMAX,45.195,629.26
+唭哩岸,exits,1,SARIMAX,21.506,283.91
+善導寺,exits,1,SARIMAX,75.545,925.726
+國父紀念館,exits,1,SARIMAX,166.827,1563.772
+圓山,exits,1,SARIMAX,92.407,1148.457
+土城,exits,1,SARIMAX,25.194,361.589
+士林,exits,1,SARIMAX,100.003,1114.074
+大坪林,exits,1,SARIMAX,0.0,0.0
+大安,exits,1,SARIMAX,85.817,989.038
+大安森林公園,exits,1,SARIMAX,37.441,384.707
+大橋頭站,exits,1,SARIMAX,35.758,526.685
+大湖公園,exits,1,SARIMAX,16.296,143.274
+大直,exits,1,SARIMAX,40.761,371.546
+奇岩,exits,1,SARIMAX,26.106,327.894
+小南門,exits,1,SARIMAX,41.744,419.153
+小碧潭,exits,1,SARIMAX,18.062,154.851
+市政府,exits,1,SARIMAX,115.584,2639.243
+幸福,exits,1,SARIMAX,0.0,0.0
+府中,exits,1,SARIMAX,59.8,1120.651
+後山埤,exits,1,SARIMAX,38.099,640.635
+徐匯中學,exits,1,SARIMAX,33.097,521.442
+復興崗,exits,1,SARIMAX,16.01,162.971
+忠孝復興,exits,1,SARIMAX,78.487,1795.856
+忠孝敦化,exits,1,SARIMAX,57.36,1258.589
+忠孝新生,exits,1,SARIMAX,82.713,1517.294
+忠義,exits,1,SARIMAX,12.721,124.953
+文德,exits,1,SARIMAX,31.989,228.338
+新北投,exits,1,SARIMAX,25.201,216.203
+新北產業園區,exits,1,SARIMAX,0.0,0.0
+新埔,exits,1,SARIMAX,80.144,1516.181
+新埔民生,exits,1,SARIMAX,0.0,0.0
+新店,exits,1,SARIMAX,38.17,461.133
+新店區公所,exits,1,SARIMAX,37.972,519.206
+新莊,exits,1,SARIMAX,45.696,484.529
+昆陽,exits,1,SARIMAX,60.482,647.7
+明德,exits,1,SARIMAX,47.952,516.274
+景安,exits,1,SARIMAX,0.0,0.0
+景平,exits,1,SARIMAX,0.0,0.0
+景美,exits,1,SARIMAX,57.258,669.864
+木柵,exits,1,SARIMAX,23.747,191.974
+東湖,exits,1,SARIMAX,37.631,367.453
+東門,exits,1,SARIMAX,69.249,1137.146
+松山,exits,1,SARIMAX,59.641,1000.512
+松山機場,exits,1,SARIMAX,19.634,230.088
+松江南京,exits,1,SARIMAX,78.259,1515.583
+板新,exits,1,SARIMAX,0.0,0.0
+橋和,exits,1,SARIMAX,0.0,0.0
+民權西路,exits,1,SARIMAX,58.295,967.547
+永安市場,exits,1,SARIMAX,55.587,1023.097
+永寧,exits,1,SARIMAX,37.245,539.99
+永春,exits,1,SARIMAX,54.735,796.011
+江子翠,exits,1,SARIMAX,61.312,1184.836
+海山,exits,1,SARIMAX,70.871,992.94
+淡水,exits,1,SARIMAX,111.176,1252.544
+港墘,exits,1,SARIMAX,52.178,640.039
+石牌,exits,1,SARIMAX,71.075,1191.203
+秀朗橋,exits,1,SARIMAX,0.0,0.0
+科技大樓,exits,1,SARIMAX,41.628,586.804
+竹圍,exits,1,SARIMAX,25.463,393.258
+紅樹林,exits,1,SARIMAX,51.96,634.432
+芝山,exits,1,SARIMAX,56.769,958.196
+菜寮,exits,1,SARIMAX,33.535,436.428
+萬芳社區,exits,1,SARIMAX,9.558,86.247
+萬芳醫院,exits,1,SARIMAX,47.4,488.278
+萬隆,exits,1,SARIMAX,30.448,430.039
+葫洲,exits,1,SARIMAX,30.074,345.128
+蘆洲,exits,1,SARIMAX,39.353,574.762
+行天宮,exits,1,SARIMAX,56.064,1092.369
+西湖,exits,1,SARIMAX,32.149,513.868
+西門,exits,1,SARIMAX,128.408,2789.819
+象山,exits,1,SARIMAX,40.17,517.865
+輔大,exits,1,SARIMAX,66.406,462.743
+辛亥,exits,1,SARIMAX,13.496,135.333
+迴龍,exits,1,SARIMAX,37.225,456.681
+關渡,exits,1,SARIMAX,43.333,515.312
+雙連,exits,1,SARIMAX,48.469,919.214
+頂埔,exits,1,SARIMAX,56.174,651.611
+頂溪,exits,1,SARIMAX,66.843,1383.594
+頭前庄,exits,1,SARIMAX,0.0,0.0
+麟光,exits,1,SARIMAX,17.425,176.474
+龍山寺,exits,1,SARIMAX,57.467,1152.875
+BL板橋,exits,1,Prophet,147.347,1765.322
+G大坪林,exits,1,Prophet,61.2,783.535
+O景安,exits,1,Prophet,63.44,832.904
+O頭前庄,exits,1,Prophet,21.004,201.914
+Y板橋,exits,1,Prophet,0.0,0.0
+七張,exits,1,Prophet,57.272,631.592
+三和國中,exits,1,Prophet,54.337,528.156
+三民高中,exits,1,Prophet,57.614,502.754
+三重,exits,1,Prophet,46.256,414.932
+三重國小,exits,1,Prophet,45.923,516.532
+中原,exits,1,Prophet,0.0,0.0
+中和,exits,1,Prophet,0.0,0.0
+中山,exits,1,Prophet,261.401,2230.089
+中山國中,exits,1,Prophet,50.261,520.625
+中山國小,exits,1,Prophet,66.509,706.188
+中正紀念堂,exits,1,Prophet,132.094,1097.214
+丹鳳,exits,1,Prophet,40.088,381.632
+亞東醫院,exits,1,Prophet,81.713,951.464
+信義安和,exits,1,Prophet,64.111,808.018
+先嗇宮,exits,1,Prophet,16.608,214.792
+內湖,exits,1,Prophet,48.588,419.872
+公館,exits,1,Prophet,198.342,1183.611
+六張犁,exits,1,Prophet,37.028,425.171
+劍南路,exits,1,Prophet,52.811,453.811
+劍潭,exits,1,Prophet,164.334,1133.685
+動物園,exits,1,Prophet,64.693,250.582
+北投,exits,1,Prophet,88.946,756.356
+北門,exits,1,Prophet,75.011,713.582
+十四張,exits,1,Prophet,0.0,0.0
+南京三民,exits,1,Prophet,74.969,933.1
+南京復興,exits,1,Prophet,127.698,1715.957
+南勢角,exits,1,Prophet,63.094,813.792
+南港,exits,1,Prophet,186.503,1129.488
+南港展覽館,exits,1,Prophet,308.271,1303.219
+南港軟體園區,exits,1,Prophet,34.226,288.847
+古亭,exits,1,Prophet,105.45,1268.099
+台北101/世貿,exits,1,Prophet,202.089,1361.986
+台北小巨蛋,exits,1,Prophet,197.447,917.201
+台北橋,exits,1,Prophet,38.692,455.111
+台北車站,exits,1,Prophet,646.816,6256.5
+台大醫院,exits,1,Prophet,94.347,895.031
+台電大樓,exits,1,Prophet,67.659,629.26
+唭哩岸,exits,1,Prophet,29.7,283.91
+善導寺,exits,1,Prophet,146.731,925.726
+國父紀念館,exits,1,Prophet,367.65,1563.772
+圓山,exits,1,Prophet,161.667,1148.457
+土城,exits,1,Prophet,34.905,361.589
+士林,exits,1,Prophet,150.776,1114.074
+大坪林,exits,1,Prophet,0.0,0.0
+大安,exits,1,Prophet,164.021,989.038
+大安森林公園,exits,1,Prophet,62.597,384.707
+大橋頭站,exits,1,Prophet,54.203,526.685
+大湖公園,exits,1,Prophet,19.447,143.274
+大直,exits,1,Prophet,57.594,371.546
+奇岩,exits,1,Prophet,33.054,327.894
+小南門,exits,1,Prophet,67.633,419.153
+小碧潭,exits,1,Prophet,25.458,154.851
+市政府,exits,1,Prophet,256.718,2639.243
+幸福,exits,1,Prophet,0.0,0.0
+府中,exits,1,Prophet,97.355,1120.651
+後山埤,exits,1,Prophet,53.595,640.635
+徐匯中學,exits,1,Prophet,49.793,521.442
+復興崗,exits,1,Prophet,19.34,162.971
+忠孝復興,exits,1,Prophet,149.747,1795.856
+忠孝敦化,exits,1,Prophet,115.409,1258.589
+忠孝新生,exits,1,Prophet,184.593,1517.294
+忠義,exits,1,Prophet,13.859,124.953
+文德,exits,1,Prophet,43.808,228.338
+新北投,exits,1,Prophet,34.17,216.203
+新北產業園區,exits,1,Prophet,0.0,0.0
+新埔,exits,1,Prophet,115.223,1516.181
+新埔民生,exits,1,Prophet,0.0,0.0
+新店,exits,1,Prophet,50.426,461.133
+新店區公所,exits,1,Prophet,42.923,519.206
+新莊,exits,1,Prophet,73.887,484.529
+昆陽,exits,1,Prophet,74.01,647.7
+明德,exits,1,Prophet,68.631,516.274
+景安,exits,1,Prophet,0.0,0.0
+景平,exits,1,Prophet,0.0,0.0
+景美,exits,1,Prophet,76.599,669.864
+木柵,exits,1,Prophet,32.395,191.974
+東湖,exits,1,Prophet,58.262,367.453
+東門,exits,1,Prophet,111.273,1137.146
+松山,exits,1,Prophet,76.251,1000.512
+松山機場,exits,1,Prophet,25.947,230.088
+松江南京,exits,1,Prophet,112.865,1515.583
+板新,exits,1,Prophet,0.0,0.0
+橋和,exits,1,Prophet,0.0,0.0
+民權西路,exits,1,Prophet,98.87,967.547
+永安市場,exits,1,Prophet,87.285,1023.097
+永寧,exits,1,Prophet,52.571,539.99
+永春,exits,1,Prophet,99.593,796.011
+江子翠,exits,1,Prophet,91.1,1184.836
+海山,exits,1,Prophet,98.241,992.94
+淡水,exits,1,Prophet,192.005,1252.544
+港墘,exits,1,Prophet,80.382,640.039
+石牌,exits,1,Prophet,110.642,1191.203
+秀朗橋,exits,1,Prophet,0.0,0.0
+科技大樓,exits,1,Prophet,64.726,586.804
+竹圍,exits,1,Prophet,36.966,393.258
+紅樹林,exits,1,Prophet,75.262,634.432
+芝山,exits,1,Prophet,76.958,958.196
+菜寮,exits,1,Prophet,50.366,436.428
+萬芳社區,exits,1,Prophet,10.14,86.247
+萬芳醫院,exits,1,Prophet,71.978,488.278
+萬隆,exits,1,Prophet,36.951,430.039
+葫洲,exits,1,Prophet,43.698,345.128
+蘆洲,exits,1,Prophet,59.076,574.762
+行天宮,exits,1,Prophet,88.229,1092.369
+西湖,exits,1,Prophet,36.621,513.868
+西門,exits,1,Prophet,267.391,2789.819
+象山,exits,1,Prophet,52.876,517.865
+輔大,exits,1,Prophet,132.797,462.743
+辛亥,exits,1,Prophet,15.906,135.333
+迴龍,exits,1,Prophet,52.137,456.681
+關渡,exits,1,Prophet,59.627,515.312
+雙連,exits,1,Prophet,65.444,919.214
+頂埔,exits,1,Prophet,118.724,651.611
+頂溪,exits,1,Prophet,109.161,1383.594
+頭前庄,exits,1,Prophet,0.0,0.0
+麟光,exits,1,Prophet,19.603,176.474
+龍山寺,exits,1,Prophet,84.169,1152.875
+BL板橋,exits,1,Prophet+AR,96.404,1765.322
+G大坪林,exits,1,Prophet+AR,55.513,783.535
+O景安,exits,1,Prophet+AR,46.762,832.904
+O頭前庄,exits,1,Prophet+AR,18.912,201.914
+Y板橋,exits,1,Prophet+AR,0.0,0.0
+七張,exits,1,Prophet+AR,54.742,631.592
+三和國中,exits,1,Prophet+AR,46.716,528.156
+三民高中,exits,1,Prophet+AR,50.541,502.754
+三重,exits,1,Prophet+AR,35.388,414.932
+三重國小,exits,1,Prophet+AR,39.825,516.532
+中原,exits,1,Prophet+AR,0.0,0.0
+中和,exits,1,Prophet+AR,0.0,0.0
+中山,exits,1,Prophet+AR,122.394,2230.089
+中山國中,exits,1,Prophet+AR,40.485,520.625
+中山國小,exits,1,Prophet+AR,68.053,706.188
+中正紀念堂,exits,1,Prophet+AR,118.83,1097.214
+丹鳳,exits,1,Prophet+AR,36.202,381.632
+亞東醫院,exits,1,Prophet+AR,63.512,951.464
+信義安和,exits,1,Prophet+AR,48.023,808.018
+先嗇宮,exits,1,Prophet+AR,15.735,214.792
+內湖,exits,1,Prophet+AR,36.215,419.872
+公館,exits,1,Prophet+AR,123.812,1183.611
+六張犁,exits,1,Prophet+AR,35.047,425.171
+劍南路,exits,1,Prophet+AR,41.108,453.811
+劍潭,exits,1,Prophet+AR,119.995,1133.685
+動物園,exits,1,Prophet+AR,47.226,250.582
+北投,exits,1,Prophet+AR,81.547,756.356
+北門,exits,1,Prophet+AR,51.723,713.582
+十四張,exits,1,Prophet+AR,0.0,0.0
+南京三民,exits,1,Prophet+AR,65.559,933.1
+南京復興,exits,1,Prophet+AR,87.826,1715.957
+南勢角,exits,1,Prophet+AR,47.587,813.792
+南港,exits,1,Prophet+AR,135.397,1129.488
+南港展覽館,exits,1,Prophet+AR,161.457,1303.219
+南港軟體園區,exits,1,Prophet+AR,25.822,288.847
+古亭,exits,1,Prophet+AR,80.061,1268.099
+台北101/世貿,exits,1,Prophet+AR,112.633,1361.986
+台北小巨蛋,exits,1,Prophet+AR,117.586,917.201
+台北橋,exits,1,Prophet+AR,31.843,455.111
+台北車站,exits,1,Prophet+AR,382.789,6256.5
+台大醫院,exits,1,Prophet+AR,71.244,895.031
+台電大樓,exits,1,Prophet+AR,57.884,629.26
+唭哩岸,exits,1,Prophet+AR,24.579,283.91
+善導寺,exits,1,Prophet+AR,117.71,925.726
+國父紀念館,exits,1,Prophet+AR,178.567,1563.772
+圓山,exits,1,Prophet+AR,114.369,1148.457
+土城,exits,1,Prophet+AR,29.475,361.589
+士林,exits,1,Prophet+AR,143.615,1114.074
+大坪林,exits,1,Prophet+AR,0.0,0.0
+大安,exits,1,Prophet+AR,147.031,989.038
+大安森林公園,exits,1,Prophet+AR,44.842,384.707
+大橋頭站,exits,1,Prophet+AR,48.716,526.685
+大湖公園,exits,1,Prophet+AR,17.293,143.274
+大直,exits,1,Prophet+AR,53.452,371.546
+奇岩,exits,1,Prophet+AR,28.83,327.894
+小南門,exits,1,Prophet+AR,69.671,419.153
+小碧潭,exits,1,Prophet+AR,22.944,154.851
+市政府,exits,1,Prophet+AR,151.73,2639.243
+幸福,exits,1,Prophet+AR,0.0,0.0
+府中,exits,1,Prophet+AR,77.366,1120.651
+後山埤,exits,1,Prophet+AR,44.822,640.635
+徐匯中學,exits,1,Prophet+AR,39.541,521.442
+復興崗,exits,1,Prophet+AR,17.179,162.971
+忠孝復興,exits,1,Prophet+AR,88.328,1795.856
+忠孝敦化,exits,1,Prophet+AR,63.809,1258.589
+忠孝新生,exits,1,Prophet+AR,105.774,1517.294
+忠義,exits,1,Prophet+AR,13.075,124.953
+文德,exits,1,Prophet+AR,44.78,228.338
+新北投,exits,1,Prophet+AR,31.857,216.203
+新北產業園區,exits,1,Prophet+AR,0.0,0.0
+新埔,exits,1,Prophet+AR,91.54,1516.181
+新埔民生,exits,1,Prophet+AR,0.0,0.0
+新店,exits,1,Prophet+AR,45.574,461.133
+新店區公所,exits,1,Prophet+AR,40.693,519.206
+新莊,exits,1,Prophet+AR,64.289,484.529
+昆陽,exits,1,Prophet+AR,62.655,647.7
+明德,exits,1,Prophet+AR,66.084,516.274
+景安,exits,1,Prophet+AR,0.0,0.0
+景平,exits,1,Prophet+AR,0.0,0.0
+景美,exits,1,Prophet+AR,73.434,669.864
+木柵,exits,1,Prophet+AR,32.214,191.974
+東湖,exits,1,Prophet+AR,52.147,367.453
+東門,exits,1,Prophet+AR,100.468,1137.146
+松山,exits,1,Prophet+AR,61.789,1000.512
+松山機場,exits,1,Prophet+AR,21.795,230.088
+松江南京,exits,1,Prophet+AR,98.945,1515.583
+板新,exits,1,Prophet+AR,0.0,0.0
+橋和,exits,1,Prophet+AR,0.0,0.0
+民權西路,exits,1,Prophet+AR,87.662,967.547
+永安市場,exits,1,Prophet+AR,67.861,1023.097
+永寧,exits,1,Prophet+AR,41.004,539.99
+永春,exits,1,Prophet+AR,90.364,796.011
+江子翠,exits,1,Prophet+AR,72.441,1184.836
+海山,exits,1,Prophet+AR,91.802,992.94
+淡水,exits,1,Prophet+AR,127.848,1252.544
+港墘,exits,1,Prophet+AR,81.664,640.039
+石牌,exits,1,Prophet+AR,100.953,1191.203
+秀朗橋,exits,1,Prophet+AR,0.0,0.0
+科技大樓,exits,1,Prophet+AR,47.713,586.804
+竹圍,exits,1,Prophet+AR,28.886,393.258
+紅樹林,exits,1,Prophet+AR,57.484,634.432
+芝山,exits,1,Prophet+AR,63.737,958.196
+菜寮,exits,1,Prophet+AR,45.783,436.428
+萬芳社區,exits,1,Prophet+AR,10.097,86.247
+萬芳醫院,exits,1,Prophet+AR,57.788,488.278
+萬隆,exits,1,Prophet+AR,35.715,430.039
+葫洲,exits,1,Prophet+AR,38.958,345.128
+蘆洲,exits,1,Prophet+AR,47.032,574.762
+行天宮,exits,1,Prophet+AR,64.787,1092.369
+西湖,exits,1,Prophet+AR,30.671,513.868
+西門,exits,1,Prophet+AR,153.163,2789.819
+象山,exits,1,Prophet+AR,40.156,517.865
+輔大,exits,1,Prophet+AR,96.763,462.743
+辛亥,exits,1,Prophet+AR,14.886,135.333
+迴龍,exits,1,Prophet+AR,44.223,456.681
+關渡,exits,1,Prophet+AR,50.42,515.312
+雙連,exits,1,Prophet+AR,45.184,919.214
+頂埔,exits,1,Prophet+AR,66.28,651.611
+頂溪,exits,1,Prophet+AR,82.852,1383.594
+頭前庄,exits,1,Prophet+AR,0.0,0.0
+麟光,exits,1,Prophet+AR,18.624,176.474
+龍山寺,exits,1,Prophet+AR,69.33,1152.875
+BL板橋,exits,1,LightGBM,79.476,1765.322
+G大坪林,exits,1,LightGBM,39.596,783.535
+O景安,exits,1,LightGBM,36.459,832.904
+O頭前庄,exits,1,LightGBM,14.395,201.914
+Y板橋,exits,1,LightGBM,0.0,0.0
+七張,exits,1,LightGBM,34.299,631.592
+三和國中,exits,1,LightGBM,28.283,528.156
+三民高中,exits,1,LightGBM,28.393,502.754
+三重,exits,1,LightGBM,28.101,414.932
+三重國小,exits,1,LightGBM,28.707,516.532
+中原,exits,1,LightGBM,0.0,0.0
+中和,exits,1,LightGBM,0.0,0.0
+中山,exits,1,LightGBM,93.848,2230.089
+中山國中,exits,1,LightGBM,27.422,520.625
+中山國小,exits,1,LightGBM,33.89,706.188
+中正紀念堂,exits,1,LightGBM,68.413,1097.214
+丹鳳,exits,1,LightGBM,25.158,381.632
+亞東醫院,exits,1,LightGBM,43.962,951.464
+信義安和,exits,1,LightGBM,40.368,808.018
+先嗇宮,exits,1,LightGBM,15.167,214.792
+內湖,exits,1,LightGBM,24.326,419.872
+公館,exits,1,LightGBM,84.526,1183.611
+六張犁,exits,1,LightGBM,23.681,425.171
+劍南路,exits,1,LightGBM,31.424,453.811
+劍潭,exits,1,LightGBM,89.33,1133.685
+動物園,exits,1,LightGBM,30.282,250.582
+北投,exits,1,LightGBM,43.291,756.356
+北門,exits,1,LightGBM,36.73,713.582
+十四張,exits,1,LightGBM,0.0,0.0
+南京三民,exits,1,LightGBM,42.357,933.1
+南京復興,exits,1,LightGBM,74.291,1715.957
+南勢角,exits,1,LightGBM,38.23,813.792
+南港,exits,1,LightGBM,96.331,1129.488
+南港展覽館,exits,1,LightGBM,102.6,1303.219
+南港軟體園區,exits,1,LightGBM,21.258,288.847
+古亭,exits,1,LightGBM,54.899,1268.099
+台北101/世貿,exits,1,LightGBM,91.785,1361.986
+台北小巨蛋,exits,1,LightGBM,73.997,917.201
+台北橋,exits,1,LightGBM,26.767,455.111
+台北車站,exits,1,LightGBM,376.414,6256.5
+台大醫院,exits,1,LightGBM,44.049,895.031
+台電大樓,exits,1,LightGBM,37.67,629.26
+唭哩岸,exits,1,LightGBM,19.462,283.91
+善導寺,exits,1,LightGBM,63.198,925.726
+國父紀念館,exits,1,LightGBM,146.507,1563.772
+圓山,exits,1,LightGBM,68.736,1148.457
+土城,exits,1,LightGBM,21.878,361.589
+士林,exits,1,LightGBM,81.168,1114.074
+大坪林,exits,1,LightGBM,0.0,0.0
+大安,exits,1,LightGBM,62.336,989.038
+大安森林公園,exits,1,LightGBM,31.851,384.707
+大橋頭站,exits,1,LightGBM,30.602,526.685
+大湖公園,exits,1,LightGBM,14.946,143.274
+大直,exits,1,LightGBM,31.541,371.546
+奇岩,exits,1,LightGBM,22.678,327.894
+小南門,exits,1,LightGBM,32.041,419.153
+小碧潭,exits,1,LightGBM,15.654,154.851
+市政府,exits,1,LightGBM,106.499,2639.243
+幸福,exits,1,LightGBM,0.0,0.0
+府中,exits,1,LightGBM,48.891,1120.651
+後山埤,exits,1,LightGBM,34.289,640.635
+徐匯中學,exits,1,LightGBM,28.326,521.442
+復興崗,exits,1,LightGBM,14.153,162.971
+忠孝復興,exits,1,LightGBM,70.612,1795.856
+忠孝敦化,exits,1,LightGBM,50.335,1258.589
+忠孝新生,exits,1,LightGBM,75.346,1517.294
+忠義,exits,1,LightGBM,12.024,124.953
+文德,exits,1,LightGBM,22.894,228.338
+新北投,exits,1,LightGBM,21.174,216.203
+新北產業園區,exits,1,LightGBM,0.0,0.0
+新埔,exits,1,LightGBM,65.666,1516.181
+新埔民生,exits,1,LightGBM,0.0,0.0
+新店,exits,1,LightGBM,30.322,461.133
+新店區公所,exits,1,LightGBM,29.16,519.206
+新莊,exits,1,LightGBM,34.944,484.529
+昆陽,exits,1,LightGBM,47.879,647.7
+明德,exits,1,LightGBM,37.283,516.274
+景安,exits,1,LightGBM,0.0,0.0
+景平,exits,1,LightGBM,0.0,0.0
+景美,exits,1,LightGBM,42.154,669.864
+木柵,exits,1,LightGBM,16.791,191.974
+東湖,exits,1,LightGBM,26.824,367.453
+東門,exits,1,LightGBM,54.488,1137.146
+松山,exits,1,LightGBM,52.389,1000.512
+松山機場,exits,1,LightGBM,18.347,230.088
+松江南京,exits,1,LightGBM,73.041,1515.583
+板新,exits,1,LightGBM,0.0,0.0
+橋和,exits,1,LightGBM,0.0,0.0
+民權西路,exits,1,LightGBM,45.553,967.547
+永安市場,exits,1,LightGBM,45.371,1023.097
+永寧,exits,1,LightGBM,34.063,539.99
+永春,exits,1,LightGBM,43.205,796.011
+江子翠,exits,1,LightGBM,51.239,1184.836
+海山,exits,1,LightGBM,55.053,992.94
+淡水,exits,1,LightGBM,86.033,1252.544
+港墘,exits,1,LightGBM,44.411,640.039
+石牌,exits,1,LightGBM,53.757,1191.203
+秀朗橋,exits,1,LightGBM,0.0,0.0
+科技大樓,exits,1,LightGBM,35.883,586.804
+竹圍,exits,1,LightGBM,23.831,393.258
+紅樹林,exits,1,LightGBM,42.973,634.432
+芝山,exits,1,LightGBM,45.383,958.196
+菜寮,exits,1,LightGBM,27.272,436.428
+萬芳社區,exits,1,LightGBM,9.171,86.247
+萬芳醫院,exits,1,LightGBM,35.957,488.278
+萬隆,exits,1,LightGBM,26.191,430.039
+葫洲,exits,1,LightGBM,24.281,345.128
+蘆洲,exits,1,LightGBM,33.735,574.762
+行天宮,exits,1,LightGBM,51.02,1092.369
+西湖,exits,1,LightGBM,22.66,513.868
+西門,exits,1,LightGBM,124.973,2789.819
+象山,exits,1,LightGBM,37.878,517.865
+輔大,exits,1,LightGBM,49.2,462.743
+辛亥,exits,1,LightGBM,12.665,135.333
+迴龍,exits,1,LightGBM,30.872,456.681
+關渡,exits,1,LightGBM,37.419,515.312
+雙連,exits,1,LightGBM,40.425,919.214
+頂埔,exits,1,LightGBM,57.056,651.611
+頂溪,exits,1,LightGBM,56.015,1383.594
+頭前庄,exits,1,LightGBM,0.0,0.0
+麟光,exits,1,LightGBM,15.841,176.474
+龍山寺,exits,1,LightGBM,50.619,1152.875
+BL板橋,exits,1,LightGBM (scaled),74.36,1765.322
+G大坪林,exits,1,LightGBM (scaled),41.614,783.535
+O景安,exits,1,LightGBM (scaled),32.757,832.904
+O頭前庄,exits,1,LightGBM (scaled),14.732,201.914
+Y板橋,exits,1,LightGBM (scaled),0.018,0.0
+七張,exits,1,LightGBM (scaled),33.789,631.592
+三和國中,exits,1,LightGBM (scaled),26.638,528.156
+三民高中,exits,1,LightGBM (scaled),27.293,502.754
+三重,exits,1,LightGBM (scaled),26.953,414.932
+三重國小,exits,1,LightGBM (scaled),25.678,516.532
+中原,exits,1,LightGBM (scaled),0.018,0.0
+中和,exits,1,LightGBM (scaled),0.018,0.0
+中山,exits,1,LightGBM (scaled),86.651,2230.089
+中山國中,exits,1,LightGBM (scaled),26.301,520.625
+中山國小,exits,1,LightGBM (scaled),31.537,706.188
+中正紀念堂,exits,1,LightGBM (scaled),66.656,1097.214
+丹鳳,exits,1,LightGBM (scaled),24.669,381.632
+亞東醫院,exits,1,LightGBM (scaled),43.328,951.464
+信義安和,exits,1,LightGBM (scaled),38.869,808.018
+先嗇宮,exits,1,LightGBM (scaled),13.787,214.792
+內湖,exits,1,LightGBM (scaled),22.226,419.872
+公館,exits,1,LightGBM (scaled),85.88,1183.611
+六張犁,exits,1,LightGBM (scaled),21.574,425.171
+劍南路,exits,1,LightGBM (scaled),30.293,453.811
+劍潭,exits,1,LightGBM (scaled),92.171,1133.685
+動物園,exits,1,LightGBM (scaled),31.538,250.582
+北投,exits,1,LightGBM (scaled),41.5,756.356
+北門,exits,1,LightGBM (scaled),34.499,713.582
+十四張,exits,1,LightGBM (scaled),0.018,0.0
+南京三民,exits,1,LightGBM (scaled),41.52,933.1
+南京復興,exits,1,LightGBM (scaled),67.418,1715.957
+南勢角,exits,1,LightGBM (scaled),33.851,813.792
+南港,exits,1,LightGBM (scaled),97.766,1129.488
+南港展覽館,exits,1,LightGBM (scaled),108.544,1303.219
+南港軟體園區,exits,1,LightGBM (scaled),21.165,288.847
+古亭,exits,1,LightGBM (scaled),53.437,1268.099
+台北101/世貿,exits,1,LightGBM (scaled),89.009,1361.986
+台北小巨蛋,exits,1,LightGBM (scaled),74.671,917.201
+台北橋,exits,1,LightGBM (scaled),24.254,455.111
+台北車站,exits,1,LightGBM (scaled),298.773,6256.5
+台大醫院,exits,1,LightGBM (scaled),45.012,895.031
+台電大樓,exits,1,LightGBM (scaled),36.875,629.26
+唭哩岸,exits,1,LightGBM (scaled),18.021,283.91
+善導寺,exits,1,LightGBM (scaled),60.663,925.726
+國父紀念館,exits,1,LightGBM (scaled),157.054,1563.772
+圓山,exits,1,LightGBM (scaled),60.71,1148.457
+土城,exits,1,LightGBM (scaled),19.808,361.589
+士林,exits,1,LightGBM (scaled),79.739,1114.074
+大坪林,exits,1,LightGBM (scaled),0.014,0.0
+大安,exits,1,LightGBM (scaled),54.922,989.038
+大安森林公園,exits,1,LightGBM (scaled),32.414,384.707
+大橋頭站,exits,1,LightGBM (scaled),28.966,526.685
+大湖公園,exits,1,LightGBM (scaled),14.066,143.274
+大直,exits,1,LightGBM (scaled),32.729,371.546
+奇岩,exits,1,LightGBM (scaled),21.339,327.894
+小南門,exits,1,LightGBM (scaled),35.684,419.153
+小碧潭,exits,1,LightGBM (scaled),14.712,154.851
+市政府,exits,1,LightGBM (scaled),100.017,2639.243
+幸福,exits,1,LightGBM (scaled),0.017,0.0
+府中,exits,1,LightGBM (scaled),50.422,1120.651
+後山埤,exits,1,LightGBM (scaled),36.829,640.635
+徐匯中學,exits,1,LightGBM (scaled),26.068,521.442
+復興崗,exits,1,LightGBM (scaled),13.284,162.971
+忠孝復興,exits,1,LightGBM (scaled),63.035,1795.856
+忠孝敦化,exits,1,LightGBM (scaled),47.252,1258.589
+忠孝新生,exits,1,LightGBM (scaled),73.036,1517.294
+忠義,exits,1,LightGBM (scaled),11.69,124.953
+文德,exits,1,LightGBM (scaled),22.24,228.338
+新北投,exits,1,LightGBM (scaled),20.665,216.203
+新北產業園區,exits,1,LightGBM (scaled),0.018,0.0
+新埔,exits,1,LightGBM (scaled),64.627,1516.181
+新埔民生,exits,1,LightGBM (scaled),0.017,0.0
+新店,exits,1,LightGBM (scaled),29.344,461.133
+新店區公所,exits,1,LightGBM (scaled),27.157,519.206
+新莊,exits,1,LightGBM (scaled),34.942,484.529
+昆陽,exits,1,LightGBM (scaled),51.266,647.7
+明德,exits,1,LightGBM (scaled),29.559,516.274
+景安,exits,1,LightGBM (scaled),0.014,0.0
+景平,exits,1,LightGBM (scaled),0.019,0.0
+景美,exits,1,LightGBM (scaled),46.709,669.864
+木柵,exits,1,LightGBM (scaled),16.164,191.974
+東湖,exits,1,LightGBM (scaled),25.8,367.453
+東門,exits,1,LightGBM (scaled),47.211,1137.146
+松山,exits,1,LightGBM (scaled),57.248,1000.512
+松山機場,exits,1,LightGBM (scaled),18.236,230.088
+松江南京,exits,1,LightGBM (scaled),56.66,1515.583
+板新,exits,1,LightGBM (scaled),0.018,0.0
+橋和,exits,1,LightGBM (scaled),0.017,0.0
+民權西路,exits,1,LightGBM (scaled),44.48,967.547
+永安市場,exits,1,LightGBM (scaled),42.6,1023.097
+永寧,exits,1,LightGBM (scaled),37.809,539.99
+永春,exits,1,LightGBM (scaled),41.099,796.011
+江子翠,exits,1,LightGBM (scaled),50.017,1184.836
+海山,exits,1,LightGBM (scaled),48.788,992.94
+淡水,exits,1,LightGBM (scaled),93.087,1252.544
+港墘,exits,1,LightGBM (scaled),33.732,640.039
+石牌,exits,1,LightGBM (scaled),51.308,1191.203
+秀朗橋,exits,1,LightGBM (scaled),0.017,0.0
+科技大樓,exits,1,LightGBM (scaled),36.389,586.804
+竹圍,exits,1,LightGBM (scaled),22.441,393.258
+紅樹林,exits,1,LightGBM (scaled),41.289,634.432
+芝山,exits,1,LightGBM (scaled),42.806,958.196
+菜寮,exits,1,LightGBM (scaled),23.693,436.428
+萬芳社區,exits,1,LightGBM (scaled),8.575,86.247
+萬芳醫院,exits,1,LightGBM (scaled),31.905,488.278
+萬隆,exits,1,LightGBM (scaled),24.738,430.039
+葫洲,exits,1,LightGBM (scaled),23.681,345.128
+蘆洲,exits,1,LightGBM (scaled),28.645,574.762
+行天宮,exits,1,LightGBM (scaled),46.985,1092.369
+西湖,exits,1,LightGBM (scaled),24.695,513.868
+西門,exits,1,LightGBM (scaled),123.177,2789.819
+象山,exits,1,LightGBM (scaled),35.216,517.865
+輔大,exits,1,LightGBM (scaled),53.795,462.743
+辛亥,exits,1,LightGBM (scaled),11.272,135.333
+迴龍,exits,1,LightGBM (scaled),30.1,456.681
+關渡,exits,1,LightGBM (scaled),33.484,515.312
+雙連,exits,1,LightGBM (scaled),36.521,919.214
+頂埔,exits,1,LightGBM (scaled),72.24,651.611
+頂溪,exits,1,LightGBM (scaled),53.427,1383.594
+頭前庄,exits,1,LightGBM (scaled),0.018,0.0
+麟光,exits,1,LightGBM (scaled),14.768,176.474
+龍山寺,exits,1,LightGBM (scaled),49.356,1152.875
+BL板橋,exits,2,Seasonal Naive,150.753,1765.322
+G大坪林,exits,2,Seasonal Naive,77.897,783.535
+O景安,exits,2,Seasonal Naive,72.875,832.904
+O頭前庄,exits,2,Seasonal Naive,26.474,201.914
+Y板橋,exits,2,Seasonal Naive,0.0,0.0
+七張,exits,2,Seasonal Naive,59.685,631.592
+三和國中,exits,2,Seasonal Naive,53.603,528.156
+三民高中,exits,2,Seasonal Naive,55.104,502.754
+三重,exits,2,Seasonal Naive,48.994,414.932
+三重國小,exits,2,Seasonal Naive,48.708,516.532
+中原,exits,2,Seasonal Naive,0.0,0.0
+中和,exits,2,Seasonal Naive,0.0,0.0
+中山,exits,2,Seasonal Naive,205.636,2230.089
+中山國中,exits,2,Seasonal Naive,57.732,520.625
+中山國小,exits,2,Seasonal Naive,68.299,706.188
+中正紀念堂,exits,2,Seasonal Naive,141.508,1097.214
+丹鳳,exits,2,Seasonal Naive,43.986,381.632
+亞東醫院,exits,2,Seasonal Naive,99.165,951.464
+信義安和,exits,2,Seasonal Naive,79.621,808.018
+先嗇宮,exits,2,Seasonal Naive,26.761,214.792
+內湖,exits,2,Seasonal Naive,43.835,419.872
+公館,exits,2,Seasonal Naive,169.356,1183.611
+六張犁,exits,2,Seasonal Naive,45.125,425.171
+劍南路,exits,2,Seasonal Naive,58.921,453.811
+劍潭,exits,2,Seasonal Naive,197.635,1133.685
+動物園,exits,2,Seasonal Naive,66.607,250.582
+北投,exits,2,Seasonal Naive,85.661,756.356
+北門,exits,2,Seasonal Naive,72.799,713.582
+十四張,exits,2,Seasonal Naive,0.0,0.0
+南京三民,exits,2,Seasonal Naive,103.246,933.1
+南京復興,exits,2,Seasonal Naive,173.917,1715.957
+南勢角,exits,2,Seasonal Naive,67.864,813.792
+南港,exits,2,Seasonal Naive,216.796,1129.488
+南港展覽館,exits,2,Seasonal Naive,350.471,1303.219
+南港軟體園區,exits,2,Seasonal Naive,40.126,288.847
+古亭,exits,2,Seasonal Naive,127.485,1268.099
+台北101/世貿,exits,2,Seasonal Naive,188.612,1361.986
+台北小巨蛋,exits,2,Seasonal Naive,201.542,917.201
+台北橋,exits,2,Seasonal Naive,42.603,455.111
+台北車站,exits,2,Seasonal Naive,574.543,6256.5
+台大醫院,exits,2,Seasonal Naive,120.531,895.031
+台電大樓,exits,2,Seasonal Naive,68.849,629.26
+唭哩岸,exits,2,Seasonal Naive,31.108,283.91
+善導寺,exits,2,Seasonal Naive,148.75,925.726
+國父紀念館,exits,2,Seasonal Naive,274.864,1563.772
+圓山,exits,2,Seasonal Naive,161.231,1148.457
+土城,exits,2,Seasonal Naive,38.689,361.589
+士林,exits,2,Seasonal Naive,160.199,1114.074
+大坪林,exits,2,Seasonal Naive,0.0,0.0
+大安,exits,2,Seasonal Naive,126.89,989.038
+大安森林公園,exits,2,Seasonal Naive,63.431,384.707
+大橋頭站,exits,2,Seasonal Naive,54.969,526.685
+大湖公園,exits,2,Seasonal Naive,23.311,143.274
+大直,exits,2,Seasonal Naive,59.485,371.546
+奇岩,exits,2,Seasonal Naive,35.815,327.894
+小南門,exits,2,Seasonal Naive,73.254,419.153
+小碧潭,exits,2,Seasonal Naive,22.357,154.851
+市政府,exits,2,Seasonal Naive,237.383,2639.243
+幸福,exits,2,Seasonal Naive,0.0,0.0
+府中,exits,2,Seasonal Naive,104.721,1120.651
+後山埤,exits,2,Seasonal Naive,58.562,640.635
+徐匯中學,exits,2,Seasonal Naive,51.278,521.442
+復興崗,exits,2,Seasonal Naive,21.501,162.971
+忠孝復興,exits,2,Seasonal Naive,134.856,1795.856
+忠孝敦化,exits,2,Seasonal Naive,107.036,1258.589
+忠孝新生,exits,2,Seasonal Naive,178.303,1517.294
+忠義,exits,2,Seasonal Naive,18.239,124.953
+文德,exits,2,Seasonal Naive,34.662,228.338
+新北投,exits,2,Seasonal Naive,33.06,216.203
+新北產業園區,exits,2,Seasonal Naive,0.0,0.0
+新埔,exits,2,Seasonal Naive,133.993,1516.181
+新埔民生,exits,2,Seasonal Naive,0.0,0.0
+新店,exits,2,Seasonal Naive,53.115,461.133
+新店區公所,exits,2,Seasonal Naive,50.515,519.206
+新莊,exits,2,Seasonal Naive,76.675,484.529
+昆陽,exits,2,Seasonal Naive,96.739,647.7
+明德,exits,2,Seasonal Naive,63.817,516.274
+景安,exits,2,Seasonal Naive,0.0,0.0
+景平,exits,2,Seasonal Naive,0.0,0.0
+景美,exits,2,Seasonal Naive,78.832,669.864
+木柵,exits,2,Seasonal Naive,28.415,191.974
+東湖,exits,2,Seasonal Naive,49.782,367.453
+東門,exits,2,Seasonal Naive,111.918,1137.146
+松山,exits,2,Seasonal Naive,109.489,1000.512
+松山機場,exits,2,Seasonal Naive,28.536,230.088
+松江南京,exits,2,Seasonal Naive,159.408,1515.583
+板新,exits,2,Seasonal Naive,0.0,0.0
+橋和,exits,2,Seasonal Naive,0.0,0.0
+民權西路,exits,2,Seasonal Naive,104.812,967.547
+永安市場,exits,2,Seasonal Naive,92.34,1023.097
+永寧,exits,2,Seasonal Naive,64.311,539.99
+永春,exits,2,Seasonal Naive,84.689,796.011
+江子翠,exits,2,Seasonal Naive,101.699,1184.836
+海山,exits,2,Seasonal Naive,102.446,992.94
+淡水,exits,2,Seasonal Naive,213.847,1252.544
+港墘,exits,2,Seasonal Naive,84.525,640.039
+石牌,exits,2,Seasonal Naive,124.801,1191.203
+秀朗橋,exits,2,Seasonal Naive,0.0,0.0
+科技大樓,exits,2,Seasonal Naive,71.349,586.804
+竹圍,exits,2,Seasonal Naive,43.258,393.258
+紅樹林,exits,2,Seasonal Naive,87.038,634.432
+芝山,exits,2,Seasonal Naive,97.689,958.196
+菜寮,exits,2,Seasonal Naive,48.715,436.428
+萬芳社區,exits,2,Seasonal Naive,12.936,86.247
+萬芳醫院,exits,2,Seasonal Naive,62.379,488.278
+萬隆,exits,2,Seasonal Naive,41.19,430.039
+葫洲,exits,2,Seasonal Naive,46.525,345.128
+蘆洲,exits,2,Seasonal Naive,62.851,574.762
+行天宮,exits,2,Seasonal Naive,110.526,1092.369
+西湖,exits,2,Seasonal Naive,61.879,513.868
+西門,exits,2,Seasonal Naive,249.847,2789.819
+象山,exits,2,Seasonal Naive,73.083,517.865
+輔大,exits,2,Seasonal Naive,112.262,462.743
+辛亥,exits,2,Seasonal Naive,19.107,135.333
+迴龍,exits,2,Seasonal Naive,56.589,456.681
+關渡,exits,2,Seasonal Naive,75.694,515.312
+雙連,exits,2,Seasonal Naive,90.086,919.214
+頂埔,exits,2,Seasonal Naive,119.744,651.611
+頂溪,exits,2,Seasonal Naive,108.722,1383.594
+頭前庄,exits,2,Seasonal Naive,0.0,0.0
+麟光,exits,2,Seasonal Naive,23.004,176.474
+龍山寺,exits,2,Seasonal Naive,103.25,1152.875
+BL板橋,exits,2,Historical Average,142.69,1765.322
+G大坪林,exits,2,Historical Average,57.43,783.535
+O景安,exits,2,Historical Average,61.212,832.904
+O頭前庄,exits,2,Historical Average,19.29,201.914
+Y板橋,exits,2,Historical Average,0.0,0.0
+七張,exits,2,Historical Average,48.57,631.592
+三和國中,exits,2,Historical Average,45.505,528.156
+三民高中,exits,2,Historical Average,46.693,502.754
+三重,exits,2,Historical Average,44.014,414.932
+三重國小,exits,2,Historical Average,39.252,516.532
+中原,exits,2,Historical Average,0.0,0.0
+中和,exits,2,Historical Average,0.0,0.0
+中山,exits,2,Historical Average,217.084,2230.089
+中山國中,exits,2,Historical Average,43.647,520.625
+中山國小,exits,2,Historical Average,57.482,706.188
+中正紀念堂,exits,2,Historical Average,121.611,1097.214
+丹鳳,exits,2,Historical Average,36.435,381.632
+亞東醫院,exits,2,Historical Average,79.877,951.464
+信義安和,exits,2,Historical Average,66.157,808.018
+先嗇宮,exits,2,Historical Average,16.996,214.792
+內湖,exits,2,Historical Average,36.404,419.872
+公館,exits,2,Historical Average,171.347,1183.611
+六張犁,exits,2,Historical Average,30.63,425.171
+劍南路,exits,2,Historical Average,47.19,453.811
+劍潭,exits,2,Historical Average,155.985,1133.685
+動物園,exits,2,Historical Average,60.08,250.582
+北投,exits,2,Historical Average,72.765,756.356
+北門,exits,2,Historical Average,59.127,713.582
+十四張,exits,2,Historical Average,0.0,0.0
+南京三民,exits,2,Historical Average,65.004,933.1
+南京復興,exits,2,Historical Average,126.593,1715.957
+南勢角,exits,2,Historical Average,57.719,813.792
+南港,exits,2,Historical Average,174.186,1129.488
+南港展覽館,exits,2,Historical Average,298.523,1303.219
+南港軟體園區,exits,2,Historical Average,28.724,288.847
+古亭,exits,2,Historical Average,101.55,1268.099
+台北101/世貿,exits,2,Historical Average,187.862,1361.986
+台北小巨蛋,exits,2,Historical Average,147.412,917.201
+台北橋,exits,2,Historical Average,38.565,455.111
+台北車站,exits,2,Historical Average,648.228,6256.5
+台大醫院,exits,2,Historical Average,78.972,895.031
+台電大樓,exits,2,Historical Average,56.911,629.26
+唭哩岸,exits,2,Historical Average,23.779,283.91
+善導寺,exits,2,Historical Average,109.25,925.726
+國父紀念館,exits,2,Historical Average,392.575,1563.772
+圓山,exits,2,Historical Average,162.689,1148.457
+土城,exits,2,Historical Average,31.767,361.589
+士林,exits,2,Historical Average,141.063,1114.074
+大坪林,exits,2,Historical Average,0.0,0.0
+大安,exits,2,Historical Average,102.414,989.038
+大安森林公園,exits,2,Historical Average,56.304,384.707
+大橋頭站,exits,2,Historical Average,45.232,526.685
+大湖公園,exits,2,Historical Average,19.43,143.274
+大直,exits,2,Historical Average,53.472,371.546
+奇岩,exits,2,Historical Average,28.926,327.894
+小南門,exits,2,Historical Average,54.234,419.153
+小碧潭,exits,2,Historical Average,17.207,154.851
+市政府,exits,2,Historical Average,257.435,2639.243
+幸福,exits,2,Historical Average,0.0,0.0
+府中,exits,2,Historical Average,95.265,1120.651
+後山埤,exits,2,Historical Average,66.167,640.635
+徐匯中學,exits,2,Historical Average,41.684,521.442
+復興崗,exits,2,Historical Average,17.073,162.971
+忠孝復興,exits,2,Historical Average,176.009,1795.856
+忠孝敦化,exits,2,Historical Average,127.553,1258.589
+忠孝新生,exits,2,Historical Average,152.358,1517.294
+忠義,exits,2,Historical Average,13.952,124.953
+文德,exits,2,Historical Average,30.443,228.338
+新北投,exits,2,Historical Average,36.058,216.203
+新北產業園區,exits,2,Historical Average,0.0,0.0
+新埔,exits,2,Historical Average,114.52,1516.181
+新埔民生,exits,2,Historical Average,0.0,0.0
+新店,exits,2,Historical Average,43.861,461.133
+新店區公所,exits,2,Historical Average,40.038,519.206
+新莊,exits,2,Historical Average,60.662,484.529
+昆陽,exits,2,Historical Average,71.162,647.7
+明德,exits,2,Historical Average,52.485,516.274
+景安,exits,2,Historical Average,0.0,0.0
+景平,exits,2,Historical Average,0.0,0.0
+景美,exits,2,Historical Average,72.616,669.864
+木柵,exits,2,Historical Average,23.539,191.974
+東湖,exits,2,Historical Average,42.962,367.453
+東門,exits,2,Historical Average,98.516,1137.146
+松山,exits,2,Historical Average,80.19,1000.512
+松山機場,exits,2,Historical Average,20.458,230.088
+松江南京,exits,2,Historical Average,102.722,1515.583
+板新,exits,2,Historical Average,0.0,0.0
+橋和,exits,2,Historical Average,0.0,0.0
+民權西路,exits,2,Historical Average,75.664,967.547
+永安市場,exits,2,Historical Average,74.123,1023.097
+永寧,exits,2,Historical Average,65.824,539.99
+永春,exits,2,Historical Average,73.024,796.011
+江子翠,exits,2,Historical Average,84.951,1184.836
+海山,exits,2,Historical Average,87.54,992.94
+淡水,exits,2,Historical Average,180.565,1252.544
+港墘,exits,2,Historical Average,55.05,640.039
+石牌,exits,2,Historical Average,94.795,1191.203
+秀朗橋,exits,2,Historical Average,0.0,0.0
+科技大樓,exits,2,Historical Average,63.024,586.804
+竹圍,exits,2,Historical Average,32.192,393.258
+紅樹林,exits,2,Historical Average,67.335,634.432
+芝山,exits,2,Historical Average,73.482,958.196
+菜寮,exits,2,Historical Average,39.665,436.428
+萬芳社區,exits,2,Historical Average,9.455,86.247
+萬芳醫院,exits,2,Historical Average,56.807,488.278
+萬隆,exits,2,Historical Average,33.876,430.039
+葫洲,exits,2,Historical Average,36.727,345.128
+蘆洲,exits,2,Historical Average,51.253,574.762
+行天宮,exits,2,Historical Average,82.01,1092.369
+西湖,exits,2,Historical Average,35.209,513.868
+西門,exits,2,Historical Average,298.111,2789.819
+象山,exits,2,Historical Average,59.186,517.865
+輔大,exits,2,Historical Average,117.71,462.743
+辛亥,exits,2,Historical Average,13.706,135.333
+迴龍,exits,2,Historical Average,48.231,456.681
+關渡,exits,2,Historical Average,57.475,515.312
+雙連,exits,2,Historical Average,73.825,919.214
+頂埔,exits,2,Historical Average,227.287,651.611
+頂溪,exits,2,Historical Average,88.062,1383.594
+頭前庄,exits,2,Historical Average,0.0,0.0
+麟光,exits,2,Historical Average,17.899,176.474
+龍山寺,exits,2,Historical Average,91.663,1152.875
+BL板橋,exits,2,SARIMAX,104.602,1765.322
+G大坪林,exits,2,SARIMAX,51.795,783.535
+O景安,exits,2,SARIMAX,55.197,832.904
+O頭前庄,exits,2,SARIMAX,17.925,201.914
+Y板橋,exits,2,SARIMAX,0.0,0.0
+七張,exits,2,SARIMAX,46.936,631.592
+三和國中,exits,2,SARIMAX,43.246,528.156
+三民高中,exits,2,SARIMAX,43.84,502.754
+三重,exits,2,SARIMAX,37.196,414.932
+三重國小,exits,2,SARIMAX,37.52,516.532
+中原,exits,2,SARIMAX,0.0,0.0
+中和,exits,2,SARIMAX,0.0,0.0
+中山,exits,2,SARIMAX,129.821,2230.089
+中山國中,exits,2,SARIMAX,42.689,520.625
+中山國小,exits,2,SARIMAX,47.32,706.188
+中正紀念堂,exits,2,SARIMAX,101.086,1097.214
+丹鳳,exits,2,SARIMAX,34.214,381.632
+亞東醫院,exits,2,SARIMAX,67.968,951.464
+信義安和,exits,2,SARIMAX,53.643,808.018
+先嗇宮,exits,2,SARIMAX,16.964,214.792
+內湖,exits,2,SARIMAX,35.641,419.872
+公館,exits,2,SARIMAX,131.348,1183.611
+六張犁,exits,2,SARIMAX,30.322,425.171
+劍南路,exits,2,SARIMAX,37.508,453.811
+劍潭,exits,2,SARIMAX,139.006,1133.685
+動物園,exits,2,SARIMAX,45.906,250.582
+北投,exits,2,SARIMAX,67.396,756.356
+北門,exits,2,SARIMAX,50.89,713.582
+十四張,exits,2,SARIMAX,0.0,0.0
+南京三民,exits,2,SARIMAX,58.956,933.1
+南京復興,exits,2,SARIMAX,108.035,1715.957
+南勢角,exits,2,SARIMAX,56.002,813.792
+南港,exits,2,SARIMAX,137.306,1129.488
+南港展覽館,exits,2,SARIMAX,166.471,1303.219
+南港軟體園區,exits,2,SARIMAX,26.559,288.847
+古亭,exits,2,SARIMAX,80.753,1268.099
+台北101/世貿,exits,2,SARIMAX,124.0,1361.986
+台北小巨蛋,exits,2,SARIMAX,117.012,917.201
+台北橋,exits,2,SARIMAX,33.256,455.111
+台北車站,exits,2,SARIMAX,430.991,6256.5
+台大醫院,exits,2,SARIMAX,72.713,895.031
+台電大樓,exits,2,SARIMAX,48.461,629.26
+唭哩岸,exits,2,SARIMAX,23.655,283.91
+善導寺,exits,2,SARIMAX,93.071,925.726
+國父紀念館,exits,2,SARIMAX,267.803,1563.772
+圓山,exits,2,SARIMAX,117.43,1148.457
+土城,exits,2,SARIMAX,28.897,361.589
+士林,exits,2,SARIMAX,123.658,1114.074
+大坪林,exits,2,SARIMAX,0.0,0.0
+大安,exits,2,SARIMAX,102.861,989.038
+大安森林公園,exits,2,SARIMAX,47.112,384.707
+大橋頭站,exits,2,SARIMAX,44.616,526.685
+大湖公園,exits,2,SARIMAX,18.332,143.274
+大直,exits,2,SARIMAX,45.514,371.546
+奇岩,exits,2,SARIMAX,29.274,327.894
+小南門,exits,2,SARIMAX,41.824,419.153
+小碧潭,exits,2,SARIMAX,17.589,154.851
+市政府,exits,2,SARIMAX,151.604,2639.243
+幸福,exits,2,SARIMAX,0.0,0.0
+府中,exits,2,SARIMAX,71.968,1120.651
+後山埤,exits,2,SARIMAX,44.367,640.635
+徐匯中學,exits,2,SARIMAX,38.998,521.442
+復興崗,exits,2,SARIMAX,17.258,162.971
+忠孝復興,exits,2,SARIMAX,93.203,1795.856
+忠孝敦化,exits,2,SARIMAX,71.556,1258.589
+忠孝新生,exits,2,SARIMAX,109.746,1517.294
+忠義,exits,2,SARIMAX,13.864,124.953
+文德,exits,2,SARIMAX,32.683,228.338
+新北投,exits,2,SARIMAX,28.963,216.203
+新北產業園區,exits,2,SARIMAX,0.0,0.0
+新埔,exits,2,SARIMAX,96.683,1516.181
+新埔民生,exits,2,SARIMAX,0.0,0.0
+新店,exits,2,SARIMAX,40.44,461.133
+新店區公所,exits,2,SARIMAX,41.325,519.206
+新莊,exits,2,SARIMAX,56.916,484.529
+昆陽,exits,2,SARIMAX,69.93,647.7
+明德,exits,2,SARIMAX,53.808,516.274
+景安,exits,2,SARIMAX,0.0,0.0
+景平,exits,2,SARIMAX,0.0,0.0
+景美,exits,2,SARIMAX,62.354,669.864
+木柵,exits,2,SARIMAX,26.889,191.974
+東湖,exits,2,SARIMAX,42.602,367.453
+東門,exits,2,SARIMAX,83.473,1137.146
+松山,exits,2,SARIMAX,64.833,1000.512
+松山機場,exits,2,SARIMAX,21.247,230.088
+松江南京,exits,2,SARIMAX,88.259,1515.583
+板新,exits,2,SARIMAX,0.0,0.0
+橋和,exits,2,SARIMAX,0.0,0.0
+民權西路,exits,2,SARIMAX,63.37,967.547
+永安市場,exits,2,SARIMAX,68.798,1023.097
+永寧,exits,2,SARIMAX,42.688,539.99
+永春,exits,2,SARIMAX,61.773,796.011
+江子翠,exits,2,SARIMAX,73.837,1184.836
+海山,exits,2,SARIMAX,80.233,992.94
+淡水,exits,2,SARIMAX,130.651,1252.544
+港墘,exits,2,SARIMAX,58.603,640.039
+石牌,exits,2,SARIMAX,87.321,1191.203
+秀朗橋,exits,2,SARIMAX,0.0,0.0
+科技大樓,exits,2,SARIMAX,51.518,586.804
+竹圍,exits,2,SARIMAX,30.14,393.258
+紅樹林,exits,2,SARIMAX,58.452,634.432
+芝山,exits,2,SARIMAX,66.568,958.196
+菜寮,exits,2,SARIMAX,38.788,436.428
+萬芳社區,exits,2,SARIMAX,10.018,86.247
+萬芳醫院,exits,2,SARIMAX,57.806,488.278
+萬隆,exits,2,SARIMAX,31.1,430.039
+葫洲,exits,2,SARIMAX,35.462,345.128
+蘆洲,exits,2,SARIMAX,47.155,574.762
+行天宮,exits,2,SARIMAX,65.941,1092.369
+西湖,exits,2,SARIMAX,39.751,513.868
+西門,exits,2,SARIMAX,158.257,2789.819
+象山,exits,2,SARIMAX,42.573,517.865
+輔大,exits,2,SARIMAX,82.71,462.743
+辛亥,exits,2,SARIMAX,14.214,135.333
+迴龍,exits,2,SARIMAX,43.921,456.681
+關渡,exits,2,SARIMAX,48.252,515.312
+雙連,exits,2,SARIMAX,56.869,919.214
+頂埔,exits,2,SARIMAX,71.041,651.611
+頂溪,exits,2,SARIMAX,84.447,1383.594
+頭前庄,exits,2,SARIMAX,0.0,0.0
+麟光,exits,2,SARIMAX,19.046,176.474
+龍山寺,exits,2,SARIMAX,68.955,1152.875
+BL板橋,exits,2,Prophet,147.347,1765.322
+G大坪林,exits,2,Prophet,61.2,783.535
+O景安,exits,2,Prophet,63.44,832.904
+O頭前庄,exits,2,Prophet,21.004,201.914
+Y板橋,exits,2,Prophet,0.0,0.0
+七張,exits,2,Prophet,57.272,631.592
+三和國中,exits,2,Prophet,54.337,528.156
+三民高中,exits,2,Prophet,57.614,502.754
+三重,exits,2,Prophet,46.256,414.932
+三重國小,exits,2,Prophet,45.923,516.532
+中原,exits,2,Prophet,0.0,0.0
+中和,exits,2,Prophet,0.0,0.0
+中山,exits,2,Prophet,261.401,2230.089
+中山國中,exits,2,Prophet,50.261,520.625
+中山國小,exits,2,Prophet,66.509,706.188
+中正紀念堂,exits,2,Prophet,132.094,1097.214
+丹鳳,exits,2,Prophet,40.088,381.632
+亞東醫院,exits,2,Prophet,81.713,951.464
+信義安和,exits,2,Prophet,64.111,808.018
+先嗇宮,exits,2,Prophet,16.608,214.792
+內湖,exits,2,Prophet,48.588,419.872
+公館,exits,2,Prophet,198.342,1183.611
+六張犁,exits,2,Prophet,37.028,425.171
+劍南路,exits,2,Prophet,52.811,453.811
+劍潭,exits,2,Prophet,164.334,1133.685
+動物園,exits,2,Prophet,64.693,250.582
+北投,exits,2,Prophet,88.946,756.356
+北門,exits,2,Prophet,75.011,713.582
+十四張,exits,2,Prophet,0.0,0.0
+南京三民,exits,2,Prophet,74.969,933.1
+南京復興,exits,2,Prophet,127.698,1715.957
+南勢角,exits,2,Prophet,63.094,813.792
+南港,exits,2,Prophet,186.503,1129.488
+南港展覽館,exits,2,Prophet,308.271,1303.219
+南港軟體園區,exits,2,Prophet,34.226,288.847
+古亭,exits,2,Prophet,105.45,1268.099
+台北101/世貿,exits,2,Prophet,202.089,1361.986
+台北小巨蛋,exits,2,Prophet,197.447,917.201
+台北橋,exits,2,Prophet,38.692,455.111
+台北車站,exits,2,Prophet,646.816,6256.5
+台大醫院,exits,2,Prophet,94.347,895.031
+台電大樓,exits,2,Prophet,67.659,629.26
+唭哩岸,exits,2,Prophet,29.7,283.91
+善導寺,exits,2,Prophet,146.731,925.726
+國父紀念館,exits,2,Prophet,367.65,1563.772
+圓山,exits,2,Prophet,161.667,1148.457
+土城,exits,2,Prophet,34.905,361.589
+士林,exits,2,Prophet,150.776,1114.074
+大坪林,exits,2,Prophet,0.0,0.0
+大安,exits,2,Prophet,164.021,989.038
+大安森林公園,exits,2,Prophet,62.597,384.707
+大橋頭站,exits,2,Prophet,54.203,526.685
+大湖公園,exits,2,Prophet,19.447,143.274
+大直,exits,2,Prophet,57.594,371.546
+奇岩,exits,2,Prophet,33.054,327.894
+小南門,exits,2,Prophet,67.633,419.153
+小碧潭,exits,2,Prophet,25.458,154.851
+市政府,exits,2,Prophet,256.718,2639.243
+幸福,exits,2,Prophet,0.0,0.0
+府中,exits,2,Prophet,97.355,1120.651
+後山埤,exits,2,Prophet,53.595,640.635
+徐匯中學,exits,2,Prophet,49.793,521.442
+復興崗,exits,2,Prophet,19.34,162.971
+忠孝復興,exits,2,Prophet,149.747,1795.856
+忠孝敦化,exits,2,Prophet,115.409,1258.589
+忠孝新生,exits,2,Prophet,184.593,1517.294
+忠義,exits,2,Prophet,13.859,124.953
+文德,exits,2,Prophet,43.808,228.338
+新北投,exits,2,Prophet,34.17,216.203
+新北產業園區,exits,2,Prophet,0.0,0.0
+新埔,exits,2,Prophet,115.223,1516.181
+新埔民生,exits,2,Prophet,0.0,0.0
+新店,exits,2,Prophet,50.426,461.133
+新店區公所,exits,2,Prophet,42.923,519.206
+新莊,exits,2,Prophet,73.887,484.529
+昆陽,exits,2,Prophet,74.01,647.7
+明德,exits,2,Prophet,68.631,516.274
+景安,exits,2,Prophet,0.0,0.0
+景平,exits,2,Prophet,0.0,0.0
+景美,exits,2,Prophet,76.599,669.864
+木柵,exits,2,Prophet,32.395,191.974
+東湖,exits,2,Prophet,58.262,367.453
+東門,exits,2,Prophet,111.273,1137.146
+松山,exits,2,Prophet,76.251,1000.512
+松山機場,exits,2,Prophet,25.947,230.088
+松江南京,exits,2,Prophet,112.865,1515.583
+板新,exits,2,Prophet,0.0,0.0
+橋和,exits,2,Prophet,0.0,0.0
+民權西路,exits,2,Prophet,98.87,967.547
+永安市場,exits,2,Prophet,87.285,1023.097
+永寧,exits,2,Prophet,52.571,539.99
+永春,exits,2,Prophet,99.593,796.011
+江子翠,exits,2,Prophet,91.1,1184.836
+海山,exits,2,Prophet,98.241,992.94
+淡水,exits,2,Prophet,192.005,1252.544
+港墘,exits,2,Prophet,80.382,640.039
+石牌,exits,2,Prophet,110.642,1191.203
+秀朗橋,exits,2,Prophet,0.0,0.0
+科技大樓,exits,2,Prophet,64.726,586.804
+竹圍,exits,2,Prophet,36.966,393.258
+紅樹林,exits,2,Prophet,75.262,634.432
+芝山,exits,2,Prophet,76.958,958.196
+菜寮,exits,2,Prophet,50.366,436.428
+萬芳社區,exits,2,Prophet,10.14,86.247
+萬芳醫院,exits,2,Prophet,71.978,488.278
+萬隆,exits,2,Prophet,36.951,430.039
+葫洲,exits,2,Prophet,43.698,345.128
+蘆洲,exits,2,Prophet,59.076,574.762
+行天宮,exits,2,Prophet,88.229,1092.369
+西湖,exits,2,Prophet,36.621,513.868
+西門,exits,2,Prophet,267.391,2789.819
+象山,exits,2,Prophet,52.876,517.865
+輔大,exits,2,Prophet,132.797,462.743
+辛亥,exits,2,Prophet,15.906,135.333
+迴龍,exits,2,Prophet,52.137,456.681
+關渡,exits,2,Prophet,59.627,515.312
+雙連,exits,2,Prophet,65.444,919.214
+頂埔,exits,2,Prophet,118.724,651.611
+頂溪,exits,2,Prophet,109.161,1383.594
+頭前庄,exits,2,Prophet,0.0,0.0
+麟光,exits,2,Prophet,19.603,176.474
+龍山寺,exits,2,Prophet,84.169,1152.875
+BL板橋,exits,2,Prophet+AR,122.873,1765.322
+G大坪林,exits,2,Prophet+AR,58.101,783.535
+O景安,exits,2,Prophet+AR,58.808,832.904
+O頭前庄,exits,2,Prophet+AR,21.275,201.914
+Y板橋,exits,2,Prophet+AR,0.0,0.0
+七張,exits,2,Prophet+AR,59.476,631.592
+三和國中,exits,2,Prophet+AR,56.128,528.156
+三民高中,exits,2,Prophet+AR,61.143,502.754
+三重,exits,2,Prophet+AR,44.776,414.932
+三重國小,exits,2,Prophet+AR,45.057,516.532
+中原,exits,2,Prophet+AR,0.0,0.0
+中和,exits,2,Prophet+AR,0.0,0.0
+中山,exits,2,Prophet+AR,174.925,2230.089
+中山國中,exits,2,Prophet+AR,47.412,520.625
+中山國小,exits,2,Prophet+AR,65.965,706.188
+中正紀念堂,exits,2,Prophet+AR,131.754,1097.214
+丹鳳,exits,2,Prophet+AR,40.759,381.632
+亞東醫院,exits,2,Prophet+AR,79.707,951.464
+信義安和,exits,2,Prophet+AR,54.553,808.018
+先嗇宮,exits,2,Prophet+AR,16.325,214.792
+內湖,exits,2,Prophet+AR,46.511,419.872
+公館,exits,2,Prophet+AR,166.591,1183.611
+六張犁,exits,2,Prophet+AR,37.62,425.171
+劍南路,exits,2,Prophet+AR,47.551,453.811
+劍潭,exits,2,Prophet+AR,170.231,1133.685
+動物園,exits,2,Prophet+AR,63.401,250.582
+北投,exits,2,Prophet+AR,97.808,756.356
+北門,exits,2,Prophet+AR,66.877,713.582
+十四張,exits,2,Prophet+AR,0.0,0.0
+南京三民,exits,2,Prophet+AR,74.572,933.1
+南京復興,exits,2,Prophet+AR,110.934,1715.957
+南勢角,exits,2,Prophet+AR,60.966,813.792
+南港,exits,2,Prophet+AR,168.766,1129.488
+南港展覽館,exits,2,Prophet+AR,240.369,1303.219
+南港軟體園區,exits,2,Prophet+AR,32.739,288.847
+古亭,exits,2,Prophet+AR,95.931,1268.099
+台北101/世貿,exits,2,Prophet+AR,151.851,1361.986
+台北小巨蛋,exits,2,Prophet+AR,151.608,917.201
+台北橋,exits,2,Prophet+AR,38.359,455.111
+台北車站,exits,2,Prophet+AR,525.865,6256.5
+台大醫院,exits,2,Prophet+AR,89.324,895.031
+台電大樓,exits,2,Prophet+AR,62.097,629.26
+唭哩岸,exits,2,Prophet+AR,28.206,283.91
+善導寺,exits,2,Prophet+AR,135.622,925.726
+國父紀念館,exits,2,Prophet+AR,271.82,1563.772
+圓山,exits,2,Prophet+AR,140.809,1148.457
+土城,exits,2,Prophet+AR,33.234,361.589
+士林,exits,2,Prophet+AR,155.489,1114.074
+大坪林,exits,2,Prophet+AR,0.0,0.0
+大安,exits,2,Prophet+AR,176.803,989.038
+大安森林公園,exits,2,Prophet+AR,54.739,384.707
+大橋頭站,exits,2,Prophet+AR,56.736,526.685
+大湖公園,exits,2,Prophet+AR,18.955,143.274
+大直,exits,2,Prophet+AR,56.301,371.546
+奇岩,exits,2,Prophet+AR,33.694,327.894
+小南門,exits,2,Prophet+AR,60.813,419.153
+小碧潭,exits,2,Prophet+AR,24.405,154.851
+市政府,exits,2,Prophet+AR,204.302,2639.243
+幸福,exits,2,Prophet+AR,0.0,0.0
+府中,exits,2,Prophet+AR,95.521,1120.651
+後山埤,exits,2,Prophet+AR,51.051,640.635
+徐匯中學,exits,2,Prophet+AR,49.199,521.442
+復興崗,exits,2,Prophet+AR,19.313,162.971
+忠孝復興,exits,2,Prophet+AR,112.925,1795.856
+忠孝敦化,exits,2,Prophet+AR,82.726,1258.589
+忠孝新生,exits,2,Prophet+AR,144.27,1517.294
+忠義,exits,2,Prophet+AR,14.185,124.953
+文德,exits,2,Prophet+AR,46.016,228.338
+新北投,exits,2,Prophet+AR,34.268,216.203
+新北產業園區,exits,2,Prophet+AR,0.0,0.0
+新埔,exits,2,Prophet+AR,116.687,1516.181
+新埔民生,exits,2,Prophet+AR,0.0,0.0
+新店,exits,2,Prophet+AR,47.54,461.133
+新店區公所,exits,2,Prophet+AR,43.953,519.206
+新莊,exits,2,Prophet+AR,77.32,484.529
+昆陽,exits,2,Prophet+AR,77.106,647.7
+明德,exits,2,Prophet+AR,72.811,516.274
+景安,exits,2,Prophet+AR,0.0,0.0
+景平,exits,2,Prophet+AR,0.0,0.0
+景美,exits,2,Prophet+AR,74.264,669.864
+木柵,exits,2,Prophet+AR,35.655,191.974
+東湖,exits,2,Prophet+AR,62.856,367.453
+東門,exits,2,Prophet+AR,111.784,1137.146
+松山,exits,2,Prophet+AR,69.497,1000.512
+松山機場,exits,2,Prophet+AR,23.567,230.088
+松江南京,exits,2,Prophet+AR,108.544,1515.583
+板新,exits,2,Prophet+AR,0.0,0.0
+橋和,exits,2,Prophet+AR,0.0,0.0
+民權西路,exits,2,Prophet+AR,94.949,967.547
+永安市場,exits,2,Prophet+AR,84.801,1023.097
+永寧,exits,2,Prophet+AR,50.672,539.99
+永春,exits,2,Prophet+AR,102.661,796.011
+江子翠,exits,2,Prophet+AR,87.566,1184.836
+海山,exits,2,Prophet+AR,103.494,992.94
+淡水,exits,2,Prophet+AR,162.309,1252.544
+港墘,exits,2,Prophet+AR,89.888,640.039
+石牌,exits,2,Prophet+AR,114.801,1191.203
+秀朗橋,exits,2,Prophet+AR,0.0,0.0
+科技大樓,exits,2,Prophet+AR,60.742,586.804
+竹圍,exits,2,Prophet+AR,36.636,393.258
+紅樹林,exits,2,Prophet+AR,72.358,634.432
+芝山,exits,2,Prophet+AR,76.464,958.196
+菜寮,exits,2,Prophet+AR,52.812,436.428
+萬芳社區,exits,2,Prophet+AR,10.449,86.247
+萬芳醫院,exits,2,Prophet+AR,69.266,488.278
+萬隆,exits,2,Prophet+AR,34.841,430.039
+葫洲,exits,2,Prophet+AR,45.569,345.128
+蘆洲,exits,2,Prophet+AR,59.198,574.762
+行天宮,exits,2,Prophet+AR,78.788,1092.369
+西湖,exits,2,Prophet+AR,37.269,513.868
+西門,exits,2,Prophet+AR,201.929,2789.819
+象山,exits,2,Prophet+AR,47.636,517.865
+輔大,exits,2,Prophet+AR,119.307,462.743
+辛亥,exits,2,Prophet+AR,16.026,135.333
+迴龍,exits,2,Prophet+AR,53.287,456.681
+關渡,exits,2,Prophet+AR,57.696,515.312
+雙連,exits,2,Prophet+AR,57.605,919.214
+頂埔,exits,2,Prophet+AR,96.093,651.611
+頂溪,exits,2,Prophet+AR,106.905,1383.594
+頭前庄,exits,2,Prophet+AR,0.0,0.0
+麟光,exits,2,Prophet+AR,19.475,176.474
+龍山寺,exits,2,Prophet+AR,79.105,1152.875
+BL板橋,exits,2,LightGBM,96.35,1765.322
+G大坪林,exits,2,LightGBM,46.073,783.535
+O景安,exits,2,LightGBM,45.598,832.904
+O頭前庄,exits,2,LightGBM,15.968,201.914
+Y板橋,exits,2,LightGBM,0.001,0.0
+七張,exits,2,LightGBM,37.49,631.592
+三和國中,exits,2,LightGBM,34.256,528.156
+三民高中,exits,2,LightGBM,33.866,502.754
+三重,exits,2,LightGBM,31.887,414.932
+三重國小,exits,2,LightGBM,33.475,516.532
+中原,exits,2,LightGBM,0.001,0.0
+中和,exits,2,LightGBM,0.001,0.0
+中山,exits,2,LightGBM,116.733,2230.089
+中山國中,exits,2,LightGBM,31.33,520.625
+中山國小,exits,2,LightGBM,37.125,706.188
+中正紀念堂,exits,2,LightGBM,75.706,1097.214
+丹鳳,exits,2,LightGBM,28.898,381.632
+亞東醫院,exits,2,LightGBM,52.893,951.464
+信義安和,exits,2,LightGBM,46.885,808.018
+先嗇宮,exits,2,LightGBM,16.056,214.792
+內湖,exits,2,LightGBM,27.841,419.872
+公館,exits,2,LightGBM,97.573,1183.611
+六張犁,exits,2,LightGBM,27.137,425.171
+劍南路,exits,2,LightGBM,35.435,453.811
+劍潭,exits,2,LightGBM,109.283,1133.685
+動物園,exits,2,LightGBM,35.823,250.582
+北投,exits,2,LightGBM,49.56,756.356
+北門,exits,2,LightGBM,42.915,713.582
+十四張,exits,2,LightGBM,0.001,0.0
+南京三民,exits,2,LightGBM,46.725,933.1
+南京復興,exits,2,LightGBM,87.527,1715.957
+南勢角,exits,2,LightGBM,46.119,813.792
+南港,exits,2,LightGBM,114.59,1129.488
+南港展覽館,exits,2,LightGBM,141.66,1303.219
+南港軟體園區,exits,2,LightGBM,24.198,288.847
+古亭,exits,2,LightGBM,64.84,1268.099
+台北101/世貿,exits,2,LightGBM,111.499,1361.986
+台北小巨蛋,exits,2,LightGBM,91.205,917.201
+台北橋,exits,2,LightGBM,31.521,455.111
+台北車站,exits,2,LightGBM,404.273,6256.5
+台大醫院,exits,2,LightGBM,57.881,895.031
+台電大樓,exits,2,LightGBM,41.846,629.26
+唭哩岸,exits,2,LightGBM,21.305,283.91
+善導寺,exits,2,LightGBM,72.404,925.726
+國父紀念館,exits,2,LightGBM,221.955,1563.772
+圓山,exits,2,LightGBM,84.565,1148.457
+土城,exits,2,LightGBM,24.314,361.589
+士林,exits,2,LightGBM,95.032,1114.074
+大坪林,exits,2,LightGBM,0.001,0.0
+大安,exits,2,LightGBM,63.072,989.038
+大安森林公園,exits,2,LightGBM,39.354,384.707
+大橋頭站,exits,2,LightGBM,35.164,526.685
+大湖公園,exits,2,LightGBM,16.002,143.274
+大直,exits,2,LightGBM,33.46,371.546
+奇岩,exits,2,LightGBM,26.0,327.894
+小南門,exits,2,LightGBM,33.104,419.153
+小碧潭,exits,2,LightGBM,16.434,154.851
+市政府,exits,2,LightGBM,136.774,2639.243
+幸福,exits,2,LightGBM,0.001,0.0
+府中,exits,2,LightGBM,59.827,1120.651
+後山埤,exits,2,LightGBM,39.384,640.635
+徐匯中學,exits,2,LightGBM,33.389,521.442
+復興崗,exits,2,LightGBM,14.544,162.971
+忠孝復興,exits,2,LightGBM,85.394,1795.856
+忠孝敦化,exits,2,LightGBM,59.559,1258.589
+忠孝新生,exits,2,LightGBM,91.484,1517.294
+忠義,exits,2,LightGBM,12.769,124.953
+文德,exits,2,LightGBM,19.735,228.338
+新北投,exits,2,LightGBM,22.134,216.203
+新北產業園區,exits,2,LightGBM,0.001,0.0
+新埔,exits,2,LightGBM,78.973,1516.181
+新埔民生,exits,2,LightGBM,0.001,0.0
+新店,exits,2,LightGBM,34.323,461.133
+新店區公所,exits,2,LightGBM,32.015,519.206
+新莊,exits,2,LightGBM,44.596,484.529
+昆陽,exits,2,LightGBM,58.635,647.7
+明德,exits,2,LightGBM,34.11,516.274
+景安,exits,2,LightGBM,0.001,0.0
+景平,exits,2,LightGBM,0.001,0.0
+景美,exits,2,LightGBM,47.602,669.864
+木柵,exits,2,LightGBM,17.459,191.974
+東湖,exits,2,LightGBM,29.409,367.453
+東門,exits,2,LightGBM,60.079,1137.146
+松山,exits,2,LightGBM,65.417,1000.512
+松山機場,exits,2,LightGBM,20.54,230.088
+松江南京,exits,2,LightGBM,79.101,1515.583
+板新,exits,2,LightGBM,0.001,0.0
+橋和,exits,2,LightGBM,0.001,0.0
+民權西路,exits,2,LightGBM,53.638,967.547
+永安市場,exits,2,LightGBM,56.566,1023.097
+永寧,exits,2,LightGBM,39.709,539.99
+永春,exits,2,LightGBM,46.856,796.011
+江子翠,exits,2,LightGBM,62.206,1184.836
+海山,exits,2,LightGBM,60.287,992.94
+淡水,exits,2,LightGBM,97.473,1252.544
+港墘,exits,2,LightGBM,40.435,640.039
+石牌,exits,2,LightGBM,63.973,1191.203
+秀朗橋,exits,2,LightGBM,0.001,0.0
+科技大樓,exits,2,LightGBM,41.621,586.804
+竹圍,exits,2,LightGBM,26.626,393.258
+紅樹林,exits,2,LightGBM,50.826,634.432
+芝山,exits,2,LightGBM,55.334,958.196
+菜寮,exits,2,LightGBM,29.807,436.428
+萬芳社區,exits,2,LightGBM,9.463,86.247
+萬芳醫院,exits,2,LightGBM,37.876,488.278
+萬隆,exits,2,LightGBM,28.209,430.039
+葫洲,exits,2,LightGBM,27.754,345.128
+蘆洲,exits,2,LightGBM,40.364,574.762
+行天宮,exits,2,LightGBM,56.159,1092.369
+西湖,exits,2,LightGBM,27.614,513.868
+西門,exits,2,LightGBM,150.534,2789.819
+象山,exits,2,LightGBM,41.759,517.865
+輔大,exits,2,LightGBM,51.62,462.743
+辛亥,exits,2,LightGBM,13.522,135.333
+迴龍,exits,2,LightGBM,35.501,456.681
+關渡,exits,2,LightGBM,40.373,515.312
+雙連,exits,2,LightGBM,46.642,919.214
+頂埔,exits,2,LightGBM,72.111,651.611
+頂溪,exits,2,LightGBM,70.979,1383.594
+頭前庄,exits,2,LightGBM,0.001,0.0
+麟光,exits,2,LightGBM,16.795,176.474
+龍山寺,exits,2,LightGBM,60.778,1152.875
+BL板橋,exits,2,LightGBM (scaled),85.943,1765.322
+G大坪林,exits,2,LightGBM (scaled),43.968,783.535
+O景安,exits,2,LightGBM (scaled),39.343,832.904
+O頭前庄,exits,2,LightGBM (scaled),15.746,201.914
+Y板橋,exits,2,LightGBM (scaled),0.014,0.0
+七張,exits,2,LightGBM (scaled),36.577,631.592
+三和國中,exits,2,LightGBM (scaled),31.162,528.156
+三民高中,exits,2,LightGBM (scaled),31.134,502.754
+三重,exits,2,LightGBM (scaled),30.562,414.932
+三重國小,exits,2,LightGBM (scaled),28.5,516.532
+中原,exits,2,LightGBM (scaled),0.014,0.0
+中和,exits,2,LightGBM (scaled),0.014,0.0
+中山,exits,2,LightGBM (scaled),104.457,2230.089
+中山國中,exits,2,LightGBM (scaled),29.553,520.625
+中山國小,exits,2,LightGBM (scaled),34.489,706.188
+中正紀念堂,exits,2,LightGBM (scaled),70.829,1097.214
+丹鳳,exits,2,LightGBM (scaled),26.341,381.632
+亞東醫院,exits,2,LightGBM (scaled),48.366,951.464
+信義安和,exits,2,LightGBM (scaled),42.148,808.018
+先嗇宮,exits,2,LightGBM (scaled),14.959,214.792
+內湖,exits,2,LightGBM (scaled),23.977,419.872
+公館,exits,2,LightGBM (scaled),101.184,1183.611
+六張犁,exits,2,LightGBM (scaled),23.125,425.171
+劍南路,exits,2,LightGBM (scaled),31.958,453.811
+劍潭,exits,2,LightGBM (scaled),108.293,1133.685
+動物園,exits,2,LightGBM (scaled),36.442,250.582
+北投,exits,2,LightGBM (scaled),46.587,756.356
+北門,exits,2,LightGBM (scaled),39.564,713.582
+十四張,exits,2,LightGBM (scaled),0.014,0.0
+南京三民,exits,2,LightGBM (scaled),45.061,933.1
+南京復興,exits,2,LightGBM (scaled),74.591,1715.957
+南勢角,exits,2,LightGBM (scaled),38.774,813.792
+南港,exits,2,LightGBM (scaled),115.386,1129.488
+南港展覽館,exits,2,LightGBM (scaled),154.071,1303.219
+南港軟體園區,exits,2,LightGBM (scaled),23.054,288.847
+古亭,exits,2,LightGBM (scaled),59.234,1268.099
+台北101/世貿,exits,2,LightGBM (scaled),110.959,1361.986
+台北小巨蛋,exits,2,LightGBM (scaled),93.24,917.201
+台北橋,exits,2,LightGBM (scaled),26.727,455.111
+台北車站,exits,2,LightGBM (scaled),359.909,6256.5
+台大醫院,exits,2,LightGBM (scaled),53.039,895.031
+台電大樓,exits,2,LightGBM (scaled),41.113,629.26
+唭哩岸,exits,2,LightGBM (scaled),20.152,283.91
+善導寺,exits,2,LightGBM (scaled),61.841,925.726
+國父紀念館,exits,2,LightGBM (scaled),280.748,1563.772
+圓山,exits,2,LightGBM (scaled),76.343,1148.457
+土城,exits,2,LightGBM (scaled),21.346,361.589
+士林,exits,2,LightGBM (scaled),91.576,1114.074
+大坪林,exits,2,LightGBM (scaled),0.014,0.0
+大安,exits,2,LightGBM (scaled),57.724,989.038
+大安森林公園,exits,2,LightGBM (scaled),39.233,384.707
+大橋頭站,exits,2,LightGBM (scaled),30.851,526.685
+大湖公園,exits,2,LightGBM (scaled),15.135,143.274
+大直,exits,2,LightGBM (scaled),35.421,371.546
+奇岩,exits,2,LightGBM (scaled),23.311,327.894
+小南門,exits,2,LightGBM (scaled),36.736,419.153
+小碧潭,exits,2,LightGBM (scaled),14.542,154.851
+市政府,exits,2,LightGBM (scaled),128.897,2639.243
+幸福,exits,2,LightGBM (scaled),0.014,0.0
+府中,exits,2,LightGBM (scaled),56.076,1120.651
+後山埤,exits,2,LightGBM (scaled),40.768,640.635
+徐匯中學,exits,2,LightGBM (scaled),28.573,521.442
+復興崗,exits,2,LightGBM (scaled),14.135,162.971
+忠孝復興,exits,2,LightGBM (scaled),72.825,1795.856
+忠孝敦化,exits,2,LightGBM (scaled),53.861,1258.589
+忠孝新生,exits,2,LightGBM (scaled),87.716,1517.294
+忠義,exits,2,LightGBM (scaled),12.561,124.953
+文德,exits,2,LightGBM (scaled),21.964,228.338
+新北投,exits,2,LightGBM (scaled),22.619,216.203
+新北產業園區,exits,2,LightGBM (scaled),0.014,0.0
+新埔,exits,2,LightGBM (scaled),77.259,1516.181
+新埔民生,exits,2,LightGBM (scaled),0.014,0.0
+新店,exits,2,LightGBM (scaled),31.912,461.133
+新店區公所,exits,2,LightGBM (scaled),29.541,519.206
+新莊,exits,2,LightGBM (scaled),44.261,484.529
+昆陽,exits,2,LightGBM (scaled),56.737,647.7
+明德,exits,2,LightGBM (scaled),32.923,516.274
+景安,exits,2,LightGBM (scaled),0.013,0.0
+景平,exits,2,LightGBM (scaled),0.014,0.0
+景美,exits,2,LightGBM (scaled),50.962,669.864
+木柵,exits,2,LightGBM (scaled),16.939,191.974
+東湖,exits,2,LightGBM (scaled),28.029,367.453
+東門,exits,2,LightGBM (scaled),55.498,1137.146
+松山,exits,2,LightGBM (scaled),60.082,1000.512
+松山機場,exits,2,LightGBM (scaled),19.346,230.088
+松江南京,exits,2,LightGBM (scaled),69.727,1515.583
+板新,exits,2,LightGBM (scaled),0.014,0.0
+橋和,exits,2,LightGBM (scaled),0.014,0.0
+民權西路,exits,2,LightGBM (scaled),48.555,967.547
+永安市場,exits,2,LightGBM (scaled),47.339,1023.097
+永寧,exits,2,LightGBM (scaled),43.667,539.99
+永春,exits,2,LightGBM (scaled),42.081,796.011
+江子翠,exits,2,LightGBM (scaled),55.037,1184.836
+海山,exits,2,LightGBM (scaled),53.728,992.94
+淡水,exits,2,LightGBM (scaled),103.81,1252.544
+港墘,exits,2,LightGBM (scaled),37.107,640.039
+石牌,exits,2,LightGBM (scaled),57.512,1191.203
+秀朗橋,exits,2,LightGBM (scaled),0.014,0.0
+科技大樓,exits,2,LightGBM (scaled),40.409,586.804
+竹圍,exits,2,LightGBM (scaled),23.464,393.258
+紅樹林,exits,2,LightGBM (scaled),48.419,634.432
+芝山,exits,2,LightGBM (scaled),51.395,958.196
+菜寮,exits,2,LightGBM (scaled),25.515,436.428
+萬芳社區,exits,2,LightGBM (scaled),8.852,86.247
+萬芳醫院,exits,2,LightGBM (scaled),35.677,488.278
+萬隆,exits,2,LightGBM (scaled),25.062,430.039
+葫洲,exits,2,LightGBM (scaled),25.195,345.128
+蘆洲,exits,2,LightGBM (scaled),33.43,574.762
+行天宮,exits,2,LightGBM (scaled),52.059,1092.369
+西湖,exits,2,LightGBM (scaled),28.21,513.868
+西門,exits,2,LightGBM (scaled),148.224,2789.819
+象山,exits,2,LightGBM (scaled),39.38,517.865
+輔大,exits,2,LightGBM (scaled),59.163,462.743
+辛亥,exits,2,LightGBM (scaled),11.986,135.333
+迴龍,exits,2,LightGBM (scaled),32.894,456.681
+關渡,exits,2,LightGBM (scaled),36.141,515.312
+雙連,exits,2,LightGBM (scaled),41.069,919.214
+頂埔,exits,2,LightGBM (scaled),76.917,651.611
+頂溪,exits,2,LightGBM (scaled),59.881,1383.594
+頭前庄,exits,2,LightGBM (scaled),0.015,0.0
+麟光,exits,2,LightGBM (scaled),15.838,176.474
+龍山寺,exits,2,LightGBM (scaled),57.346,1152.875
