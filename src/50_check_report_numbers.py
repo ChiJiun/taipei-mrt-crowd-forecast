@@ -98,6 +98,20 @@ CHECKS = [
     # SHAP
     (SG, "group=='歷史平均剖面'", "share_%", "歷史平均剖面占平均 |SHAP| 的 {v:.1f}%"),
     (SG, "group=='天氣'", "share_%", "天氣 {v:.1f}%"),
+    # 多月回測（迴歸）
+    ("reg_backtest_special.csv", "target=='entries' and subset=='颱風假'", "MAE_LightGBM-B", "| 進站：颱風假（2 天） | 629.9 | 560.6 | 196.9 | {v:.1f} |"),
+    ("reg_backtest_special.csv", "target=='entries' and subset=='颱風假'", "bias_LightGBM-B", "平均偏差 +{v:.0f}"),
+    ("reg_backtest_special.csv", "target=='entries' and subset=='春節連假'", "MAE_LightGBM-B", "| 167.6 | 53.8 | {v:.1f} |"),
+    ("reg_backtest_special.csv", "target=='entries' and subset.str.startswith('跨年')", "MAE_LightGBM-B", "LightGBM-B（{v:.1f}）甚至略遜"),
+    # 分位數區間
+    ("reg_quantile.csv", "target=='entries' and horizon==1 and interval=='CQR-分組' and subset=='all'", "coverage", "| 進站 t+1 | {v:.1%} |"),
+    ("reg_quantile.csv", "target=='entries' and horizon==1 and interval=='CQR-分組' and subset=='peak'", "coverage", "| 79.7% | {v:.1%} |"),
+    ("reg_quantile.csv", "target=='exits' and horizon==2 and interval=='CQR-分組' and subset=='rain'", "coverage", "| 74.8% | {v:.1%} |"),
+    ("reg_quantile.csv", "target=='exits' and horizon==1 and interval=='raw' and subset=='all'", "coverage", "未校準時出站 t+1 只有 {v:.1%}"),
+    ("reg_quantile.csv", "target=='exits' and horizon==1 and interval=='CQR-分組' and subset=='all'", "coverage", "CQR 後提升到 {v:.1%}"),
+    # 消融（天氣上限）
+    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "MAE", "整體 MAE 為 {v:.2f}"),
+    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "rain_MAE", "雨天 MAE 從 60.7 升到 {v:.1f}，因此"),
 ]
 
 
@@ -111,6 +125,20 @@ def eda_checks(report: str):
     x = r[("平日", ">5mm")]
     out.append(("eda_summary_numbers.json", "平日 >5mm", f"仍有 {x['ratio_mean'] * 100:.0f}%（CI {x['ci_low']:.2f}–{x['ci_high']:.2f}）"))
     out.append(("eda_summary_numbers.json", "假日／平日", f"假日／平日 = {eda['holiday_to_workday_ratio']:.2f}"))
+    bt = rd.read_csv("reg_backtest_monthly.csv")
+    x = bt[bt.target == "entries"].pivot(index="month", columns="method", values="MAE")
+    imp = 100 * (1 - x["LightGBM-B"] / x["Historical Average"])
+    out.append(("reg_backtest_monthly.csv", "各月改善最小", f"介於 {imp.min():.1f}%（{imp.idxmin()}）與 {imp.max():.1f}%（{imp.idxmax()}）"))
+    out.append(("reg_backtest_monthly.csv", "2026-09 改善", f"主測試月 2026-09 為 {imp['2026-09']:.1f}%"))
+    n = bt[bt.target == "entries"].groupby("method").apply(lambda g: (g.MAE * g.n).sum() / g.n.sum())
+    out.append(("reg_backtest_monthly.csv", "全年 MAE", f"| 進站全年 MAE | {n['Seasonal Naive']:.1f} | {n['Historical Average']:.1f} | "
+                f"{n['LightGBM-scaled']:.1f} | {n['LightGBM-B']:.1f} |"))
+    import re as _re
+    t = rd.read_text("reg_rain_tables.md")
+    sec = t[t.index("控制組成後"):]
+    v = [float(m) for m in _re.findall(r"\| ([\d.]+) \|", sec)[:3]]
+    out.append(("reg_rain_tables.md", "雨天 MAE", f"雨天 MAE {v[0]:.1f}，無雨 {v[1]:.1f}"))
+    out.append(("reg_rain_tables.md", "組成加權", f"無雨 MAE 升到 {v[2]:.1f}"))
     return [(f, d, s, s in report) for f, d, s in out]
 
 
