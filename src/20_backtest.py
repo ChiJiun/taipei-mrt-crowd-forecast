@@ -4,6 +4,8 @@ Each test month M in 2025-10..2026-09 is predicted by a model trained only on da
   * retrain every `--retrain` months (default 3 = quarterly; 1 = monthly);
   * for a block starting at month B: train on ts_target < B - 1 month, early-stop on month B-1,
     historical-average profiles use data < B only (no leakage), then predict every month in the block.
+Leakage: hist_avg (and B's day-type profiles) are recomputed for every block from data < block start
+(`20_reglib.add_features(hist_end=...)`, equivalent to make_features(train_end=...)).
 Methods: Seasonal Naive, Historical Average (same cut-off), LightGBM-scaled (report version) and LightGBM-B.
 Also reports special-day errors (New Year's Eve/Day, Lunar New Year, long weekends, typhoon days if the
 external calendar provides them, rainy hours if weather is available).
