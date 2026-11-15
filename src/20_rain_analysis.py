@@ -65,8 +65,15 @@ def main():
     params = {"learning_rate": 0.1}
     panel = load_panel()
     fr = R.build(panel, tgt, h)
+    # "recent level correction" (suggested by workstream C's SARIMAX finding): deviation of the last
+    # 2-3 origin hours from the station profile, in scale units
+    g = fr.groupby("station", observed=True)["anom_origin_s"]
+    fr["anom_prev1_s"] = g.shift(1)
+    fr["anom_mean3_s"] = g.transform(lambda x: x.rolling(3, min_periods=1).mean())
+    fr["anom_trend_s"] = fr["anom_origin_s"] - fr["anom_prev1_s"]
+    recent = ["anom_prev1_s", "anom_mean3_s", "anom_trend_s"]
     tr, va, te = R.split(fr)
-    full = R.cols_full(fr)
+    full = [c for c in R.cols_full(fr) if c not in recent]
     # Evaluate on valid+test: models trained on <= TRAIN_END with early stopping on a slice of training
     # (last 4 weeks) so August is also out-of-sample.
     es_start = pd.Timestamp(TRAIN_END) - pd.Timedelta(days=28)
@@ -81,6 +88,7 @@ def main():
         "B 無任何天氣": ([c for c in full if c not in RAIN_DERIV and c not in ("precip", "precip_3h", "temp", "rh")
                      and c not in (R.load_weather("obs").columns)], R.B_OBJ),
         "LightGBM-B": (full, R.B_OBJ),
+        "B + 近期水準修正": (full + recent, R.B_OBJ),
     }
     for name, (cols, obj) in variants.items():
         m = R.fit(tr2, es, cols, obj, True, params=params)
@@ -143,7 +151,7 @@ def main():
     t1 = sections[2][1]
     x = np.arange(len(t1))
     for i, mt in enumerate(methods):
-        axes[0].bar(x + (i - 1.5) * 0.2, t1[f"relMAE%_{mt}"], 0.2, label=mt)
+        axes[0].bar(x + (i - 2) * 0.16, t1[f"relMAE%_{mt}"], 0.16, label=mt)
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(t1["intensity"].astype(str))
     axes[0].set_xlabel("降雨強度 (mm/h)")
@@ -152,7 +160,7 @@ def main():
     t2 = sections[5][1]
     x = np.arange(len(t2))
     for i, mt in enumerate(methods):
-        axes[1].bar(x + (i - 1.5) * 0.2, t2[f"bias_{mt}"], 0.2, label=mt)
+        axes[1].bar(x + (i - 2) * 0.16, t2[f"bias_{mt}"], 0.16, label=mt)
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(t2["phase"], fontsize=8)
     axes[1].axhline(0, color="gray", lw=.6)
@@ -162,7 +170,7 @@ def main():
     lab = [f"{'雨' if r else '晴'}·{d}" for r, d in zip(t3.rain, t3.dtn)]
     x = np.arange(len(t3))
     for i, mt in enumerate(methods):
-        axes[2].bar(x + (i - 1.5) * 0.2, t3[f"bias_{mt}"], 0.2, label=mt)
+        axes[2].bar(x + (i - 2) * 0.16, t3[f"bias_{mt}"], 0.16, label=mt)
     axes[2].set_xticks(x)
     axes[2].set_xticklabels(lab, fontsize=8, rotation=30)
     axes[2].axhline(0, color="gray", lw=.6)

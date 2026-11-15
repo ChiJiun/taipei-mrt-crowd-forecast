@@ -82,7 +82,7 @@ def plot_station(te, P, lo_c, hi_c, target, h):
         return
     t = te["ts_target"].to_numpy()[m]
     fig, ax = plt.subplots(figsize=(11, 3.8))
-    ax.fill_between(t, lo_c[m], hi_c[m], color="#9ecae1", alpha=0.6, label="P10–P90（校準後）")
+    ax.fill_between(t, lo_c[m], hi_c[m], color="#9ecae1", alpha=0.6, label="P10–P90（分組校準後）")
     ax.plot(t, P[m, 1], color="#08519c", lw=1.2, label="P50 預測")
     ax.plot(t, te["y"].to_numpy()[m], color="black", lw=0.9, ls="--", label="實際")
     y = te["y"].to_numpy()[m]
@@ -122,16 +122,30 @@ def main():
         # CQR in scaled units so the correction is proportional to station size
         off = cqr_offset(va.y.to_numpy() / sv, Pv[:, 0] / sv, Pv[:, 2] / sv)
         lo_c, hi_c = np.clip(Pt[:, 0] - off * st, 0, None), Pt[:, 2] + off * st
+        # group-wise (Mondrian) CQR: separate offsets for weekday-peak and other hours
+        gv, gt = peak_mask(va), peak_mask(te)
+        lo_g, hi_g = Pt[:, 0].copy(), Pt[:, 2].copy()
+        offs = {}
+        for gname, mv, mt in (("peak", gv, gt), ("other", ~gv, ~gt)):
+            o = cqr_offset(va.y.to_numpy()[mv] / sv[mv], Pv[mv, 0] / sv[mv], Pv[mv, 2] / sv[mv])
+            offs[gname] = o
+            lo_g[mt] = np.clip(Pt[mt, 0] - o * st[mt], 0, None)
+            hi_g[mt] = Pt[mt, 2] + o * st[mt]
         y = te.y.to_numpy()
-        for r in evaluate(y, Pt, Pt[:, 0], Pt[:, 2], te, "raw") + evaluate(y, Pt, lo_c, hi_c, te, "CQR"):
-            rows.append({"target": tgt, "horizon": h, "cqr_offset_scaled": round(off, 4), **r})
-        plot_station(te, Pt, lo_c, hi_c, tgt, h)
+        for lab, l_, h_, o_ in (("raw", Pt[:, 0], Pt[:, 2], 0.0), ("CQR", lo_c, hi_c, off),
+                                ("CQR-分組", lo_g, hi_g, offs["peak"])):
+            for r in evaluate(y, Pt, l_, h_, te, lab):
+                rows.append({"target": tgt, "horizon": h, "cqr_offset_scaled": round(o_, 4), **r})
+        pd.DataFrame({"ts_target": te.ts_target.to_numpy(), "station": te.station.to_numpy(), "y": y,
+                      "P10": Pt[:, 0], "P50": Pt[:, 1], "P90": Pt[:, 2], "lo_cqr_group": lo_g,
+                      "hi_cqr_group": hi_g}).to_parquet(RESULTS / f"pred_quantile_h{h}_{tgt}.parquet", index=False)
+        plot_station(te, Pt, lo_g, hi_g, tgt, h)
         print(pd.DataFrame(rows).tail(8).to_string(index=False), flush=True)
     df = pd.DataFrame(rows)
     suffix = "_quick" if a.quick else ""
     df.to_csv(RESULTS / f"reg_quantile{suffix}.csv", index=False)
     md = ["# 分位數預測區間（LightGBM quantile P10/P50/P90，測試集 2026-09）\n",
-          f"名目覆蓋率 {NOMINAL:.0%}。raw = 直接用 P10/P90；CQR = 以驗證集（2026-08）做 conformal 校準。"
+          f"名目覆蓋率 {NOMINAL:.0%}。raw = 直接用 P10/P90；CQR = 以驗證集（2026-08）做 conformal 校準（全體單一修正量）；CQR-分組 = 平日尖峰與其他時段各自校準（Mondrian CQR），圖用此版本。cqr_offset_scaled 對 CQR-分組列出的是尖峰組修正量（單位：站點週平均量級）。"
           "interval_score 越低越好（寬度 + 未覆蓋懲罰）。\n"]
     show = ["target", "horizon", "interval", "subset", "coverage", "below_P10", "above_P90", "mean_width",
             "MAE_P50", "pinball_P10", "pinball_P50", "pinball_P90", "interval_score"]
