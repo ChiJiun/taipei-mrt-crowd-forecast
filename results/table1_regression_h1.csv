@@ -1,0 +1,11 @@
+target,horizon,method,MAE,RMSE,peak_MAE
+entries,1,Last Value,272.41,597.61,786.48
+entries,1,Seasonal Naive,87.42,305.39,106.94
+entries,1,Historical Average,75.91,199.26,125.27
+entries,1,LightGBM,41.08,113.83,78.97
+entries,1,LightGBM (scaled),41.34,117.79,73.97
+exits,1,Last Value,271.44,638.99,802.19
+exits,1,Seasonal Naive,85.08,308.02,110.9
+exits,1,Historical Average,76.47,203.46,136.24
+exits,1,LightGBM,39.65,103.96,82.89
+exits,1,LightGBM (scaled),39.48,98.39,76.47
