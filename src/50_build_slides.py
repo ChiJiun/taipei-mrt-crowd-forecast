@@ -346,9 +346,41 @@ def build():
     card(s, Inches(9.1), Inches(1.7), Inches(3.63), Inches(5.0))
     stat(s, Inches(9.35), Inches(1.9), Inches(3.3), f"{imp[('entries', 1)]:.0f}%", "t+1 進站 MAE 改善（相對 HA）")
     stat(s, Inches(9.35), Inches(3.4), Inches(3.3), f"{imp[('entries', 2)]:.0f}%", "t+2 進站 MAE 改善（相對 HA）")
-    text(s, Inches(9.35), Inches(4.95), Inches(3.2), Inches(1.6),
-         "關鍵特徵：依站點量級正規化、起點當下相對歷史剖面的偏離（今天比平常高或低多少）", size=13, color=INK)
-    footer(s, n, "results/reg_main.csv、ts_compare.csv" + ("" if D["has_b"] else "（迴歸主結果待更新）"))
+    if rd.has("reg_backtest_monthly.csv"):
+        bt = rd.read_csv("reg_backtest_monthly.csv")
+        x = bt[bt.target == "entries"].pivot(index="month", columns="method", values="MAE")
+        bimp = 100 * (1 - x["LightGBM-B"] / x["Historical Average"])
+        n_ok = int((bimp >= 25).sum())
+        stat(s, Inches(9.35), Inches(4.9), Inches(3.3), f"{n_ok}／{len(bimp)} 月",
+             f"多月回測達標（改善 {bimp.min():.0f}–{bimp.max():.0f}%）")
+        src_extra = "、reg_backtest_monthly.csv"
+    else:
+        text(s, Inches(9.35), Inches(4.95), Inches(3.2), Inches(1.6),
+             "關鍵特徵：依站點量級正規化、起點當下相對歷史剖面的偏離", size=13, color=INK)
+        src_extra = ""
+    footer(s, n, "results/reg_main.csv、ts_compare.csv" + src_extra)
+
+    # 6b 多月回測與預測區間
+    if rd.has("reg_backtest_monthly.csv") and rd.has("reg_quantile.csv"):
+        s = new()
+        title(s, "結論不只對單月成立：12 個月回測全數達標", "左：滾動起點回測各月進站 MAE；右：台北車站 P10–P90 預測區間（分組 CQR 校準）")
+        picture(s, "figures/reg_backtest_monthly.png", MX, Inches(1.55), h=Inches(3.2))
+        picture(s, "figures/reg_interval_taipei_main.png", Inches(5.75), Inches(1.9), w=Inches(7.0))
+        sp = rd.read_csv("reg_backtest_special.csv")
+        sp = sp[sp.target == "entries"].set_index("subset")
+        q = rd.read_csv("reg_quantile.csv")
+        q = q[(q.target == "entries") & (q.horizon == 1) & (q.interval == "CQR-分組")].set_index("subset")
+        bullets(s, MX, Inches(5.0), Inches(4.9), Inches(1.9), [
+            ("颱風假：", f"HA {sp.loc['颱風假', 'MAE_Historical Average']:.0f} → LightGBM-B "
+                       f"{sp.loc['颱風假', 'MAE_LightGBM-B']:.0f}（仍偏高估）"),
+            ("跨年最難：", f"MAE {sp.loc[[k for k in sp.index if k.startswith('跨年')][0], 'MAE_LightGBM-B']:.0f}，"
+                        "跨年夜低估、凌晨後高估"),
+        ], size=14, gap=8)
+        bullets(s, Inches(5.75), Inches(5.0), Inches(7.0), Inches(1.9), [
+            ("整體覆蓋率：", f"{q.loc['all', 'coverage']:.1%}（名目 80%）"),
+            ("平日尖峰：", f"只有 {q.loc['peak', 'coverage']:.1%}，開學月尖峰高於校準月"),
+        ], size=14, gap=8)
+        footer(s, n, "results/reg_backtest_monthly.csv、reg_backtest_special.csv、reg_quantile.csv（回測歷史期尚無天氣）")
 
     # 7 SARIMA / Prophet
     s = new()
@@ -515,7 +547,7 @@ def build():
         ["Recall ≥ 0.7 時 Precision ≥ 0.9", f"相對 P95：P {rel.Precision:.3f}／R {rel.Recall:.3f}；雙門檻：P {dual.Precision:.3f}／R "
                                             f"{dual.Recall:.3f}", "✓"],
         ["各站型、雨天情境的表現", "6 個站型分別報告；雨天誤差分解與空間特徵改善", "✓"],
-        ["延長回測含颱風與連假", "回放涵蓋元旦、春節、清明、端午；颱風日不在測試月", "部分"],
+        ["延長回測含颱風與連假", "迴歸 12 個月回測含颱風假、春節、跨年；預警回放未含颱風月", "大致"],
     ], col_w=[3.8, 7.33, 1.0], size=16, row_h=0.85)
     footer(s, n, "results/reg_main.csv、clf_main.csv、clf_backtest.csv")
 
