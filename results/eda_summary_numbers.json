@@ -6,5 +6,98 @@
   18,
   8,
   17
+ ],
+ "rain_ratio_main": [
+  {
+   "day_type": "平日",
+   "rain": "無雨",
+   "n_hours": 3001,
+   "ratio_mean": 1.0,
+   "ci_low": 0.992,
+   "ci_high": 1.008
+  },
+  {
+   "day_type": "平日",
+   "rain": "<1mm",
+   "n_hours": 1100,
+   "ratio_mean": 0.993,
+   "ci_low": 0.974,
+   "ci_high": 1.014
+  },
+  {
+   "day_type": "平日",
+   "rain": "1–5mm",
+   "n_hours": 261,
+   "ratio_mean": 0.963,
+   "ci_low": 0.919,
+   "ci_high": 0.996
+  },
+  {
+   "day_type": "平日",
+   "rain": ">5mm",
+   "n_hours": 30,
+   "ratio_mean": 0.942,
+   "ci_low": 0.897,
+   "ci_high": 1.015
+  },
+  {
+   "day_type": "假日",
+   "rain": "無雨",
+   "n_hours": 1586,
+   "ratio_mean": 1.0,
+   "ci_low": 0.969,
+   "ci_high": 1.03
+  },
+  {
+   "day_type": "假日",
+   "rain": "<1mm",
+   "n_hours": 464,
+   "ratio_mean": 0.983,
+   "ci_low": 0.949,
+   "ci_high": 1.018
+  },
+  {
+   "day_type": "假日",
+   "rain": "1–5mm",
+   "n_hours": 97,
+   "ratio_mean": 0.859,
+   "ci_low": 0.729,
+   "ci_high": 0.95
+  },
+  {
+   "day_type": "假日",
+   "rain": ">5mm",
+   "n_hours": 21,
+   "ratio_mean": 0.547,
+   "ci_low": 0.283,
+   "ci_high": 0.936
+  }
+ ],
+ "typhoon_days": [
+  {
+   "date": "2024-10-02",
+   "type": "停班停課",
+   "ratio": 0.271
+  },
+  {
+   "date": "2024-10-03",
+   "type": "停班停課",
+   "ratio": 0.221
+  },
+  {
+   "date": "2024-10-31",
+   "type": "停班停課",
+   "ratio": 0.083
+  },
+  {
+   "date": "2026-07-10",
+   "type": "停班停課",
+   "ratio": 0.266
+  },
+  {
+   "date": "2026-07-11",
+   "type": "停班停課",
+   "ratio": 0.1
+  }
  ]
 }

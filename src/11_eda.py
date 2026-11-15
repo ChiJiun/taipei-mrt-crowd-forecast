@@ -20,8 +20,9 @@ from plotting import plt  # noqa: E402
 
 RNG = np.random.default_rng(0)
 SERVICE_HOURS = list(range(6, 24))          # exclude 0-5 (little or no service)
-RAIN_BINS = [-0.01, 0.1, 1.0, 5.0, np.inf]
-RAIN_LABELS = ["無雨(<0.1)", "微雨 0.1–1", "1–5 mm", ">5 mm"]
+# same bins as the progress report (reference/progress_report/src/03_eda.py): 0, (0,1], (1,5], >5 mm
+RAIN_BINS = [-1, 0, 1.0, 5.0, np.inf]
+RAIN_LABELS = ["無雨", "<1mm", "1–5mm", ">5mm"]
 DAYTYPE = {0: "平日", 1: "假日"}
 NUM = {}
 
@@ -87,10 +88,14 @@ def rain_effect(net: pd.DataFrame, weather: pd.DataFrame, period: str, precip_co
     df["ratio2"] = df["entries"] / df["base2"]
     rows = []
     for (h, r), g in df.dropna(subset=["ratio"]).groupby(["hol", "rain"], observed=True):
-        lo, hi = boot_ci(g["ratio"].to_numpy(), g["date"].to_numpy())
+        # ratio_mean / ci: proposal definition (baseline = dry hours of same day-type x hour)
+        # ratio_month_ctrl: baseline additionally within the same month (controls seasonality)
+        lo, hi = boot_ci(g["ratio2"].to_numpy(), g["date"].to_numpy())
+        lo2, hi2 = boot_ci(g["ratio"].to_numpy(), g["date"].to_numpy())
         rows.append({"period": period, "day_type": DAYTYPE[h], "rain": r, "n_hours": len(g),
-                     "n_days": g["date"].nunique(), "ratio_mean": g["ratio"].mean(),
-                     "ci_low": lo, "ci_high": hi, "ratio_proposal_style": g["ratio2"].mean()})
+                     "n_days": g["date"].nunique(), "ratio_mean": g["ratio2"].mean(),
+                     "ci_low": lo, "ci_high": hi, "ratio_month_ctrl": g["ratio"].mean(),
+                     "ci_low_month_ctrl": lo2, "ci_high_month_ctrl": hi2})
     return pd.DataFrame(rows), df
 
 
@@ -118,7 +123,7 @@ def fig_rain(tab: pd.DataFrame, fname: str, title: str):
 
 def rain_by_hour_heat(df: pd.DataFrame):
     """ratio by hour for rainy (>=1mm) hours, weekday vs holiday."""
-    d = df[df[df.columns[df.columns.str.startswith("precip")][0]] >= 1.0]
+    d = df[df["precip"] >= 1.0]
     t = d.groupby(["hol", "hour"])["ratio"].agg(["mean", "count"]).reset_index()
     t["day_type"] = t.hol.map(DAYTYPE)
     t.drop(columns="hol").to_csv(RESULTS / "eda_rain_by_hour.csv", index=False, float_format="%.3f")
@@ -267,8 +272,6 @@ def main():
                 rain_by_hour_heat(df)
                 NUM["rain_ratio_main"] = t[["day_type", "rain", "n_hours", "ratio_mean", "ci_low",
                                             "ci_high"]].round(3).to_dict("records")
-        tp, _ = rain_effect(net, w, "2024-10~2026-09 (precip_max)", "precip_max")
-        tabs.append(tp)
         pd.concat(tabs).to_csv(RESULTS / "eda_rain_ratio.csv", index=False, float_format="%.3f")
         fig_rain(tabs[1], "eda_rain_ratio_2y.png", "降雨 × 日別：全網進站量相對無雨基準（2024/10–2026/9，95% CI）")
         wf = load_weather("forecast")
