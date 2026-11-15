@@ -159,7 +159,7 @@ def event_effect(panel: pd.DataFrame, cal: pd.DataFrame):
     p["hour"] = p.ts.dt.hour
     p = p.merge(cal[["date", "is_holiday"]], on="date", how="left")
     p["hol"] = p.is_holiday.fillna(False).astype(int)
-    rows, curves = [], {}
+    rows, curves, cands = [], {}, []
     for venue, g in ev.groupby("venue"):
         st = vmap[venue][0][0]
         days = pd.to_datetime(g["date"].unique())
@@ -193,6 +193,18 @@ def event_effect(panel: pd.DataFrame, cal: pd.DataFrame):
             "daily_entries_ratio": day_e.entries.sum() / day_e.entries_base.sum(),
         })
         curves[venue] = (st, e.groupby("hour")[["entries", "entries_base", "exits", "exits_base"]].mean())
+        # data-driven gap check: non-event days whose evening (20-23h) entries at the venue station are
+        # >= 2x the baseline -> candidate unlisted events (NOT added to events.csv, for manual review)
+        ev_days = set(pd.to_datetime(esh.loc[esh.station == st, "ts"]).dt.normalize())
+        nb = pts[(pts.hour >= 20) & ~pts.date.isin(ev_days)]
+        dd = nb.groupby("date")[["entries", "entries_base"]].sum()
+        dd = dd[dd.entries_base > 0]
+        dd = dd[dd.entries / dd.entries_base >= 2.0]
+        for d, r in dd.iterrows():
+            cands.append({"venue": venue, "station": st, "date": d.date(), "evening_entries": int(r.entries),
+                          "baseline": round(r.entries_base), "ratio": r.entries / r.entries_base})
+    pd.DataFrame(cands).to_csv(RESULTS / "eda_event_candidates_unlisted.csv", index=False, float_format="%.2f")
+    NUM["unlisted_event_candidates"] = pd.DataFrame(cands).groupby("venue").size().to_dict() if cands else {}
     tab = pd.DataFrame(rows).sort_values("departure_entries_ratio", ascending=False)
     tab.to_csv(RESULTS / "eda_event_uplift.csv", index=False, float_format="%.2f")
     NUM["event_uplift"] = tab[["venue", "station", "n_event_days", "arrival_exits_ratio",

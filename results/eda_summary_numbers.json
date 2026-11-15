@@ -73,6 +73,12 @@
    "ci_high": 0.936
   }
  ],
+ "unlisted_event_candidates": {
+  "南港展覽館": 15,
+  "台北大巨蛋": 11,
+  "台北小巨蛋": 11,
+  "台北流行音樂中心": 10
+ },
  "event_uplift": [
   {
    "venue": "台北101跨年",
@@ -87,6 +93,20 @@
    "n_event_days": 6,
    "arrival_exits_ratio": 4.07,
    "departure_entries_ratio": 8.12
+  },
+  {
+   "venue": "台北小巨蛋",
+   "station": "台北小巨蛋",
+   "n_event_days": 133,
+   "arrival_exits_ratio": 2.19,
+   "departure_entries_ratio": 2.99
+  },
+  {
+   "venue": "台北大巨蛋",
+   "station": "國父紀念館",
+   "n_event_days": 143,
+   "arrival_exits_ratio": 2.27,
+   "departure_entries_ratio": 2.81
   },
   {
    "venue": "台北流行音樂中心",
