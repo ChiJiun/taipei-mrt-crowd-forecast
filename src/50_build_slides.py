@@ -295,16 +295,16 @@ def build():
     # 5 EDA
     s = new()
     title(s, "雨天抑制的是非通勤人流，活動造成數倍尖峰", "同日別、同小時下，全網進站量相對無雨基準")
-    picture(s, "figures/eda_rain_ratio.png", MX, Inches(1.7), w=Inches(6.5))
+    picture(s, "figures/eda_rain_ratio.png", MX, Inches(1.6), w=Inches(7.6))
     rr = {(x["day_type"], x["rain"]): x for x in eda["rain_ratio_main"]}
     hol, wk = rr[("假日", ">5mm")], rr[("平日", ">5mm")]
     ev = {x["venue"]: x for x in eda["event_uplift"]}["台北大巨蛋"]
-    bullets(s, Inches(7.4), Inches(1.9), Inches(5.3), Inches(4.8), [
-        ("假日降雨 > 5 mm：", f"只剩 {hol['ratio_mean'] * 100:.0f}%（CI {hol['ci_low']:.2f}–{hol['ci_high']:.2f}，"
-                          f"僅 {hol['n_hours']} 小時）"),
+    bullets(s, Inches(8.5), Inches(1.9), Inches(4.25), Inches(4.8), [
+        ("假日降雨 > 5 mm：", f"只剩 {hol['ratio_mean'] * 100:.0f}%，但僅 {hol['n_hours']} 小時"
+                          f"（CI\u00a0{hol['ci_low']:.2f}–{hol['ci_high']:.2f}）"),
         ("平日降雨 > 5 mm：", f"仍有 {wk['ratio_mean'] * 100:.0f}%，通勤需求剛性"),
         ("大巨蛋活動日：", f"國父紀念館散場進站為平常的 {ev['departure_entries_ratio']:.1f} 倍"),
-        ("颱風停班停課：", "全網日進站只剩 8–27%"),
+        ("颱風假：", "日進站只剩平常的 8%–27%"),
     ], size=16, gap=14)
     footer(s, n, "results/eda_summary_numbers.json")
 
@@ -367,6 +367,7 @@ def build():
     gf = s.shapes.add_chart(XL_CHART_TYPE.BAR_CLUSTERED, MX, Inches(1.6), Inches(6.6), Inches(5.2), cd)
     ch = gf.chart
     style_chart(ch, legend=False)
+    ch.has_title = False
     ser = ch.series[0]
     ser.format.fill.solid()
     ser.format.fill.fore_color.rgb = GRAY
@@ -418,9 +419,10 @@ def build():
     items = []
     if D["sg"] is not None:
         sg = D["sg"].set_index("group")
-        items.append(("特徵組占比：", f"歷史剖面 {sg.loc['歷史平均剖面', 'share_%']:.0f}%、近期延遲 "
-                                 f"{sg.loc['近期延遲（t, t-1, t-2）', 'share_%']:.0f}%、天氣 {sg.loc['天氣', 'share_%']:.1f}%、"
-                                 f"活動 {sg.loc['活動', 'share_%']:.1f}%"))
+        for k, (g, lab) in enumerate((("歷史平均剖面", "歷史平均剖面"), ("近期延遲（t, t-1, t-2）", "近期延遲"),
+                                      ("天氣", "天氣"), ("活動", "活動"))):
+            stat(s, MX + Inches(1.65 * k), Inches(5.05), Inches(1.6), f"{sg.loc[g, 'share_%']:.1f}%", lab,
+                 color=ACCENT if k < 2 else NAVY, big_size=28)
     rain_b = reg(D, "entries", 1, BM, "rain_MAE")
     dry_b = reg(D, "entries", 1, BM, "dry_MAE")
     items += [
@@ -452,7 +454,7 @@ def build():
         ser.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
         ser.data_labels.font.size = Pt(11)
     ch.plots[0].gap_width = 70
-    ch.value_axis.minimum_scale = 30
+    ch.value_axis.minimum_scale = 0
     r0 = float(sa.loc[("entries", 2, "base"), "rain_MAE"])
     r1 = float(sa.loc[("entries", 2, "+all"), "rain_MAE"])
     bullets(s, Inches(8.0), Inches(1.8), Inches(4.7), Inches(5.0), [
@@ -475,9 +477,9 @@ def build():
                      f"{l_.Precision:.3f}／{l_.Recall:.3f}", f"{l_.AP:.3f}", "✓" if ok else "✗"])
     table(s, MX, Inches(1.75), W - 2 * MX, rows, col_w=[3.2, 1.3, 2.2, 2.8, 1.2, 1.43], size=14, row_h=0.55)
     picture(s, "figures/clf_pr_curves.png", MX, Inches(4.15), h=Inches(2.7))
-    bullets(s, Inches(7.6), Inches(4.3), Inches(5.1), Inches(2.6), [
+    bullets(s, Inches(7.9), Inches(4.3), Inches(4.8), Inches(2.6), [
         "相對門檻有一半正類在小站；雙門檻聚焦大、中站的異常尖峰",
-        "class weight／focal／欠採樣的 AP 差異 < 0.005",
+        "class weight、focal、欠採樣：AP 差異不到 0.005",
     ], size=14, gap=10)
     footer(s, n, "results/clf_main.csv")
 
@@ -502,7 +504,7 @@ def build():
 
     # 13 目標達成
     s = new()
-    title(s, "提案預期成果：迴歸與預警目標全數達成")
+    title(s, "提案預期成果：迴歸與預警的量化目標都達成")
     clf = D["cm"].set_index(["label", "method"])
     rel = clf.loc[("relative", "LGB-clf[none]")]
     dual = clf.loc[("dual", "LGB-clf[none]")]
@@ -538,19 +540,20 @@ def build():
     s = new(dark=True)
     text(s, MX, Inches(0.5), Inches(12), Inches(0.8), "結論與未來工作", size=32, color=WHITE, bold=True)
     light = RGBColor(0xDD, 0xE4, 0xF0)
-    bullets(s, MX, Inches(1.6), Inches(7.0), Inches(5.0), [
+    bullets(s, MX, Inches(1.7), Inches(7.0), Inches(5.0), [
         ("預測：", f"全站共用的 {BM}，t+1／t+2 MAE 約為 HA 的一半，t+2 退化很小"),
         ("預警：", "三種擁擠定義都達標；回放回測 97–99% 事件提前約 2 小時"),
         ("影響因素：", "站型決定可預測性；雨天、活動需靠即時偏離與 OD 流向修正"),
-    ], size=17, color=WHITE, gap=16)
-    card(s, Inches(8.0), Inches(1.6), Inches(4.73), Inches(3.6), fill=RGBColor(0x2A, 0x3B, 0x5F))
+    ], size=20, color=WHITE, gap=24)
+    card(s, Inches(8.0), Inches(1.6), Inches(4.73), Inches(4.2), fill=RGBColor(0x2A, 0x3B, 0x5F))
     text(s, Inches(8.25), Inches(1.8), Inches(4.3), Inches(0.5), "未來工作", size=19, color=WHITE, bold=True)
     bullets(s, Inches(8.25), Inches(2.45), Inches(4.3), Inches(4.0), [
         "月台面積／載客率換算實際密度",
         "氣象署測站與鄉鎮預報",
         "擴充活動資料與售票數",
         "SARIMAX、站型做 stacking",
-    ], size=15, color=light, gap=10)
+    ], size=17, color=light, gap=14)
+    text(s, MX, Inches(6.2), Inches(12), Inches(0.6), "謝謝聆聽　Q & A", size=24, color=WHITE, bold=True)
     text(s, W - Inches(1.4), Inches(7.0), Inches(0.8), Inches(0.35), str(n), size=10, color=light, align=PP_ALIGN.RIGHT)
 
     prs.core_properties.title = "台北捷運站點人流預測與擁擠預警"

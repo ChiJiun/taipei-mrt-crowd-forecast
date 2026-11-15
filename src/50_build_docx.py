@@ -104,6 +104,20 @@ def build():
         t = d.add_table(rows=1 + len(body), cols=len(hdr))
         t.style = "Light Grid Accent 1"
         t.alignment = WD_TABLE_ALIGNMENT.CENTER
+        t.autofit = False
+        # 欄寬依內容顯示長度分配（中文字算 2），避免短欄被平均分配擠到換行
+        def disp(v):
+            v = re.sub(r"\*\*|`", "", v)
+            return sum(2 if ord(ch) > 0x2E7F else 1 for ch in v)
+        need = [min(max(max(disp(r[j]) for r in body) if body else 0, disp(hdr[j]) * 0.7, 7) + 2, 46)
+                for j in range(len(hdr))]
+        total = min(17.4, max(sum(need) * 0.22, 9))
+        widths = [Cm(total * n / sum(need)) for n in need]
+        for j, col in enumerate(t.columns):
+            col.width = widths[j]
+        for row in t.rows:
+            for j, c in enumerate(row.cells):
+                c.width = widths[j]
         for i, row in enumerate([hdr] + body):
             for j, v in enumerate(row):
                 c = t.cell(i, j)
@@ -115,6 +129,9 @@ def build():
                 elif aligns[j].startswith(":") and aligns[j].endswith(":"):
                     para.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 add_inline(para, v, size=8.5, bold=(i == 0))
+                # 小表格不跨頁：除最後一列外都與下一段同頁
+                if len(body) <= 16 and i < len(body):
+                    para.paragraph_format.keep_with_next = True
         d.add_paragraph().paragraph_format.space_after = Pt(2)
 
     lines = SRC.read_text(encoding="utf-8").splitlines()
