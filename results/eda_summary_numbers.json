@@ -75,7 +75,7 @@
  ],
  "unlisted_event_candidates": {
   "南港展覽館": 15,
-  "台北大巨蛋": 11,
+  "台北大巨蛋": 1,
   "台北小巨蛋": 11,
   "台北流行音樂中心": 10
  },
@@ -95,18 +95,18 @@
    "departure_entries_ratio": 8.12
   },
   {
+   "venue": "台北大巨蛋",
+   "station": "國父紀念館",
+   "n_event_days": 221,
+   "arrival_exits_ratio": 2.98,
+   "departure_entries_ratio": 3.89
+  },
+  {
    "venue": "台北小巨蛋",
    "station": "台北小巨蛋",
    "n_event_days": 133,
    "arrival_exits_ratio": 2.19,
    "departure_entries_ratio": 2.99
-  },
-  {
-   "venue": "台北大巨蛋",
-   "station": "國父紀念館",
-   "n_event_days": 143,
-   "arrival_exits_ratio": 2.27,
-   "departure_entries_ratio": 2.81
   },
   {
    "venue": "台北流行音樂中心",
