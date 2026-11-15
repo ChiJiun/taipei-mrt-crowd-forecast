@@ -31,7 +31,7 @@ python src/03_calendar.py                         # -> data/external/calendar.cs
 
 進度報告當時的原始程式碼與數值放在 `reference/progress_report/`（僅供對照）。
 
-基準結果（`results/table1_regression_h1.csv`，尚未含天氣）：進站 MAE — Historical Average 75.9、LightGBM 41.1、LightGBM-scaled 41.3（尖峰 MAE 74.0）。
+基準結果（`results/table1_regression_h1.csv`，含天氣，t+1 測試集 2026-09）：進站 MAE — Historical Average 75.9、LightGBM 42.8、LightGBM-scaled 41.9（尖峰 77.5；雨天 72.1 vs 無雨 40.3）；出站 LightGBM-scaled 40.2。加入天氣後整體 MAE 與不含天氣版（41.3）相近，主要差異在雨天時段。
 
 ## 資料約定
 - 面板：`ts`（小時起點）、`station`（category）、`entries`、`exits`。主研究期 2025-10~2026-09（122 站 × 8760 小時）；`_hist` 版本為 2024-10~2026-09。
