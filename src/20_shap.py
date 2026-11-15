@@ -57,9 +57,9 @@ def main():
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--target", default="entries")
     ap.add_argument("--horizon", type=int, default=1)
-    ap.add_argument("--n", type=int, default=20000)
+    ap.add_argument("--n", type=int, default=8000)
     a = ap.parse_args()
-    n = 5000 if a.quick else a.n
+    n = 2000 if a.quick else a.n
     tgt, h = a.target, a.horizon
     panel = load_panel()
     fr = R.build(panel, tgt, h)

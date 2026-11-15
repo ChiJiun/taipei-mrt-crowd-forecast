@@ -31,6 +31,7 @@ MODEL_DIR = INTERIM / "reg_models"
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
 WEATHER_COLS = ("temp", "precip", "rh")
+WITH_L1 = False
 
 
 def weather_cols(fr):
@@ -78,7 +79,7 @@ def run(panel, target, h, quick=False, ablation=True):
         wc = weather_cols(fr)
         if wc:
             go("LightGBM-B (no weather)", [c for c in full if c not in wc], R.B_OBJ, True)
-        if (target, h) == ("entries", 1):  # L1 is ~8x slower; run once for the record
+        if WITH_L1 and (target, h) == ("entries", 1):  # L1 is ~8x slower (--with-l1)
             go("LightGBM-B (L1 loss)", full, "regression_l1", True)
         ev = [c for c in full if c.startswith("event")]
         if ev:
@@ -108,7 +109,10 @@ def main():
     ap.add_argument("--targets", default="entries,exits")
     ap.add_argument("--horizons", default="1,2")
     ap.add_argument("--no-ablation", action="store_true")
+    ap.add_argument("--with-l1", action="store_true", help="also fit the (slow) L1-loss variant for entries h=1")
     a = ap.parse_args()
+    global WITH_L1
+    WITH_L1 = a.with_l1
     targets = ["entries"] if a.quick else a.targets.split(",")
     hs = [1] if a.quick else [int(x) for x in a.horizons.split(",")]
     print(f"weather: {R.weather_available()}  events: {R.load_events() is not None}", flush=True)
