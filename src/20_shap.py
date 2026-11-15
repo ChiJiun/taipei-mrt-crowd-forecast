@@ -141,41 +141,52 @@ def main():
     plt.close(fig)
 
     if "precip" in cols:
-        # oversample rainy hours for the dependence plot
-        rain_idx = np.where(te["precip"].to_numpy() > 0)[0]
-        ridx = rng.choice(rain_idx, size=min(len(rain_idx), n), replace=False)
-        Xr = te.iloc[ridx][cols]
-        svr = expl.shap_values(Xr) * te.iloc[ridx]["scale"].to_numpy()[:, None]
+        # rainy-hour sample (daytime 7-22 h so the relative effect is not dominated by near-zero night volumes)
+        te_d = te[te["hour"].between(7, 22).to_numpy()]
+        rain_idx = np.where(te_d["precip"].to_numpy() > 0)[0]
+        dry_idx = np.where(te_d["precip"].to_numpy() == 0)[0]
+        ridx = np.concatenate([rng.choice(rain_idx, size=min(len(rain_idx), n), replace=False),
+                               rng.choice(dry_idx, size=min(len(dry_idx), n // 4), replace=False)])
+        Xr = te_d.iloc[ridx][cols]
+        svr = expl.shap_values(Xr) * te_d.iloc[ridx]["scale"].to_numpy()[:, None]
         wc = [cols.index(c) for c in cols if group_of(c) == "天氣"]
         tot = svr[:, wc].sum(1)
-        rel = 100 * tot / np.maximum(te.iloc[ridx]["hist_dt"].to_numpy(), 1)
+        base = te_d.iloc[ridx]["hist_dt"].to_numpy()
+        dt = np.where(Xr["daytype"].to_numpy() == 0, "平日", "週末／假日")
+        pr = Xr["precip"].to_numpy()
         fig, axes = plt.subplots(1, 2, figsize=(11, 4))
-        dt = Xr["daytype"].to_numpy()
-        for v, col, lab in ((0, "#3182bd", "平日"), (1, "#31a354", "週六"), (2, "#e6550d", "週日／假日")):
+        for v, col in (("平日", "#3182bd"), ("週末／假日", "#e6550d")):
             mm = dt == v
-            axes[0].scatter(Xr["precip"].to_numpy()[mm], svr[mm, cols.index("precip")], s=4,
-                            alpha=.35, color=col, label=lab)
-            axes[1].scatter(Xr["precip"].to_numpy()[mm], rel[mm], s=4, alpha=.35, color=col, label=lab)
-        axes[0].set_xscale("symlog", linthresh=1)
-        axes[1].set_xscale("symlog", linthresh=1)
-        axes[0].set_xlabel("目標小時降雨 (mm)")
-        axes[1].set_xlabel("目標小時降雨 (mm)")
+            axes[0].scatter(np.minimum(pr[mm], 12) + rng.uniform(-.05, .05, mm.sum()),
+                            svr[mm, cols.index("precip")], s=5, alpha=.35, color=col, label=v)
+        axes[0].set_xlabel("目標小時降雨 (mm，>12 併入 12)")
         axes[0].set_ylabel("SHAP(precip)（人次）")
-        axes[1].set_ylabel("所有天氣特徵 SHAP 合計 / 歷史平均（%）")
-        axes[0].set_title("降雨 × 日別：precip 的 SHAP")
-        axes[1].set_title("降雨 × 日別：天氣總效果（相對量）")
-        for ax in axes:
-            ax.axhline(0, color="gray", lw=.6)
-            ax.legend(markerscale=4, fontsize=8)
+        axes[0].set_title("降雨 × 日別：precip 的 SHAP 依賴圖（7–22 時）")
+        axes[0].axhline(0, color="gray", lw=.6)
+        axes[0].legend(markerscale=3, fontsize=8)
+        bins = pd.cut(pd.Series(pr), [-0.01, 0, 1, 3, 1e9], labels=["0", "0.1–1", "1–3", "≥3"])
+        tab = pd.DataFrame({"precip_bin": bins.to_numpy(), "daytype": dt, "shap": tot, "base": base}).groupby(
+            ["precip_bin", "daytype"], observed=True).agg(n=("shap", "size"), weather_shap_persons=("shap", "mean"),
+                                                         base_persons=("base", "mean"))
+        tab["weather_shap_pct_of_profile"] = 100 * tab.weather_shap_persons / tab.base_persons
+        tab = tab.round(2)
+        tab.to_csv(RESULTS / "reg_shap_rain_daytype.csv")
+        print(tab)
+        piv = tab["weather_shap_pct_of_profile"].unstack()
+        x = np.arange(len(piv))
+        for i, (v, col) in enumerate((("平日", "#3182bd"), ("週末／假日", "#e6550d"))):
+            if v in piv:
+                axes[1].bar(x + (i - .5) * .38, piv[v], .38, color=col, label=v)
+        axes[1].set_xticks(x)
+        axes[1].set_xticklabels(piv.index.astype(str))
+        axes[1].set_xlabel("目標小時降雨 (mm)")
+        axes[1].set_ylabel("天氣特徵 SHAP 合計 / 歷史平均（%）")
+        axes[1].set_title("天氣總效果（相對同站同時段的歷史平均）")
+        axes[1].axhline(0, color="gray", lw=.6)
+        axes[1].legend(fontsize=8)
         fig.tight_layout()
         fig.savefig(FIGURES / "reg_shap_dependence_precip_holiday.png", dpi=150)
         plt.close(fig)
-        bins = pd.cut(Xr["precip"], [0, 1, 5, 10, 1e9], right=False, labels=["<1", "1–5", "5–10", "≥10"])
-        tab = pd.DataFrame({"precip_bin": bins, "daytype": dt, "rel": rel, "abs": tot}).groupby(
-            ["precip_bin", "daytype"], observed=True).agg(n=("rel", "size"), weather_shap_pct=("rel", "mean"),
-                                                         weather_shap_persons=("abs", "mean")).round(2)
-        tab.to_csv(RESULTS / "reg_shap_rain_daytype.csv")
-        print(tab)
 
 
 if __name__ == "__main__":
