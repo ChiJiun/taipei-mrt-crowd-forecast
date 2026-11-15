@@ -167,7 +167,14 @@ def run_period(name, va, te, rows, cost_rows, ev_rows):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
+    ap.add_argument("--plots-only", action="store_true", help="redraw figures from saved results")
     a = ap.parse_args()
+    if a.plots_only:
+        te = pd.read_parquet(RESULTS / "clf_backtest_scores_2026-09.parquet")
+        te["station"] = te["station"].astype("category")
+        plots(pd.read_csv(RESULTS / "clf_backtest.csv"), pd.read_csv(RESULTS / "clf_backtest_cost.csv"),
+              None, te)
+        return
     rows, cost_rows, ev_rows = [], [], []
 
     print("period 2026-09 (main split)", flush=True)
@@ -175,6 +182,7 @@ def main():
     va, te = fold_scores(panel, TRAIN_END, (VALID_START, VALID_END), (TEST_START, TEST_END), cache="tot")
     run_period("2026-09", va, te, rows, cost_rows, ev_rows)
     main_te = te
+    te.to_parquet(RESULTS / "clf_backtest_scores_2026-09.parquet", index=False)
 
     if not a.quick:
         hist = load_panel(hist=True)
@@ -209,10 +217,11 @@ def plots(res, cost, evs, te):
             if part == "valid":
                 ts = d.loc[d.cost.idxmin(), "tau"]
                 ax.axvline(ts, color="k", ls=":", lw=0.8)
-                ax.text(ts, ax.get_ylim()[1] * 0.95 if ax.get_ylim()[1] else 0, f" τ*={ts:.2f}", fontsize=8)
-        ax.set(xlabel="預警機率門檻 τ", ylabel="成本（漏報×比例＋誤報小時）", title=f"漏報:誤報 = {ratio}:1")
+                ax.text(ts, d.cost.max() * 0.9, f" τ*={ts:.2f}", fontsize=8)
+        ax.set(xlabel="預警機率門檻 τ", title=f"漏報:誤報 = {ratio}:1")
         ax.legend(fontsize=8)
-    fig.suptitle("成本－門檻曲線（τ* 於驗證月選定）")
+    axes[0].set_ylabel("成本＝比例×漏報事件＋誤報小時")
+    fig.suptitle("成本－門檻曲線（τ* 於驗證月選定）", y=1.03)
     fig.savefig(FIGURES / "clf_backtest_cost.png", dpi=150)
 
     # detection / lead / false alarms vs tau (main test) + per period summary
@@ -236,11 +245,11 @@ def plots(res, cost, evs, te):
     ax.bar(x - 0.2, pol.prewarn_rate, 0.4, label="提前偵測率")
     ax.bar(x + 0.2, pol.hour_precision, 0.4, label="小時 Precision")
     for i, r in enumerate(pol.itertuples()):
-        ax.text(i, 0.05, f"lead {r.mean_lead_h:.2f}h\nFA {r.fa_per_station_day:.2f}", ha="center", fontsize=7.5,
-                color="w")
+        ax.text(i, 1.02, f"提前 {r.mean_lead_h:.2f}h\n誤報 {r.fa_per_station_day:.2f}/站日", ha="center",
+                fontsize=7.5)
     ax.set_xticks(x, pol.period)
-    ax.set(ylim=(0, 1.05), title="各回測月（成本比 10:1 的 τ*）")
-    ax.legend(fontsize=8, loc="lower right")
+    ax.set(ylim=(0, 1.18), title="各回測月（成本比 10:1 的 τ*）")
+    ax.legend(fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.08), ncol=2)
     fig.savefig(FIGURES / "clf_backtest_lead.png", dpi=150)
 
     # timeline example: busiest event station in the main test month
