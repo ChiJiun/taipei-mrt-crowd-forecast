@@ -148,9 +148,12 @@ def event_effect(panel: pd.DataFrame, cal: pd.DataFrame):
         print("events.csv missing -> skip event EDA")
         return
     from importlib import import_module
-    vmap = import_module("10_events").VENUE_STATIONS
+    evmod = import_module("10_events")
+    vmap = evmod.VENUE_STATIONS
+    vmap_st = set(panel.station.cat.categories)
     ev = pd.read_csv(evf, dtype=str)
-    ev = ev[ev.venue.isin(vmap)]
+    ev = ev[ev.venue.isin(vmap)].drop_duplicates(["venue", "date"])
+    esh = pd.read_csv(EXTERNAL / "events_station_hour.csv", parse_dates=["ts"])
     p = panel.copy()
     p["date"] = p.ts.dt.normalize()
     p["hour"] = p.ts.dt.hour
@@ -161,8 +164,8 @@ def event_effect(panel: pd.DataFrame, cal: pd.DataFrame):
         st = vmap[venue][0][0]
         days = pd.to_datetime(g["date"].unique())
         ps = p[p.station == st]
-        # nearby event days of other venues mapped to the same station are excluded from the baseline
-        other = pd.to_datetime(ev[ev.venue.map(lambda v: st in [s for s, _ in vmap[v]])]["date"].unique())
+        # baseline excludes every day on which any event touches this station (events_station_hour)
+        other = esh.loc[esh.station == st, "ts"].dt.normalize().unique()
         base = ps[~ps.date.isin(other)].groupby(["hol", "hour", ps.ts.dt.to_period("Q")])[
             ["entries", "exits"]].mean()
         e = ps[ps.date.isin(days)].copy()
@@ -170,19 +173,23 @@ def event_effect(panel: pd.DataFrame, cal: pd.DataFrame):
         e = e.join(base, on=["hol", "hour", "q"], rsuffix="_base")
         e["r_ent"] = e.entries / e.entries_base
         e["r_exi"] = e.exits / e.exits_base
-        # event start hour (mode of the venue's start times)
+        # arrival / departure windows from the actual timestamps of 10_events.expand (handles midnight)
+        imp = evmod.expand(g.assign(stations=""), set(vmap_st))
+        imp = imp[imp.station == st].set_index("ts")
+        pts = ps.assign(q=ps.ts.dt.to_period("Q")).join(base, on=["hol", "hour", "q"], rsuffix="_base")
+        pts = pts.set_index("ts")
+        arr = pts.loc[pts.index.intersection(imp.index[imp.event_arrive == 1])]
+        dep = pts.loc[pts.index.intersection(imp.index[imp.event_depart == 1])]
         sh = int(pd.to_datetime(g.start_time, format="%H:%M").dt.hour.mode().iloc[0])
         eh = int(pd.to_datetime(g.end_time, format="%H:%M").dt.hour.mode().iloc[0])
-        arr = e[e.hour.isin([sh - 2, sh - 1])]
-        dep = e[e.hour.isin([eh, eh + 1])]
         day_e = e.groupby("date")[["entries", "entries_base"]].sum()
         rows.append({
             "venue": venue, "station": st, "n_event_days": e.date.nunique(),
             "typical_start": f"{sh}:00", "typical_end": f"{eh}:00",
             "arrival_exits_ratio": arr.exits.sum() / arr.exits_base.sum(),
-            "arrival_extra_exits_per_day": (arr.exits - arr.exits_base).groupby(arr.date).sum().mean(),
+            "arrival_extra_exits_per_event": (arr.exits - arr.exits_base).sum() / len(g),
             "departure_entries_ratio": dep.entries.sum() / dep.entries_base.sum(),
-            "departure_extra_entries_per_day": (dep.entries - dep.entries_base).groupby(dep.date).sum().mean(),
+            "departure_extra_entries_per_event": (dep.entries - dep.entries_base).sum() / len(g),
             "daily_entries_ratio": day_e.entries.sum() / day_e.entries_base.sum(),
         })
         curves[venue] = (st, e.groupby("hour")[["entries", "entries_base", "exits", "exits_base"]].mean())

@@ -1,0 +1,6 @@
+venue,station,n_event_days,typical_start,typical_end,arrival_exits_ratio,arrival_extra_exits_per_event,departure_entries_ratio,departure_extra_entries_per_event,daily_entries_ratio
+台北101跨年,台北101/世貿,2,18:00,1:00,2.21,4896.85,2168.30,7647.47,1.78
+大稻埕,北門,6,19:00,21:00,4.07,8683.98,8.12,8438.96,1.86
+台北流行音樂中心,昆陽,57,19:00,22:00,1.50,751.52,2.20,875.16,1.19
+南港展覽館,南港展覽館,68,10:00,18:00,1.70,4453.58,1.69,5169.01,1.54
+台北世貿,台北101/世貿,43,10:00,18:00,1.17,1321.67,1.21,1805.43,1.26
