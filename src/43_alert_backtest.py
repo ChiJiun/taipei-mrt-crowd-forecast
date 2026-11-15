@@ -21,7 +21,7 @@ the hist panel (2024-10..): test months 2026-01 (元旦), 2026-02 (春節), 2026
 (端午) each with train = all data up to month-2, valid = month-1, thresholds/HA/OD re-estimated.
 
 Usage: python src/43_alert_backtest.py [--quick]   (quick = main split only)
-Outputs results/clf_backtest.csv, results/clf_backtest_cost.csv, results/clf_backtest_events.parquet,
+Outputs results/clf_backtest.csv, results/clf_backtest_by_cluster.csv, results/clf_backtest_cost.csv, results/clf_backtest_events.parquet,
         figures/clf_backtest_cost.png, figures/clf_backtest_lead.png, figures/clf_backtest_timeline.png
 """
 from __future__ import annotations
@@ -172,8 +172,9 @@ def main():
     if a.plots_only:
         te = pd.read_parquet(RESULTS / "clf_backtest_scores_2026-09.parquet")
         te["station"] = te["station"].astype("category")
-        plots(pd.read_csv(RESULTS / "clf_backtest.csv"), pd.read_csv(RESULTS / "clf_backtest_cost.csv"),
-              None, te)
+        res = pd.read_csv(RESULTS / "clf_backtest.csv")
+        by_cluster(te, res)
+        plots(res, pd.read_csv(RESULTS / "clf_backtest_cost.csv"), None, te)
         return
     rows, cost_rows, ev_rows = [], [], []
 
@@ -202,7 +203,26 @@ def main():
     evs.to_parquet(RESULTS / "clf_backtest_events.parquet", index=False)
     (RESULTS / "clf_backtest.md").write_text(
         "# 預警回放回測（事件層級）\n\n" + lib.to_md(res) + "\n", encoding="utf-8")
+    by_cluster(main_te, res)
     plots(res, cost, evs, main_te)
+
+
+def by_cluster(te: pd.DataFrame, res: pd.DataFrame) -> pd.DataFrame | None:
+    """Main-period backtest broken down by workstream C's station types (results/cluster_assignments.csv)."""
+    f = RESULTS / "cluster_assignments.csv"
+    if not f.exists():
+        return None
+    cl = pd.read_csv(f).set_index("station")["cluster_name"]
+    rows = []
+    for pol in ("hour Recall≥0.7 (valid)", "min cost 10:1 (valid)"):
+        r = res[(res.period == "2026-09") & (res.policy == pol)].iloc[0]
+        for name, d in te.groupby(te["station"].astype(str).map(cl).fillna("未分群"), sort=True):
+            d = d.sort_values(["station", "ts_target"]).reset_index(drop=True)
+            rows.append({"policy": pol, "cluster": name, "n_stations": d.station.nunique(),
+                         **evaluate(d, r.tau1, r.tau2)})
+    out = pd.DataFrame(rows)
+    out.to_csv(RESULTS / "clf_backtest_by_cluster.csv", index=False)
+    return out
 
 
 def plots(res, cost, evs, te):
