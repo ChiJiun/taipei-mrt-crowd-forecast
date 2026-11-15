@@ -62,7 +62,7 @@ def main():
     if not R.weather_available():
         sys.exit("weather_hourly.csv not found: rain analysis needs workstream A's weather data")
     tgt, h = a.target, a.horizon
-    params = {"learning_rate": 0.1}
+    params = {}
     panel = load_panel()
     fr = R.build(panel, tgt, h)
     # "recent level correction" (suggested by workstream C's SARIMAX finding): deviation of the last
@@ -79,6 +79,9 @@ def main():
     es_start = pd.Timestamp(TRAIN_END) - pd.Timedelta(days=28)
     tr2 = tr[tr.ts_target < es_start]
     es = tr[tr.ts_target >= es_start]
+    ty = R.typhoon_dates()
+    if ty is not None:  # typhoon closures (2026-07-10/11) would dominate the early-stopping loss
+        es = es[~es.ts_target.dt.normalize().isin(ty)]
     ev = pd.concat([va, te])
     out = ev[["ts_target", "station", "y", "hour", "daytype", "is_holiday", "precip", "precip_prev1", "rain_onset",
               "rain_run", "scale", "hist_dt"]].copy()
