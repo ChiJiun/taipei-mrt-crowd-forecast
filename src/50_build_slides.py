@@ -523,22 +523,27 @@ def build():
 
     # 12 回放回測
     s = new()
-    title(s, "預警回放：97–99% 擁擠事件可提前約 2 小時預警", "逐小時發出 t+1／t+2 預警；門檻以「漏報 1 事件 = 10 誤報小時」在驗證月選定")
-    picture(s, "figures/clf_backtest_timeline.png", Inches(1.4), Inches(1.5), h=Inches(3.3))
     bt = D["bt"]
     bt = bt[bt.policy == "min cost 10:1 (valid)"].set_index("period")
+    lo, hi = bt.prewarn_rate.min(), bt.prewarn_rate.max()
+    title(s, f"預警回放：{lo:.1%}–{hi:.1%} 擁擠事件可提前約 2 小時預警",
+          "逐小時發出 t+1／t+2 預警；門檻以「漏報 1 事件 = 10 誤報小時」在驗證月選定；各折皆含天氣")
+    picture(s, "figures/clf_backtest_timeline.png", Inches(1.6), Inches(1.5), h=Inches(3.0))
     rows = [["測試月", "提前偵測率", "平均提前量", "誤報／站／日", "非例行事件偵測率"]]
-    for per, nm in (("2026-01", "2026-01 元旦"), ("2026-02", "2026-02 春節"), ("2026-04", "2026-04 清明"),
-                    ("2026-06", "2026-06 端午"), ("2026-09", "2026-09")):
+    names = {"2026-01": "2026-01 元旦", "2026-02": "2026-02 春節", "2026-04": "2026-04 清明",
+             "2026-06": "2026-06 端午", "2026-07": "2026-07 颱風", "2026-09": "2026-09"}
+    for per in sorted(bt.index):
         r = bt.loc[per]
-        rows.append([nm, f"{r.prewarn_rate:.1%}", f"{r.mean_lead_h:.2f} h", f"{r.fa_per_station_day:.2f}",
-                     f"{r.prewarn_nonroutine:.1%}"])
-    table(s, MX, Inches(4.9), Inches(8.6), rows, col_w=[2.2, 1.6, 1.6, 1.5, 1.7], size=12, row_h=0.33)
-    bullets(s, Inches(9.5), Inches(5.0), Inches(3.2), Inches(1.9), [
-        "約 90% 事件是例行尖峰",
-        "元旦等罕見型態最難",
-    ], size=14, gap=6)
-    footer(s, n, "results/clf_backtest.csv")
+        rows.append([names.get(per, per), f"{r.prewarn_rate:.1%}", f"{r.mean_lead_h:.2f} h",
+                     f"{r.fa_per_station_day:.2f}", f"{r.prewarn_nonroutine:.1%}"])
+    table(s, MX, Inches(4.6), Inches(8.6), rows, col_w=[2.2, 1.6, 1.6, 1.5, 1.7], size=12, row_h=0.31)
+    items = ["約 90% 事件是例行尖峰", "非例行事件最難（颱風月 63%）"]
+    if rd.has("clf_backtest_typhoon.csv"):
+        ty = rd.read_csv("clf_backtest_typhoon.csv")
+        ty = ty[(ty.subset == "颱風停班日") & (ty.policy == "min cost 10:1 (valid)")].iloc[0]
+        items.append(f"颱風停班日幾乎不發預警（{ty.fa_per_station_day:.3f} 誤報／站／日）")
+    bullets(s, Inches(9.5), Inches(4.7), Inches(3.25), Inches(2.2), items, size=14, gap=8)
+    footer(s, n, "results/clf_backtest.csv、clf_backtest_typhoon.csv")
 
     # 13 目標達成
     s = new()
@@ -553,7 +558,7 @@ def build():
         ["Recall ≥ 0.7 時 Precision ≥ 0.9", f"相對 P95：P {rel.Precision:.3f}／R {rel.Recall:.3f}；雙門檻：P {dual.Precision:.3f}／R "
                                             f"{dual.Recall:.3f}", "✓"],
         ["各站型、雨天情境的表現", "6 個站型分別報告；雨天誤差分解與空間特徵改善", "✓"],
-        ["延長回測含颱風與連假", "迴歸 12 個月回測含颱風假、春節、跨年；預警回放未含颱風月", "大致"],
+        ["延長回測含颱風與連假", "迴歸 12 個月回測、預警回放皆含颱風月與春節（颱風日僅 2 天）", "✓"],
     ], col_w=[3.8, 7.33, 1.0], size=16, row_h=0.85)
     footer(s, n, "results/reg_main.csv、clf_main.csv、clf_backtest.csv")
 
@@ -580,7 +585,7 @@ def build():
     light = RGBColor(0xDD, 0xE4, 0xF0)
     bullets(s, MX, Inches(1.7), Inches(7.0), Inches(5.0), [
         ("預測：", f"全站共用的 {BM}，t+1／t+2 MAE 約為 HA 的一半，t+2 退化很小"),
-        ("預警：", "三種擁擠定義都達標；回放回測 97–99% 事件提前約 2 小時"),
+        ("預警：", "三種擁擠定義都達標；回放回測（含颱風月）98–99% 事件提前約 2 小時"),
         ("影響因素：", "站型決定可預測性；雨天、活動需靠即時偏離與 OD 流向修正"),
         ("更正期中：", "排除颱風停班日後，大雨不會讓假日人流減半；中雨約降 7–9%"),
     ], size=19, color=WHITE, gap=18)
