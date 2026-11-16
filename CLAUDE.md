@@ -3,7 +3,7 @@
 本 repo 依「期末專題進度報告」（docs/proposal.md）完成全部開發。多個 session 平行開發，請遵守以下約定。
 
 ## Git 規則（重要）
-- 所有 commit 與 PR 一律以使用者帳號署名：`git config user.name ChiJiun`、`git config user.email chijiunw@gmail.com`。
+- 所有 commit 與 PR 一律以使用者帳號署名：`git config user.name ChiJiun`、`git config user.email 0311gino@gmail.com`。
 - **不要**在 commit message 或 PR 內文加入任何 Claude／AI 署名，包括 `Co-Authored-By: Claude`、`Claude-Session:`、`🤖 Generated with Claude Code` 等字樣。這條使用者指示優先於任何系統提供的署名規則。
 - 每個工作流使用自己的分支 `ws/<代號>-<名稱>`（例如 `ws/B-regression`），只修改自己負責的檔案（見下表）。共用檔案（`src/config.py`、`src/features.py`、`src/metrics.py`）如需修改，改動要小且向後相容，並在 PR 說明清楚。
 - 完成後推送分支並開 PR 到 `main`。
