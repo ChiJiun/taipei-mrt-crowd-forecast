@@ -377,7 +377,7 @@ def build():
         q = rd.read_csv("reg_quantile.csv")
         q = q[(q.target == "entries") & (q.horizon == 1) & (q.interval == "CQR-分組")].set_index("subset")
         bullets(s, MX, Inches(5.0), Inches(4.9), Inches(1.9), [
-            ("颱風假：", f"HA {sp.loc['颱風假', 'MAE_Historical Average']:.0f} → LightGBM-B "
+            ("颱風停班日：", f"HA {sp.loc['颱風假', 'MAE_Historical Average']:.0f} → LightGBM-B "
                        f"{sp.loc['颱風假', 'MAE_LightGBM-B']:.0f}（仍偏高估）"),
             ("跨年最難：", f"MAE {sp.loc[[k for k in sp.index if k.startswith('跨年')][0], 'MAE_LightGBM-B']:.0f}，"
                         "跨年夜低估、凌晨後高估"),
@@ -386,7 +386,7 @@ def build():
             ("整體覆蓋率：", f"{q.loc['all', 'coverage']:.1%}（名目 80%）"),
             ("平日尖峰：", f"只有 {q.loc['peak', 'coverage']:.1%}，開學月尖峰高於校準月"),
         ], size=14, gap=8)
-        footer(s, n, "results/reg_backtest_monthly.csv、reg_backtest_special.csv、reg_quantile.csv（回測歷史期尚無天氣）")
+        footer(s, n, "results/reg_backtest_monthly.csv、reg_backtest_special.csv、reg_quantile.csv（回測含兩年天氣）")
 
     # 7 SARIMA / Prophet
     s = new()
@@ -468,8 +468,15 @@ def build():
         ("偏差方向：", "平日雨天尖峰被低估、假日雨天被高估"),
         ("活動站時：", "相對 HA 改善 44%，但絕對誤差仍高（規模與散場時間不確定）"),
     ]
+    src9 = "results/reg_shap_groups.csv、reg_rain_tables.md、reg_supplement.csv"
+    if rd.has("reg_weather_forecast.csv"):
+        wf = rd.read_csv("reg_weather_forecast.csv")
+        wb = wf[(wf.target == "entries") & (wf.horizon == 1) & wf.scenario.str.startswith("(b) 觀測訓練→JMA")].iloc[0]
+        items.append(("改用 JMA 預報：", f"MAE 只多 {wb.over_vs_a:.2f}、雨天 MAE 多 {wb.rain_over_vs_a:.1f}，"
+                                       "「假設天氣準確」的高估很小"))
+        src9 += "、reg_weather_forecast.csv"
     bullets(s, Inches(7.5), Inches(1.8), Inches(5.2), Inches(5.0), items, size=15, gap=12)
-    footer(s, n, "results/reg_shap_groups.csv、reg_rain_tables.md、reg_supplement.csv")
+    footer(s, n, src9)
 
     # 10 空間特徵
     s = new()
@@ -602,6 +609,8 @@ def build():
 
     prs.core_properties.title = "台北捷運站點人流預測與擁擠預警"
     prs.core_properties.author = ""
+    prs.core_properties.comments = ""
+    prs.core_properties.last_modified_by = ""
     prs.save(OUT)
     print(f"wrote {OUT.relative_to(ROOT)} ({n} slides)")
 
