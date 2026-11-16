@@ -53,6 +53,39 @@ def summarize(g, methods):
     return pd.Series(r)
 
 
+DRY = {"precip": 0.0, "precip_3h": 0.0, "precip_prev1": 0.0, "precip_prev3": 0.0, "precip_6h": 0.0,
+       "precip_change": 0.0, "rain_onset": 0, "rain_run": 0, "rain_x_holiday": 0.0}
+
+
+def typhoon_check(tr, va, te, full, ty):
+    """Train LightGBM-B (a) with the typhoon flag, (b) without it, (c) without typhoon days; on rainy test hours
+    report MAE / bias and the counterfactual rain effect = prediction minus prediction with rain set to 0
+    (precip_origin, temp, rh unchanged), as % of the dry counterfactual, by day type."""
+    noflag = [c for c in full if c != "is_typhoon_day"]
+    tymask = tr.ts_target.dt.normalize().isin(ty).to_numpy() if ty is not None else np.zeros(len(tr), bool)
+    vs = {"含颱風旗標（LightGBM-B）": (tr, full), "無颱風旗標": (tr, noflag), "訓練排除颱風日": (tr[~tymask], noflag)}
+    rain = (te["precip"] >= RAIN_MM).to_numpy()
+    ter = te[rain]
+    dry = ter.copy()
+    for c, v in DRY.items():
+        if c in dry:
+            dry[c] = v
+    rows = []
+    for name, (trn, cols) in vs.items():
+        m = R.fit(trn, va, cols, R.B_OBJ, True)
+        p, pdry = R.predict(m, ter, cols), R.predict(m, dry, cols)
+        print(f"typhoon check {name}: iter={m.best_iteration}", flush=True)
+        for dname, dm in (("全部", np.ones(len(ter), bool)), ("平日", (ter.daytype == 0).to_numpy()),
+                          ("週末／假日", (ter.daytype > 0).to_numpy())):
+            rows.append({"model": name, "雨天日別": dname, "n": int(dm.sum()),
+                         "MAE": float(np.abs(p[dm] - ter.y.to_numpy()[dm]).mean()),
+                         "bias": float((p[dm] - ter.y.to_numpy()[dm]).mean()),
+                         "rain_effect_%": float(100 * (p[dm].sum() - pdry[dm].sum()) / pdry[dm].sum()),
+                         "actual_vs_dry_pred_%": float(100 * (ter.y.to_numpy()[dm].sum() - pdry[dm].sum())
+                                                       / pdry[dm].sum())})
+    return pd.DataFrame(rows)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
@@ -146,15 +179,22 @@ def main():
                             "LightGBM-B": [rr.ae_B.mean(), out[~out.rain].ae_B.mean(), rr.dry_cell_MAE.mean()]})
     sections.append(("控制組成後的雨天誤差", mix_adj))
 
+    # ---- typhoon check on the MAIN model setup (train <= 2026-07 incl. typhoon Bavi 07-10/11, ES on 2026-08,
+    # evaluate 2026-09). Workstream A showed the report's "holiday >5 mm -> 55%" came from a typhoon Saturday;
+    # here we test whether the model's rain effect absorbs typhoon closures.
+    typ = typhoon_check(tr, va, te, full, ty)
+    sections.append(("颱風檢查：主模型設定（訓練含 2026-07 巴威颱風，測試 2026-09）", typ))
+
     allb = pd.concat([t.assign(section=s) for s, t in sections], ignore_index=True)
     allb.round(2).to_csv(RESULTS / "reg_rain_breakdown.csv", index=False)
 
+    PLOT_M = ["LightGBM-scaled", "B 無任何天氣", "LightGBM-B"]
     # figure: MAE by intensity & bias by phase
     fig, axes = plt.subplots(1, 3, figsize=(14, 3.8))
     t1 = sections[2][1]
     x = np.arange(len(t1))
-    for i, mt in enumerate(methods):
-        axes[0].bar(x + (i - 2) * 0.16, t1[f"relMAE%_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[0].bar(x + (i - 1) * 0.26, t1[f"relMAE%_{mt}"], 0.26, label=mt)
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(t1["intensity"].astype(str))
     axes[0].set_xlabel("降雨強度 (mm/h)")
@@ -162,8 +202,8 @@ def main():
     axes[0].legend(fontsize=7)
     t2 = sections[5][1]
     x = np.arange(len(t2))
-    for i, mt in enumerate(methods):
-        axes[1].bar(x + (i - 2) * 0.16, t2[f"bias_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[1].bar(x + (i - 1) * 0.26, t2[f"bias_{mt}"], 0.26, label=mt)
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(t2["phase"], fontsize=8)
     axes[1].axhline(0, color="gray", lw=.6)
@@ -172,8 +212,8 @@ def main():
     t3 = sections[3][1]
     lab = [f"{'雨' if r else '晴'}·{d}" for r, d in zip(t3.rain, t3.dtn)]
     x = np.arange(len(t3))
-    for i, mt in enumerate(methods):
-        axes[2].bar(x + (i - 2) * 0.16, t3[f"bias_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[2].bar(x + (i - 1) * 0.26, t3[f"bias_{mt}"], 0.26, label=mt)
     axes[2].set_xticks(x)
     axes[2].set_xticklabels(lab, fontsize=8, rotation=30)
     axes[2].axhline(0, color="gray", lw=.6)

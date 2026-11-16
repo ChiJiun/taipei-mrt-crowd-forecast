@@ -67,7 +67,7 @@ def special_labels(ts: pd.Series) -> pd.DataFrame:
                     & ~d.map(cal["is_holiday"]).fillna(False).astype(bool))
     ty = typhoon_dates()
     if ty:
-        lab["颱風假"] = d.isin(ty)
+        lab["颱風假"] = d.isin(list(ty))
     lab["一般平日"] = (~d.map(cal["is_holiday"]).fillna(False).astype(bool)) & (~lab.drop(columns=[]).any(axis=1))
     del name
     return lab
@@ -120,9 +120,15 @@ def main():
     P = pd.concat(allp, ignore_index=True)
     methods = [c for c in ("Seasonal Naive", "Historical Average", "LightGBM-scaled", "LightGBM-B") if c in P]
     P["month"] = P["ts_target"].dt.to_period("M").astype(str)
+    ty = typhoon_dates()
+    P["typhoon"] = P["ts_target"].dt.normalize().isin(list(ty))
     for (tgt, mo), g in P.groupby(["target", "month"]):
+        gx = g[~g["typhoon"]]
         for mt in methods:
-            rows.append({"target": tgt, "month": mo, "method": mt, "n": len(g), **reg_metrics(g.y, g[mt], g)})
+            r = {"target": tgt, "month": mo, "method": mt, "n": len(g), **reg_metrics(g.y, g[mt], g),
+                 "typhoon_hours": int(g["typhoon"].sum() // max(g.station.nunique(), 1)),
+                 "MAE_excl_typhoon": round(float(np.abs(gx[mt] - gx.y).mean()), 2)}
+            rows.append(r)
     lab = special_labels(P["ts_target"])
     if "precip" in P:
         lab["雨天小時（≥1mm）"] = P["precip"].fillna(0).ge(RAIN_MM)
@@ -173,14 +179,21 @@ def main():
     plt.close(fig)
 
     md = [f"# 多月滾動起點回測（2025-10 ~ 2026-09，119 站，t+{h}，每 {retrain} 個月重訓）\n",
-          "每個測試區塊只用區塊開始前的資料訓練（前一個月作 early stopping），歷史平均也只用區塊前資料。\n",
+          "每個測試區塊只用區塊開始前的資料訓練（前一個月作 early stopping），歷史平均也只用區塊前資料。"
+          "颱風停班日（data/external/typhoon_days.csv）的誤差另列，「排除颱風日」欄為不含這些日子的 MAE。\n",
           "## 各月 MAE\n"]
     for tgt in targets:
         d = df[df.target == tgt].pivot(index="month", columns="method", values="MAE")[methods].reset_index()
         d["B_vs_HA_%"] = (100 * (1 - d["LightGBM-B"] / d["Historical Average"])).round(1)
+        dx = df[df.target == tgt].pivot(index="month", columns="method", values="MAE_excl_typhoon")
+        d["B 排除颱風日"] = dx["LightGBM-B"].to_numpy()
+        d["HA 排除颱風日"] = dx["Historical Average"].to_numpy()
         md += [f"### {tgt}\n", R.md_table(d), ""]
         tot = P[P.target == tgt]
         md.append("全期 MAE：" + "、".join(f"{mt} {np.abs(tot[mt] - tot.y).mean():.1f}" for mt in methods) + "\n")
+        tx = tot[~tot["typhoon"]]
+        md.append("全期 MAE（排除颱風停班日）：" + "、".join(f"{mt} {np.abs(tx[mt] - tx.y).mean():.1f}"
+                                                   for mt in methods) + "\n")
     md += ["## 特殊日誤差（MAE／平均偏差 bias = 預測 − 實際）\n", R.md_table(sp), "",
            "## LightGBM-B 誤差最大的日子\n", R.md_table(worst.assign(date=worst.date.dt.strftime("%Y-%m-%d")))]
     (RESULTS / f"reg_backtest{suffix}.md").write_text("\n".join(md), encoding="utf-8")
