@@ -92,9 +92,15 @@ def main():
                      and c not in (R.load_weather("obs").columns)], R.B_OBJ),
         "LightGBM-B": (full, R.B_OBJ),
         "B + 近期水準修正": (full + recent, R.B_OBJ),
+        # typhoon checks (workstream A: the report's "holiday >5 mm -> 55%" came from a typhoon Saturday):
+        # does the rain signal absorb the typhoon effect when the flag is missing / typhoon days are dropped?
+        "B 無颱風旗標": ([c for c in full if c != "is_typhoon_day"], R.B_OBJ),
+        "B 訓練排除颱風日": ([c for c in full if c != "is_typhoon_day"], R.B_OBJ),
     }
+    ty_train = tr2.ts_target.dt.normalize().isin(ty) if ty is not None else np.zeros(len(tr2), bool)
     for name, (cols, obj) in variants.items():
-        m = R.fit(tr2, es, cols, obj, True, params=params)
+        trn = tr2[~np.asarray(ty_train)] if name == "B 訓練排除颱風日" else tr2
+        m = R.fit(trn, es, cols, obj, True, params=params)
         out[name] = R.predict(m, ev, cols, True)
         print(f"{name}: iter={m.best_iteration}", flush=True)
     methods = list(variants)
@@ -149,12 +155,13 @@ def main():
     allb = pd.concat([t.assign(section=s) for s, t in sections], ignore_index=True)
     allb.round(2).to_csv(RESULTS / "reg_rain_breakdown.csv", index=False)
 
+    PLOT_M = ["LightGBM-scaled", "B 無任何天氣", "LightGBM-B"]
     # figure: MAE by intensity & bias by phase
     fig, axes = plt.subplots(1, 3, figsize=(14, 3.8))
     t1 = sections[2][1]
     x = np.arange(len(t1))
-    for i, mt in enumerate(methods):
-        axes[0].bar(x + (i - 2) * 0.16, t1[f"relMAE%_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[0].bar(x + (i - 1) * 0.26, t1[f"relMAE%_{mt}"], 0.26, label=mt)
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(t1["intensity"].astype(str))
     axes[0].set_xlabel("降雨強度 (mm/h)")
@@ -162,8 +169,8 @@ def main():
     axes[0].legend(fontsize=7)
     t2 = sections[5][1]
     x = np.arange(len(t2))
-    for i, mt in enumerate(methods):
-        axes[1].bar(x + (i - 2) * 0.16, t2[f"bias_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[1].bar(x + (i - 1) * 0.26, t2[f"bias_{mt}"], 0.26, label=mt)
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(t2["phase"], fontsize=8)
     axes[1].axhline(0, color="gray", lw=.6)
@@ -172,8 +179,8 @@ def main():
     t3 = sections[3][1]
     lab = [f"{'雨' if r else '晴'}·{d}" for r, d in zip(t3.rain, t3.dtn)]
     x = np.arange(len(t3))
-    for i, mt in enumerate(methods):
-        axes[2].bar(x + (i - 2) * 0.16, t3[f"bias_{mt}"], 0.16, label=mt)
+    for i, mt in enumerate(PLOT_M):
+        axes[2].bar(x + (i - 1) * 0.26, t3[f"bias_{mt}"], 0.26, label=mt)
     axes[2].set_xticks(x)
     axes[2].set_xticklabels(lab, fontsize=8, rotation=30)
     axes[2].axhline(0, color="gray", lw=.6)
