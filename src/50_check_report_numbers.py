@@ -91,7 +91,11 @@ CHECKS = [
     # 表八：回放回測
     (BT, "period=='2026-09' and policy=='min cost 10:1 (valid)'", "prewarn_rate", "| 4,078 | {v:.1%} |"),
     (BT, "period=='2026-01' and policy=='min cost 10:1 (valid)'", "prewarn_nonroutine", "| 234 | {v:.1%} |"),
-    (BT, "period=='2026-02' and policy=='min cost 10:1 (valid)'", "fa_per_station_day", "| 21 | {v:.2f} |"),
+    (BT, "period=='2026-02' and policy=='min cost 10:1 (valid)'", "fa_per_station_day", "| 25 | {v:.2f} |"),
+    (BT, "period=='2026-07' and policy=='min cost 10:1 (valid)'", "prewarn_nonroutine", "| 143 | {v:.1%} |"),
+    (BT, "period=='2026-07' and policy=='min cost 10:1 (valid)'", "prewarn_rate", "| 3,551 | {v:.1%} |"),
+    ("clf_backtest_typhoon.csv", "subset=='颱風停班日' and policy=='min cost 10:1 (valid)'", "fa_per_station_day", "只有 4 個誤報小時（{v:.3f}／站／日"),
+    ("clf_backtest_typhoon.csv", "subset=='其餘日' and policy=='min cost 10:1 (valid)'", "fa_per_station_day", "同月其餘日為 {v:.2f}）"),
     # 補充：排除全 0 序列、活動站時
     (RS, "target=='entries' and horizon==1 and subset.str.startswith('排除')", "LightGBM-B", "t+1 進站 MAE 為 {v:.1f}"),
     (RS, "target=='entries' and horizon==1 and subset=='活動影響站時'", "B_vs_HA_%", "改善為 {v:.0f}%（進站）"),
