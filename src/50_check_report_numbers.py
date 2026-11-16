@@ -118,12 +118,32 @@ CHECKS = [
 def eda_checks(report: str):
     out = []
     eda = json.loads(rd.read_text("eda_summary_numbers.json"))
-    r = {(x["day_type"], x["rain"]): x for x in eda["rain_ratio_main"]}
-    x = r[("假日", ">5mm")]
-    out.append(("eda_summary_numbers.json", "假日 >5mm CI", f"CI {x['ci_low']:.2f}–{x['ci_high']:.2f}，只有 {x['n_hours']} 個小時"))
-    out.append(("eda_summary_numbers.json", "假日 >5mm 比例", f"降至 {x['ratio_mean'] * 100:.0f}%"))
-    x = r[("平日", ">5mm")]
-    out.append(("eda_summary_numbers.json", "平日 >5mm", f"仍有 {x['ratio_mean'] * 100:.0f}%（CI {x['ci_low']:.2f}–{x['ci_high']:.2f}）"))
+    rr = rd.read_csv("eda_rain_ratio.csv")
+
+    def r(period, dt, rain):
+        x = rr[(rr.period == period) & (rr.day_type == dt) & (rr.rain == rain)]
+        assert len(x) == 1, (period, dt, rain)
+        return x.iloc[0]
+    P2, PM, PT = "2024-10~2026-09", "2025-10~2026-09", "2025-10~2026-09 含颱風停班日（=進度報告定義）"
+    x = r(P2, "假日", "1–5mm")
+    out.append(("eda_rain_ratio.csv", "2y 假日中雨", f"假日全網進站量降到無雨的 {x.ratio_mean * 100:.0f}%（CI {x.ci_low:.2f}–{x.ci_high:.2f}）"))
+    x = r(P2, "平日", "1–5mm")
+    out.append(("eda_rain_ratio.csv", "2y 平日中雨", f"平日 {x.ratio_mean * 100:.0f}%（CI {x.ci_low:.2f}–{x.ci_high:.2f}）；"))
+    x = r(P2, "平日", ">5mm")
+    out.append(("eda_rain_ratio.csv", "2y 平日大雨", f"平日為 {x.ratio_mean * 100:.0f}%（CI {x.ci_low:.2f}–{x.ci_high:.2f}）"))
+    x = r(P2, "假日", ">5mm")
+    out.append(("eda_rain_ratio.csv", "2y 假日大雨", f"假日為 {x.ratio_mean * 100:.0f}%（CI {x.ci_low:.2f}–{x.ci_high:.2f}，只有 {x.n_hours} 個小時、{x.n_days} 天）"))
+    out.append(("eda_rain_ratio.csv", "2y 假日大雨（限制）", f"兩年資料也只有 {x.n_hours} 個小時（CI {x.ci_low:.2f}–{x.ci_high:.2f}）"))
+    x = r(PT, "假日", ">5mm")
+    out.append(("eda_rain_ratio.csv", "進度報告定義", f"{x.ratio_mean:.2f}，CI {x.ci_low:.2f}–{x.ci_high:.2f}，{x.n_hours} 小時、{x.n_days} 天"))
+    out.append(("eda_rain_ratio.csv", "進度報告定義（限制）", f"信賴區間寬達 {x.ci_low:.2f}–{x.ci_high:.2f}"))
+    x = r(PM, "假日", ">5mm")
+    out.append(("eda_rain_ratio.csv", "主研究期排除颱風", f"假日 > 5 mm 為 {x.ratio_mean * 100:.0f}%（CI {x.ci_low:.2f}–{x.ci_high:.2f}，只有 {x.n_hours} 個小時）"))
+    a, b = r(PM, "假日", "1–5mm"), r(PM, "平日", "1–5mm")
+    out.append(("eda_rain_ratio.csv", "主研究期中雨", f"中雨時假日 {a.ratio_mean * 100:.0f}%、平日 {b.ratio_mean * 100:.0f}%"))
+    fv = eda["forecast_vs_obs"]
+    out.append(("eda_summary_numbers.json", "預報命中率", f"命中率 {fv['rain_hit_rate']:.2f}、誤報率 {fv['rain_false_alarm_ratio']:.2f}"))
+    out.append(("eda_summary_numbers.json", "預報 MAE", f"氣溫 MAE {fv['temp_mae']:.2f} °C、降雨 MAE {fv['precip_mae']:.2f} mm"))
     out.append(("eda_summary_numbers.json", "假日／平日", f"假日／平日 = {eda['holiday_to_workday_ratio']:.2f}"))
     bt = rd.read_csv("reg_backtest_monthly.csv")
     x = bt[bt.target == "entries"].pivot(index="month", columns="method", values="MAE")

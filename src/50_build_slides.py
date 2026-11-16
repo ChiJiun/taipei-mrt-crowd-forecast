@@ -273,7 +273,7 @@ def build():
     table(s, MX, Inches(1.7), Inches(7.6), [
         ["資料", "來源", "粒度／規模"],
         ["每日分時各站 OD", "臺北捷運（政府開放資料）", "24 個月檔，每月約 300 MB"],
-        ["逐時天氣", "Open-Meteo 再分析", "臺北單一格點，逐時"],
+        ["逐時天氣", "Open-Meteo 觀測＋JMA 預報", "臺北單一格點，兩年逐時"],
         ["辦公日曆", "人事行政總處日曆", "假日、補班、連假長度"],
         ["大型活動", "場館節目表、維基百科", "574 筆、9 個場館"],
         ["颱風停班停課", "新聞與市府公告", "5 天"],
@@ -292,21 +292,27 @@ def build():
     picture(s, "figures/final_pipeline.png", Inches(0.9), Inches(1.35), w=Inches(11.5))
     footer(s, n)
 
-    # 5 EDA
+    # 5 EDA（含期末更正）
     s = new()
-    title(s, "雨天抑制的是非通勤人流，活動造成數倍尖峰", "同日別、同小時下，全網進站量相對無雨基準")
-    picture(s, "figures/eda_rain_ratio.png", MX, Inches(1.6), w=Inches(7.6))
-    rr = {(x["day_type"], x["rain"]): x for x in eda["rain_ratio_main"]}
-    hol, wk = rr[("假日", ">5mm")], rr[("平日", ">5mm")]
+    title(s, "雨天效果比期中小：中雨讓假日降約 8%", "2024/10–2026/9，排除颱風停班日；全網進站量相對同日別、同小時的無雨基準")
+    picture(s, "figures/eda_rain_ratio_2y.png", MX, Inches(1.6), w=Inches(7.3))
+    rr = rd.read_csv("eda_rain_ratio.csv").set_index(["period", "day_type", "rain"])
+    h2 = rr.loc[("2024-10~2026-09", "假日", "1–5mm")]
+    w2 = rr.loc[("2024-10~2026-09", "平日", "1–5mm")]
+    old = rr.loc[("2025-10~2026-09 含颱風停班日（=進度報告定義）", "假日", ">5mm")]
+    hb = rr.loc[("2024-10~2026-09", "假日", ">5mm")]
     ev = {x["venue"]: x for x in eda["event_uplift"]}["台北大巨蛋"]
-    bullets(s, Inches(8.5), Inches(1.9), Inches(4.25), Inches(4.8), [
-        ("假日降雨 > 5 mm：", f"只剩 {hol['ratio_mean'] * 100:.0f}%，但僅 {hol['n_hours']} 小時"
-                          f"（CI\u00a0{hol['ci_low']:.2f}–{hol['ci_high']:.2f}）"),
-        ("平日降雨 > 5 mm：", f"仍有 {wk['ratio_mean'] * 100:.0f}%，通勤需求剛性"),
-        ("大巨蛋活動日：", f"國父紀念館散場進站為平常的 {ev['departure_entries_ratio']:.1f} 倍"),
-        ("颱風假：", "日進站只剩平常的 8%–27%"),
-    ], size=16, gap=14)
-    footer(s, n, "results/eda_summary_numbers.json")
+    bullets(s, Inches(8.2), Inches(1.75), Inches(4.55), Inches(3.3), [
+        ("中雨 1–5 mm：", f"假日 {h2.ratio_mean * 100:.0f}%、平日 {w2.ratio_mean * 100:.0f}%（CI 皆不含 1）"),
+        ("大雨 > 5 mm 假日：", f"{hb.ratio_mean * 100:.0f}%，與無雨無顯著差異"),
+        ("活動與颱風：", f"大巨蛋散場進站 {ev['departure_entries_ratio']:.1f} 倍；颱風假只剩 8%–27%"),
+    ], size=15, gap=12)
+    card(s, Inches(8.2), Inches(4.95), Inches(4.55), Inches(1.85), fill=RGBColor(0xFD, 0xEE, 0xE4))
+    text(s, Inches(8.4), Inches(5.05), Inches(4.2), Inches(0.45), "期末更正", size=15, color=ACCENT, bold=True)
+    text(s, Inches(8.4), Inches(5.5), Inches(4.2), Inches(1.3),
+         f"期中「假日大雨降到 {old.ratio_mean * 100:.0f}%」主要來自巴威颱風停班的週六；排除颱風日後不成立",
+         size=13, color=INK)
+    footer(s, n, "results/eda_rain_ratio.csv、eda_summary_numbers.json")
 
     # 6 主結果 t+1 / t+2
     s = new()
@@ -558,7 +564,7 @@ def build():
         ("出站 ≠ 實際出站時間", "OD 只有進站時段：出站量(t) 是「t 時進站、目的地為該站」的人次"),
         ("17 個站名只有單一方向", "景安／大坪林／頭前庄拆成兩個名稱，環狀線 11 個轉乘口只有進站"),
         ("擁擠是相對定義", "門檻是自身歷史的分位數，不是月台實際人數；轉乘人流看不到"),
-        ("天氣與樣本", "單一格點再分析值；假日降雨 > 5 mm 只有 21 小時（CI 0.28–0.94）"),
+        ("天氣與樣本", "單一格點模式值；假日大雨樣本少（期中 21 小時，CI 0.28–0.93，且受颱風日主導）"),
     ]
     for i, (h_, b_) in enumerate(lims):
         x = MX + (i % 2) * Inches(6.15)
@@ -576,7 +582,8 @@ def build():
         ("預測：", f"全站共用的 {BM}，t+1／t+2 MAE 約為 HA 的一半，t+2 退化很小"),
         ("預警：", "三種擁擠定義都達標；回放回測 97–99% 事件提前約 2 小時"),
         ("影響因素：", "站型決定可預測性；雨天、活動需靠即時偏離與 OD 流向修正"),
-    ], size=20, color=WHITE, gap=24)
+        ("更正期中：", "排除颱風停班日後，大雨不會讓假日人流減半；中雨約降 7–9%"),
+    ], size=19, color=WHITE, gap=18)
     card(s, Inches(8.0), Inches(1.6), Inches(4.73), Inches(4.2), fill=RGBColor(0x2A, 0x3B, 0x5F))
     text(s, Inches(8.25), Inches(1.8), Inches(4.3), Inches(0.5), "未來工作", size=19, color=WHITE, bold=True)
     bullets(s, Inches(8.25), Inches(2.45), Inches(4.3), Inches(4.0), [
