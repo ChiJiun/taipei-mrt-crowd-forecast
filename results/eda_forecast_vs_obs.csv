@@ -1,0 +1,8 @@
+,value
+temp_mae,0.924
+precip_mae,0.266
+precip_corr,0.421
+rain_hours_obs,1088.000
+rain_hours_fc,1074.000
+rain_hit_rate,0.441
+rain_false_alarm_ratio,0.553
