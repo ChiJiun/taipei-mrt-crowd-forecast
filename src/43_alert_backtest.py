@@ -18,7 +18,8 @@ validation month and then applied to the test month (no peeking).
 
 Periods: main split (train ~2026-07, valid 2026-08, test 2026-09). Full mode adds rolling origins on
 the hist panel (2024-10..): test months 2026-01 (元旦), 2026-02 (春節), 2026-04 (清明連假), 2026-06
-(端午) each with train = all data up to month-2, valid = month-1, thresholds/HA/OD re-estimated.
+(端午), 2026-07 (巴威颱風停班停課 7/10-11, reported separately in
+clf_backtest_typhoon.csv) each with train = all data up to month-2, valid = month-1, thresholds/HA/OD re-estimated.
 
 Usage: python src/43_alert_backtest.py [--quick]   (quick = main split only)
 Outputs results/clf_backtest.csv, results/clf_backtest_by_cluster.csv, results/clf_backtest_cost.csv, results/clf_backtest_events.parquet,
@@ -35,7 +36,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
-from config import FIGURES, RESULTS, TEST_END, TEST_START, TRAIN_END, VALID_END, VALID_START  # noqa: E402
+from config import EXTERNAL, FIGURES, RESULTS, TEST_END, TEST_START, TRAIN_END, VALID_END, VALID_START  # noqa: E402
 from features import load_panel  # noqa: E402
 from metrics import pick_threshold  # noqa: E402
 
@@ -138,7 +139,29 @@ def evaluate(df: pd.DataFrame, tau1: float, tau2: float | None = None, ev: pd.Da
     return r
 
 
-def run_period(name, va, te, rows, cost_rows, ev_rows):
+def typhoon_days() -> set:
+    f = EXTERNAL / "typhoon_days.csv"
+    return set(pd.to_datetime(pd.read_csv(f)["date"]).dt.normalize()) if f.exists() else set()
+
+
+def typhoon_split(name, te, pols, out):
+    """Evaluate typhoon day-off dates (typhoon_days.csv) separately from the rest of the test month."""
+    td = typhoon_days()
+    day = te["ts_target"].dt.normalize()
+    is_t = day.isin(td).to_numpy()
+    if not is_t.any():
+        return
+    for subset, m in (("颱風停班日", is_t), ("其餘日", ~is_t)):
+        d = te[m].reset_index(drop=True)
+        for pol, t1, t2 in pols:
+            r = evaluate(d, t1, t2)
+            out.append({"period": name, "subset": subset, "days": d["ts_target"].dt.normalize().nunique(),
+                        "policy": pol, "pos_rate": round(float(d.label.mean()), 4),
+                        "mean_p1": round(float(d.p1.mean()), 4), **r})
+    print(pd.DataFrame([x for x in out if x["period"] == name]).to_string(index=False), flush=True)
+
+
+def run_period(name, va, te, rows, cost_rows, ev_rows, typh_rows):
     ev_va, ev_te = events_of(va), events_of(te)
     sweep = {}
     for part, d, ev in (("valid", va, ev_va), ("test", te, ev_te)):
@@ -153,6 +176,7 @@ def run_period(name, va, te, rows, cost_rows, ev_rows):
     t1, t2 = pick_threshold(va.label, va.p1, 0.7), pick_threshold(va.label, va.p2, 0.7)
     r, e = evaluate(te, t1, t2, ev=ev_te, return_events=True)
     rows.append({"period": name, "policy": "hour Recall≥0.7 (valid)", **r})
+    pols = [("hour Recall≥0.7 (valid)", t1, t2)]
     e["period"] = name
     ev_rows.append(e)
     # policy 2: min expected cost on validation for each cost ratio
@@ -161,6 +185,8 @@ def run_period(name, va, te, rows, cost_rows, ev_rows):
                  for tau in TAUS}
         tau_star = min(costs, key=costs.get)
         rows.append({"period": name, "policy": f"min cost {ratio}:1 (valid)", **evaluate(te, tau_star, ev=ev_te)})
+        pols.append((f"min cost {ratio}:1 (valid)", tau_star, tau_star))
+    typhoon_split(name, te, pols, typh_rows)
     print(pd.DataFrame([x for x in rows if x["period"] == name]).to_string(index=False), flush=True)
 
 
@@ -176,26 +202,28 @@ def main():
         by_cluster(te, res)
         plots(res, pd.read_csv(RESULTS / "clf_backtest_cost.csv"), None, te)
         return
-    rows, cost_rows, ev_rows = [], [], []
+    rows, cost_rows, ev_rows, typh_rows = [], [], [], []
 
     print("period 2026-09 (main split)", flush=True)
     panel = load_panel()
     va, te = fold_scores(panel, TRAIN_END, (VALID_START, VALID_END), (TEST_START, TEST_END), cache="tot")
-    run_period("2026-09", va, te, rows, cost_rows, ev_rows)
+    run_period("2026-09", va, te, rows, cost_rows, ev_rows, typh_rows)
     main_te = te
     te.to_parquet(RESULTS / "clf_backtest_scores_2026-09.parquet", index=False)
 
     if not a.quick:
         hist = load_panel(hist=True)
-        for ym in ("2026-01", "2026-02", "2026-04", "2026-06"):
+        for ym in ("2026-01", "2026-02", "2026-04", "2026-06", "2026-07"):
             p = pd.Period(ym, "M")
             train_end = str((p - 2).end_time.floor("h"))
             print(f"period {ym}: train <= {train_end}", flush=True)
             va, te = fold_scores(hist, train_end, month_bounds(str(p - 1)), month_bounds(ym), od_start_ym="202510")
-            run_period(ym, va, te, rows, cost_rows, ev_rows)
+            run_period(ym, va, te, rows, cost_rows, ev_rows, typh_rows)
 
     res = pd.DataFrame(rows)
     res.to_csv(RESULTS / "clf_backtest.csv", index=False)
+    if typh_rows:
+        pd.DataFrame(typh_rows).to_csv(RESULTS / "clf_backtest_typhoon.csv", index=False)
     cost = pd.DataFrame(cost_rows)
     cost.to_csv(RESULTS / "clf_backtest_cost.csv", index=False)
     evs = pd.concat(ev_rows, ignore_index=True)
