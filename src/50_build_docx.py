@@ -229,6 +229,8 @@ def build():
         i += 1
     d.core_properties.title = "台北捷運站點人流預測與擁擠預警"
     d.core_properties.author = ""
+    d.core_properties.comments = ""
+    d.core_properties.last_modified_by = ""
     d.save(OUT)
     print(f"wrote {OUT.relative_to(ROOT)}")
 

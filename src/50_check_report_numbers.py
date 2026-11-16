@@ -102,11 +102,16 @@ CHECKS = [
     # SHAP
     (SG, "group=='歷史平均剖面'", "share_%", "歷史平均剖面占平均 |SHAP| 的 {v:.1f}%"),
     (SG, "group=='天氣'", "share_%", "天氣 {v:.1f}%"),
+    ("reg_weather_forecast.csv", "target=='entries' and horizon==1 and scenario.str.startswith('(b) 觀測訓練→JMA')", "MAE", "| (b) 觀測訓練、JMA 預報測試（實際部署） | {v:.2f} |"),
+    ("reg_weather_forecast.csv", "target=='entries' and horizon==1 and scenario.str.startswith('(b) 觀測訓練→JMA')", "rain_MAE", "| 38.58 | {v:.2f} |"),
+    ("reg_weather_forecast.csv", "target=='entries' and horizon==1 and scenario.str.startswith('(b) 觀測訓練→JMA')", "rain_over_vs_a", "雨天 MAE 多 {v:.1f}（約 2%）"),
+    ("reg_weather_forecast.csv", "target=='entries' and horizon==1 and scenario.str.startswith('(b) 觀測訓練→ECMWF')", "MAE", "| (b′) 觀測訓練、ECMWF 預報測試 | {v:.2f} |"),
+    ("reg_weather_forecast.csv", "target=='entries' and horizon==1 and scenario.str.startswith('(d)')", "rain_bias", "| 38.47 | 62.82 | {v:.2f} |"),
     # 多月回測（迴歸）
-    ("reg_backtest_special.csv", "target=='entries' and subset=='颱風假'", "MAE_LightGBM-B", "| 進站：颱風假（2 天） | 629.9 | 560.6 | 196.9 | {v:.1f} |"),
+    ("reg_backtest_special.csv", "target=='entries' and subset=='颱風假'", "MAE_LightGBM-B", "| 進站：颱風停班日（2 天） | 629.9 | 560.6 | 230.0 | {v:.1f} |"),
     ("reg_backtest_special.csv", "target=='entries' and subset=='颱風假'", "bias_LightGBM-B", "平均偏差 +{v:.0f}"),
-    ("reg_backtest_special.csv", "target=='entries' and subset=='春節連假'", "MAE_LightGBM-B", "| 167.6 | 53.8 | {v:.1f} |"),
-    ("reg_backtest_special.csv", "target=='entries' and subset.str.startswith('跨年')", "MAE_LightGBM-B", "LightGBM-B（{v:.1f}）甚至略遜"),
+    ("reg_backtest_special.csv", "target=='entries' and subset=='春節連假'", "MAE_LightGBM-B", "| 167.6 | 60.1 | {v:.1f} |"),
+    ("reg_backtest_special.csv", "target=='entries' and subset.str.startswith('跨年')", "MAE_LightGBM-B", "LightGBM-B 的 MAE（{v:.1f}）"),
     # 分位數區間
     ("reg_quantile.csv", "target=='entries' and horizon==1 and interval=='CQR-分組' and subset=='all'", "coverage", "| 進站 t+1 | {v:.1%} |"),
     ("reg_quantile.csv", "target=='entries' and horizon==1 and interval=='CQR-分組' and subset=='peak'", "coverage", "| 79.7% | {v:.1%} |"),
@@ -114,8 +119,8 @@ CHECKS = [
     ("reg_quantile.csv", "target=='exits' and horizon==1 and interval=='raw' and subset=='all'", "coverage", "未校準時出站 t+1 只有 {v:.1%}"),
     ("reg_quantile.csv", "target=='exits' and horizon==1 and interval=='CQR-分組' and subset=='all'", "coverage", "CQR 後提升到 {v:.1%}"),
     # 消融（天氣上限）
-    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "MAE", "整體 MAE 為 {v:.2f}"),
-    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "rain_MAE", "雨天 MAE 從 60.7 升到 {v:.1f}，因此"),
+    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "MAE", "| (d) 不用天氣 | {v:.2f} |"),
+    ("reg_ablation.csv", "target=='entries' and horizon==1 and method=='LightGBM-B (no weather)'", "rain_MAE", "雨天 MAE 只從 60.7 升到 {v:.1f}"),
 ]
 
 
@@ -163,6 +168,14 @@ def eda_checks(report: str):
     v = [float(m) for m in _re.findall(r"\| ([\d.]+) \|", sec)[:3]]
     out.append(("reg_rain_tables.md", "雨天 MAE", f"雨天 MAE {v[0]:.1f}，無雨 {v[1]:.1f}"))
     out.append(("reg_rain_tables.md", "組成加權", f"無雨 MAE 升到 {v[2]:.1f}"))
+    wf = rd.read_csv("reg_weather_forecast.csv")
+    o = wf[wf.scenario.str.startswith("(b) 觀測訓練→JMA")].over_vs_a
+    out.append(("reg_weather_forecast.csv", "JMA 高估範圍", f"都只多 {o.min():.2f}–{o.max():.2f}"))
+    bt2 = bt[bt.target == "entries"]
+    ex = bt2.groupby("method").apply(lambda g: (g.MAE_excl_typhoon * (g.n - g.typhoon_hours * 119)).sum()
+                                     / (g.n - g.typhoon_hours * 119).sum())
+    out.append(("reg_backtest_monthly.csv", "排除颱風", f"| 進站全年 MAE（排除颱風停班日） | {ex['Seasonal Naive']:.1f} | "
+                f"{ex['Historical Average']:.1f} | {ex['LightGBM-scaled']:.1f} | {ex['LightGBM-B']:.1f} |"))
     return [(f, d, s, s in report) for f, d, s in out]
 
 
