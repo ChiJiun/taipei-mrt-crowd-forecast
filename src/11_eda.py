@@ -283,16 +283,23 @@ def main():
     w = load_weather("obs")
     if w is not None:
         tabs = []
-        for period, d in [("2025-10~2026-09", main_net), ("2024-10~2026-09", net)]:
+        # typhoon work/school-suspension days are excluded (they confound heavy rain with closures);
+        # a version including them is kept for comparison
+        tyf = EXTERNAL / "typhoon_days.csv"
+        ty = set(pd.to_datetime(pd.read_csv(tyf)["date"])) if tyf.exists() else set()
+        nt = net[~net.date.isin(ty)]
+        for period, d in [("2025-10~2026-09", nt[nt.ts >= MAIN_START]),
+                          ("2025-10~2026-09 含颱風停班日（=進度報告定義）", main_net), ("2024-10~2026-09", nt),
+                          ("2024-10~2026-09 含颱風停班日", net)]:
             t, df = rain_effect(d, w, period)
             tabs.append(t)
-            if period.startswith("2025"):
-                fig_rain(t, "eda_rain_ratio.png", "降雨 × 日別：全網進站量相對無雨基準（2025/10–2026/9，95% CI）")
+            if period == "2025-10~2026-09":
+                fig_rain(t, "eda_rain_ratio.png", "降雨 × 日別：全網進站量相對無雨基準（2025/10–2026/9，排除颱風停班日，95% CI）")
                 rain_by_hour_heat(df)
                 NUM["rain_ratio_main"] = t[["day_type", "rain", "n_hours", "ratio_mean", "ci_low",
                                             "ci_high"]].round(3).to_dict("records")
         pd.concat(tabs).to_csv(RESULTS / "eda_rain_ratio.csv", index=False, float_format="%.3f")
-        fig_rain(tabs[1], "eda_rain_ratio_2y.png", "降雨 × 日別：全網進站量相對無雨基準（2024/10–2026/9，95% CI）")
+        fig_rain(tabs[2], "eda_rain_ratio_2y.png", "降雨 × 日別：全網進站量相對無雨基準（2024/10–2026/9，排除颱風停班日，95% CI）")
         wf = load_weather("forecast")
         if wf is not None:
             m = w.merge(wf, on="ts", suffixes=("_obs", "_fc")).dropna(subset=["precip_obs", "precip_fc"])
