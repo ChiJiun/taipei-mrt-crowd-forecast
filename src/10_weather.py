@@ -9,13 +9,19 @@ supplied on main, so main-period values stay identical):
   * archive-api.open-meteo.com  (ERA5 / ERA5-Land / IFS "best_match")
       2025-10..2026-09 : data/external/openmeteo_archive_raw_2025-10_2026-09.json   (from main, not refetched)
       2024-10..2025-09 : data/external/openmeteo_archive_raw_2024-10_2025-09.json   (fetched here)
-  * historical-forecast-api.open-meteo.com
-      data/external/openmeteo_histforecast_raw_2024-10_2026-09.json
-    The historical-forecast series is stitched from the first hours of successive model runs
-    (best_match; for Taiwan mainly JMA MSM/GSM, ECMWF IFS, GFS), so each hour comes from a run issued
-    roughly 1-6 h earlier (runs every 1-6 h, plus ~1-3 h publication delay). We therefore treat it as
-    the forecast available at the prediction origin t for targets t+1 / t+2. It is NOT a strict
-    "issued before t" archive: for a t+2 target the true lead may be slightly shorter than assumed.
+  * historical-forecast-api.open-meteo.com, models=jma_seamless (main forecast file) and
+    models=ecmwf_ifs025 (sensitivity file weather_forecast_hourly_ecmwf.csv)
+      data/external/openmeteo_histforecast_<model>_raw_2024-10_2026-09.json
+    IMPORTANT: at this grid point the archive "best_match" series (our observation proxy) is the SAME
+    series as historical-forecast "best_match" (both are ECMWF IFS 9 km assembled from the first hours
+    of successive forecasts), so best_match cannot serve as an independent forecast. We use instead the
+    JMA model (MSM 5 km / GSM, regional operational model for East Asia), which is independent of the
+    observation proxy and therefore carries realistic forecast error.
+    Lead-time assumption: the historical-forecast series is stitched from the first hours of successive
+    runs (JMA MSM runs every 3 h; data available ~2-3 h after run time), so each hour comes from a run
+    issued roughly 0-6 h earlier. We treat it as the forecast available at the origin t for t+1 / t+2.
+    Strictly "issued before t" forecasts (Open-Meteo previous-runs API, e.g. *_previous_day1) would be
+    cleaner but that host is not reachable from the build environment.
 Raw JSON responses are committed so reruns need no network (the free API has a per-IP daily quota);
 --refresh forces a new download.
 
@@ -51,9 +57,13 @@ HISTFC = "https://historical-forecast-api.open-meteo.com/v1/forecast"
 RAW = {
     "obs_main": (EXTERNAL / "openmeteo_archive_raw_2025-10_2026-09.json", ARCHIVE, "2025-10-01", "2026-09-30"),
     "obs_hist": (EXTERNAL / "openmeteo_archive_raw_2024-10_2025-09.json", ARCHIVE, "2024-10-01", "2025-09-30"),
-    "forecast": (EXTERNAL / "openmeteo_histforecast_raw_2024-10_2026-09.json", HISTFC, START, END),
+    "forecast": (EXTERNAL / "openmeteo_histforecast_jma_seamless_raw_2024-10_2026-09.json", HISTFC, START, END),
+    "forecast_ecmwf": (EXTERNAL / "openmeteo_histforecast_ecmwf_ifs025_raw_2024-10_2026-09.json", HISTFC,
+                       START, END),
 }
-OUT = {"obs": EXTERNAL / "weather_hourly.csv", "forecast": EXTERNAL / "weather_forecast_hourly.csv"}
+MODELS = {"forecast": "jma_seamless", "forecast_ecmwf": "ecmwf_ifs025"}
+OUT = {"obs": EXTERNAL / "weather_hourly.csv", "forecast": EXTERNAL / "weather_forecast_hourly.csv",
+       "forecast_ecmwf": EXTERNAL / "weather_forecast_hourly_ecmwf.csv"}
 
 
 def fetch(key: str, refresh: bool = False) -> dict:
@@ -62,6 +72,8 @@ def fetch(key: str, refresh: bool = False) -> dict:
         return json.loads(path.read_text())
     params = {"latitude": LAT, "longitude": LON, "start_date": s, "end_date": e,
               "hourly": ",".join(VARS), "timezone": "Asia/Taipei"}
+    if key in MODELS:
+        params["models"] = MODELS[key]
     url = api + "?" + urllib.parse.urlencode(params)
     for attempt in range(4):
         try:
@@ -114,14 +126,14 @@ def build_obs(refresh: bool) -> pd.DataFrame:
     return df
 
 
-def build_forecast(refresh: bool) -> pd.DataFrame:
-    return finalize(to_frame(fetch("forecast", refresh)), "forecast")
+def build_forecast(refresh: bool, key: str = "forecast") -> pd.DataFrame:
+    return finalize(to_frame(fetch(key, refresh)), key)
 
 
-def compare(obs: pd.DataFrame, fc: pd.DataFrame):
+def compare(obs: pd.DataFrame, fc: pd.DataFrame, label: str = "forecast"):
     m = obs.merge(fc, on="ts", suffixes=("_obs", "_fc")).dropna()
     o, f = m.precip_obs >= 1, m.precip_fc >= 1
-    print(f"forecast vs obs ({len(m)} h): temp MAE {(m.temp_obs - m.temp_fc).abs().mean():.2f} C, "
+    print(f"{label} vs obs ({len(m)} h): temp MAE {(m.temp_obs - m.temp_fc).abs().mean():.2f} C, "
           f"precip MAE {(m.precip_obs - m.precip_fc).abs().mean():.3f} mm, corr "
           f"{np.corrcoef(m.precip_obs, m.precip_fc)[0, 1]:.2f}; rain>=1mm: obs {o.sum()} h, fc {f.sum()} h, "
           f"hit {(o & f).sum() / max(o.sum(), 1):.2f}, false alarm {(~o & f).sum() / max(f.sum(), 1):.2f}")
@@ -130,13 +142,14 @@ def compare(obs: pd.DataFrame, fc: pd.DataFrame):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--refresh", action="store_true", help="re-download (except the main-period file)")
-    ap.add_argument("--kinds", default="obs,forecast")
+    ap.add_argument("--kinds", default="obs,forecast,forecast_ecmwf")
     a = ap.parse_args()
     res = {}
     for k in a.kinds.split(","):
-        res[k] = build_obs(a.refresh) if k == "obs" else build_forecast(a.refresh)
-    if len(res) == 2:
-        compare(res["obs"], res["forecast"])
+        res[k] = build_obs(a.refresh) if k == "obs" else build_forecast(a.refresh, k)
+    for k in res:
+        if k != "obs" and "obs" in res:
+            compare(res["obs"], res[k], k)
 
 
 if __name__ == "__main__":
