@@ -11,68 +11,77 @@
   {
    "day_type": "平日",
    "rain": "無雨",
-   "n_hours": 3001,
+   "n_hours": 3000,
    "ratio_mean": 1.0,
    "ci_low": 0.992,
-   "ci_high": 1.008
+   "ci_high": 1.009
   },
   {
    "day_type": "平日",
    "rain": "<1mm",
-   "n_hours": 1100,
-   "ratio_mean": 0.993,
-   "ci_low": 0.974,
-   "ci_high": 1.014
+   "n_hours": 1090,
+   "ratio_mean": 0.999,
+   "ci_low": 0.985,
+   "ci_high": 1.015
   },
   {
    "day_type": "平日",
    "rain": "1–5mm",
-   "n_hours": 261,
-   "ratio_mean": 0.963,
-   "ci_low": 0.919,
-   "ci_high": 0.996
+   "n_hours": 254,
+   "ratio_mean": 0.98,
+   "ci_low": 0.961,
+   "ci_high": 1.004
   },
   {
    "day_type": "平日",
    "rain": ">5mm",
    "n_hours": 30,
    "ratio_mean": 0.942,
-   "ci_low": 0.897,
-   "ci_high": 1.015
+   "ci_low": 0.898,
+   "ci_high": 1.01
   },
   {
    "day_type": "假日",
    "rain": "無雨",
-   "n_hours": 1586,
+   "n_hours": 1584,
    "ratio_mean": 1.0,
-   "ci_low": 0.969,
-   "ci_high": 1.03
+   "ci_low": 0.97,
+   "ci_high": 1.028
   },
   {
    "day_type": "假日",
    "rain": "<1mm",
-   "n_hours": 464,
-   "ratio_mean": 0.983,
-   "ci_low": 0.949,
-   "ci_high": 1.018
+   "n_hours": 463,
+   "ratio_mean": 0.984,
+   "ci_low": 0.947,
+   "ci_high": 1.016
   },
   {
    "day_type": "假日",
    "rain": "1–5mm",
-   "n_hours": 97,
-   "ratio_mean": 0.859,
-   "ci_low": 0.729,
-   "ci_high": 0.95
+   "n_hours": 90,
+   "ratio_mean": 0.915,
+   "ci_low": 0.873,
+   "ci_high": 0.962
   },
   {
    "day_type": "假日",
    "rain": ">5mm",
-   "n_hours": 21,
-   "ratio_mean": 0.547,
-   "ci_low": 0.283,
-   "ci_high": 0.936
+   "n_hours": 13,
+   "ratio_mean": 0.818,
+   "ci_low": 0.704,
+   "ci_high": 0.961
   }
  ],
+ "forecast_vs_obs": {
+  "temp_mae": 0.924,
+  "precip_mae": 0.266,
+  "precip_corr": 0.421,
+  "rain_hours_obs": 1088.0,
+  "rain_hours_fc": 1074.0,
+  "rain_hit_rate": 0.441,
+  "rain_false_alarm_ratio": 0.553
+ },
  "unlisted_event_candidates": {
   "南港展覽館": 15,
   "台北大巨蛋": 1,
